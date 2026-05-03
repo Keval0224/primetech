@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTech | Digital Solutions</title>
+    <meta name="description" content="PrimeTech is a high-end digital agency.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Prime</span><span class="logo-accent">Tech</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link btn-small">Get in Touch</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
+            </nav>
+            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container container grid">
+                <div class="hero-data">
+                    <h1 class="hero-title">
+                        We Build Digital Solutions That Drive <br> <span class="text-gradient">Real Growth</span>
+                    </h1>
+                    <p class="hero-description">
+                        Transforming bold ideas into exceptional digital experiences. We combine strategy, design, and
+                        technology to elevate your brand to the next level.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary">Get Started</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-3d">
+                    <div id="canvas-container"></div>
+                    <div class="floating-ui code-snippet glass-panel">
+                        <p><span>const</span> success = <span>await</span> launch();</p>
+                    </div>
+                    <div class="floating-ui chart glass-panel">
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-shape-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Our Capabilities</h2>
+                    <p class="section-subtitle">Delivering high-performance solutions tailored to your specific needs.
+                    </p>
+                </div>
+
+                <div class="services-container grid">
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class='bx bx-code-alt'></i></div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">Scalable, fast, and secure web applications built with
+                            cutting-edge technologies.</p>
+                        <a href="services.html" class="service-link">Learn more <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class='bx bx-palette'></i></div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">Intuitive user interfaces and immersive experiences that engage
+                            and convert.</p>
+                        <a href="services.html" class="service-link">Learn more <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                    <div class="service-card glass-panel">
+                        <div class="service-icon"><i class='bx bx-cloud-upload'></i></div>
+                        <h3 class="service-title">Web Deployment</h3>
+                        <p class="service-description">Seamless cloud CI/CD deployment, reliable hosting, and
+                            infrastructure management.</p>
+                        <a href="services.html" class="service-link">Learn more <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container grid about-container">
+                <div class="about-visual">
+                    <div class="about-bg-abstract glass-panel">
+                        <div class="circle c1"></div>
+                        <div class="circle c2"></div>
+                        <div class="stats-box glass-panel floating">
+                            <h4>100+</h4>
+                            <p>Projects Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-data">
+                    <h2 class="section-title text-left">We think differently. We build differently.</h2>
+                    <p class="about-description">
+                        At PrimeTech, we merge creativity with technical precision. We don't just build websites; we
+                        craft dynamic digital ecosystems that empower your business to thrive in the modern web era. Our
+                        team of visionaries and developers work synergistically to unlock true digital potential.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class='bx bx-check-circle'></i> Innovation-first approach</li>
+                        <li><i class='bx bx-check-circle'></i> Dedicated expert teams</li>
+                        <li><i class='bx bx-check-circle'></i> Seamless communication protocol</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline mt-2">Read Full Story</a>
+                </div>
+            </div>
+
+            <div class="wave-shape-top">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Selected Works</h2>
+                    <p class="section-subtitle">A glimpse into our recent successful collaborations</p>
+                </div>
+
+                <div class="portfolio-container grid">
+                    <div class="portfolio-card glass-panel">
+                        <div class="portfolio-img">
+                            <div class="placeholder-img c1"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span>FinTech App</span>
+                            <h3>Nexus Banking</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-card glass-panel">
+                        <div class="portfolio-img">
+                            <div class="placeholder-img c2"></div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span>E-Commerce</span>
+                            <h3>Aura Fashion</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="portfolio.html" class="btn btn-outline">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Transparent Pricing</h2>
+                    <p class="section-subtitle">Scalable plans crafted to grow with your business.</p>
+                </div>
+
+                <div class="pricing-container grid">
+                    <!-- Basic -->
+                    <div class="pricing-card glass-panel">
+                        <h3>Basic</h3>
+                        <p class="price"><span>$</span>999</p>
+                        <p class="pricing-desc">Perfect for startups and small localized businesses.</p>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> 5 Pages Custom Website</li>
+                            <li><i class='bx bx-check'></i> Mobile Responsive</li>
+                            <li><i class='bx bx-check'></i> Basic SEO Optimization</li>
+                            <li><i class='bx bx-check'></i> 1 Month Support</li>
+                        </ul>
+                        <a href="pricing.html" class="btn btn-outline w-full">Choose Basic</a>
+                    </div>
+                    <!-- Standard (Highlighted) -->
+                    <div class="pricing-card glass-panel popular">
+                        <div class="badge">Most Popular</div>
+                        <h3>Standard</h3>
+                        <p class="price"><span>$</span>2,499</p>
+                        <p class="pricing-desc">Ideal for growing businesses needing dynamic features.</p>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> Up to 15 Pages</li>
+                            <li><i class='bx bx-check'></i> CMS Integration</li>
+                            <li><i class='bx bx-check'></i> Advanced SEO setup</li>
+                            <li><i class='bx bx-check'></i> Performance Optimization</li>
+                            <li><i class='bx bx-check'></i> 3 Months Support</li>
+                        </ul>
+                        <a href="pricing.html" class="btn btn-primary w-full">Choose Standard</a>
+                    </div>
+                    <!-- Premium -->
+                    <div class="pricing-card glass-panel">
+                        <h3>Premium</h3>
+                        <p class="price"><span>$</span>5,999</p>
+                        <p class="pricing-desc">For enterprise-level, custom applications and ecosystems.</p>
+                        <ul class="pricing-features">
+                            <li><i class='bx bx-check'></i> Unlimited Pages / App</li>
+                            <li><i class='bx bx-check'></i> Custom Backend / API</li>
+                            <li><i class='bx bx-check'></i> Advanced Animations</li>
+                            <li><i class='bx bx-check'></i> Security Audits</li>
+                            <li><i class='bx bx-check'></i> 12 Months Support</li>
+                        </ul>
+                        <a href="pricing.html" class="btn btn-outline w-full">Choose Premium</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Client Success</h2>
+                </div>
+
+                <div class="testimonial-slider glass-panel">
+                    <div class="testimonial-content">
+                        <i class='bx bxs-quote-alt-left quote-icon'></i>
+                        <p class="testimonial-text">PrimeTech revolutionized our digital presence. The website is
+                            incredibly fast, stunningly beautiful, and has doubled our conversion rates in just 2
+                            months.</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">SA</div>
+                            <div class="author-info">
+                                <h4>Sarah Anders</h4>
+                                <span>CEO at CloudSync</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog section" id="blog">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Latest Insights</h2>
+                    <p class="section-subtitle">Trends, guides, and thoughts from our experts.</p>
+                </div>
+
+                <div class="blog-container grid">
+                    <article class="blog-card glass-panel">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-category cat-dev">Web Dev</span>
+                            <h3><a href="blog.html">The Future of Serverless Architecture in 2026</a></h3>
+                            <p>Discover how serverless computing is evolving and why it is the baseline...</p>
+                            <span class="blog-date">March 14, 2026</span>
+                        </div>
+                    </article>
+                    <article class="blog-card glass-panel">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-category cat-ui">Graphic </span>
+                            <h3><a href="blog.html">Mastering Glassmorphism & 3D Web</a></h3>
+                            <p>How combining transparency effects with WebGL brings a boost to engagement...</p>
+                            <span class="blog-date">April 02, 2026</span>
+                        </div>
+                    </article>
+                    <article class="blog-card glass-panel">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-category cat-growth">Growth</span>
+                            <h3><a href="blog.html">Why Fast Loading Speeds Determine ROI</a></h3>
+                            <p>An in-depth analysis of how a 100ms delay in page load time severely impacts...</p>
+                            <span class="blog-date">April 05, 2026</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="blog.html" class="btn btn-outline">Read All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact"
+            style="position: relative; overflow: hidden; background-color: #050810; padding-top: 6rem; padding-bottom: 6rem;">
+
+            <div class="contact-bg-visual"
+                style="position: absolute; top:0; left:0; width:60%; height:100%; z-index:0;">
+                <svg viewBox="0 0 800 1000" preserveAspectRatio="none" style="width: 100%; height: 100%; opacity: 0.8;">
+                    <path d="M0,0 L0,1000 L500,1000 C800,600 200,300 800,0 Z" fill="url(#contactGrad)" />
+                    <path d="M0,0 L0,1000 L300,1000 C600,700 100,200 600,0 Z" fill="rgba(0, 229, 255, 0.1)" />
+                    <defs>
+                        <linearGradient id="contactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#004d66" />
+                            <stop offset="50%" stop-color="#008080" />
+                            <stop offset="100%" stop-color="#050810" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="container grid contact-container">
+                <div class="contact-info"
+                    style="display: flex; flex-direction: column; justify-content: space-between; padding-block: 2rem;">
+                    <div>
+                        <h2 class="contact-heading">Get in touch</h2>
+                        <p class="contact-subheading">We love to hear from you!</p>
+                        <p class="contact-desc" style="margin-top: 1rem; color: var(--text-muted); max-width: 350px;">
+                            Tell us about your project, goals, and vision. We will reach back within 24 hours.</p>
+                    </div>
+                    <div class="contact-email">
+                        primetech.pvt001@gmail.com
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap dark-panel">
+                    <h3 style="margin-bottom: 3rem; font-size: 1.5rem; font-weight: 400; color: #fff;">Send us a message
+                    </h3>
+                    <form action="" class="contact-form">
+                        <div class="form-group grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                            <div class="input-line">
+                                <label>First Name</label>
+                                <input type="text" class="form-input-line" required>
+                            </div>
+                            <div class="input-line">
+                                <label>Last Name</label>
+                                <input type="text" class="form-input-line" required>
+                            </div>
+                        </div>
+                        <div class="form-group grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                            <div class="input-line">
+                                <label>Email</label>
+                                <input type="email" class="form-input-line" required>
+                            </div>
+                            <div class="input-line">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-input-line">
+                            </div>
+                        </div>
+
+                        <div class="form-group input-line"
+                            style="display: flex; justify-content: space-between; align-items: center; border-bottom: none; margin-bottom: 2rem; margin-top: 3rem;">
+                            <label style="margin-bottom: 0; font-size: 0.95rem; color: #fff;">Which service do you
+                                need?</label>
+                            <select class="form-input-select" required>
+                                <option value="web">Web Development</option>
+                                <option value="ui">UI/UX Design</option>
+                                <option value="deploy">Web Deployment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group input-line">
+                            <label>Project Details</label>
+                            <textarea rows="1" class="form-input-line" style="resize: none;"
+                                placeholder="Brief description..." required></textarea>
+                        </div>
+
+                        <div class="form-group"
+                            style="margin-top: 3rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer; width: max-content;">
+                            <i class='bx bx-link-alt' style="font-size: 1.25rem;"></i> <span
+                                style="font-size: 0.9rem;">Add Attachment</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-full btn-square" style="margin-top: 3rem;">Send
+                            Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <span class="logo-text">Prime</span><span class="logo-accent">Tech</span>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge
+                    technology and unparalleled design expertise.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legals</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i> @primtech.solution</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> Email
+                        Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
