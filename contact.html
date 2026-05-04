@@ -9,26 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <!-- Custom JS -->
+    <script src="main.js" defer></script>
 </head>
 <body>
-        <header class="header" id="header">
+    <header class="header" id="header">
         <div class="nav-container container">
             <a href="index.html" class="brand-logo">
                 <div class="brand-icon">
-                    <svg viewBox="0 0 50 65" width="40" height="40">
-                        <defs>
-                            <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#38bdf8" />
-                                <stop offset="100%" stop-color="#2563eb" />
-                            </linearGradient>
-                            <linearGradient id="logoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#1e3a8a" />
-                                <stop offset="100%" stop-color="#2563eb" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M 10 40 L 10 55 L 25 47.5 L 25 32.5 Z" fill="url(#logoGrad2)" />
-                        <path d="M 10 10 L 40 25 L 10 40 Z" fill="url(#logoGrad1)" />
-                    </svg>
+                    <img src="p-logo.png" alt="PrimeTech">
                 </div>
                 <div class="brand-text-wrap">
                     <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
@@ -55,10 +47,9 @@
     </header>
 
     <main>
-        <section class="contact section page-top" id="contact" style="position: relative; overflow: hidden; background-color: #050810; padding-bottom: 6rem;">
-            
-            <div class="contact-bg-visual" style="position: absolute; top:0; left:0; width:60%; height:100%; z-index:0;">
-               <svg viewBox="0 0 800 1000" preserveAspectRatio="none" style="width: 100%; height: 100%; opacity: 0.8;">
+        <section class="contact section page-top" id="contact">
+            <div class="contact-bg-visual">
+               <svg viewBox="0 0 800 1000" preserveAspectRatio="none">
                    <path d="M0,0 L0,1000 L500,1000 C800,600 200,300 800,0 Z" fill="url(#contactGrad)" />
                    <path d="M0,0 L0,1000 L300,1000 C600,700 100,200 600,0 Z" fill="rgba(0, 229, 255, 0.1)" />
                    <defs>
@@ -72,11 +63,11 @@
             </div>
 
             <div class="container grid contact-container">
-                <div class="contact-info" style="display: flex; flex-direction: column; justify-content: space-between; padding-block: 2rem;">
+                <div class="contact-info">
                     <div>
                         <h2 class="contact-heading">Get in touch</h2>
                         <p class="contact-subheading">We love to hear from you!</p>
-                        <p class="contact-desc" style="margin-top: 1rem; color: var(--text-muted); max-width: 350px;">Tell us about your project, goals, and vision. We will reach back within 24 hours.</p>
+                        <p class="contact-desc mt-2">Tell us about your project, goals, and vision. We will reach back within 24 hours.</p>
                     </div>
                     <div class="contact-email">
                         primetech.pvt001@gmail.com
@@ -84,9 +75,9 @@
                 </div>
 
                 <div class="contact-form-wrap dark-panel">
-                    <h3 style="margin-bottom: 3rem; font-size: 1.5rem; font-weight: 400; color: #fff;">Send us a message</h3>
-                    <form action="" class="contact-form">
-                        <div class="form-group grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                    <h3>Send us a message</h3>
+                    <form action="#" class="contact-form">
+                        <div class="grid-2">
                             <div class="input-line">
                                 <label>First Name</label>
                                 <input type="text" class="form-input-line" required>
@@ -96,7 +87,7 @@
                                 <input type="text" class="form-input-line" required>
                             </div>
                         </div>
-                        <div class="form-group grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                        <div class="grid-2 mt-2">
                             <div class="input-line">
                                 <label>Email</label>
                                 <input type="email" class="form-input-line" required>
@@ -107,9 +98,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group input-line" style="display: flex; justify-content: space-between; align-items: center; border-bottom: none; margin-bottom: 2rem; margin-top: 3rem;">
-                            <label style="margin-bottom: 0; font-size: 0.95rem; color: #fff;">Which service do you need?</label>
-                            <select class="form-input-select" required>
+                        <div class="form-group mt-2">
+                            <label class="nav-link">Which service do you need?</label>
+                            <select class="form-input-select w-full mt-2" required>
                                 <option value="web">Web Development</option>
                                 <option value="ui">UI/UX Design</option>
                                 <option value="deploy">Web Deployment</option>
@@ -117,47 +108,34 @@
                             </select>
                         </div>
 
-                        <div class="form-group input-line">
+                        <div class="input-line mt-2">
                             <label>Project Details</label>
-                            <textarea rows="1" class="form-input-line" style="resize: none;" placeholder="Brief description..." required></textarea>
+                            <textarea rows="2" class="form-input-line" style="resize: none;" placeholder="Brief description..." required></textarea>
                         </div>
                         
-                        <div class="form-group" style="margin-top: 3rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer; width: max-content;">
-                            <i class='bx bx-link-alt' style="font-size: 1.25rem;"></i> <span style="font-size: 0.9rem;">Add Attachment</span>
+                        <div class="form-group mt-2" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer;">
+                            <i class='bx bx-link-alt'></i> <span>Add Attachment</span>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary w-full btn-square" style="margin-top: 3rem;">Send Request</button>
+                        <button type="submit" class="btn btn-primary w-full btn-square mt-2">Send Request</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
-            <a href="index.html" class="brand-logo">
-                <div class="brand-icon">
-                    <svg viewBox="0 0 50 65" width="40" height="40">
-                        <defs>
-                            <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#38bdf8" />
-                                <stop offset="100%" stop-color="#2563eb" />
-                            </linearGradient>
-                            <linearGradient id="logoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#1e3a8a" />
-                                <stop offset="100%" stop-color="#2563eb" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M 10 40 L 10 55 L 25 47.5 L 25 32.5 Z" fill="url(#logoGrad2)" />
-                        <path d="M 10 10 L 40 25 L 10 40 Z" fill="url(#logoGrad1)" />
-                    </svg>
-                </div>
-                <div class="brand-text-wrap">
-                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
-                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
-                </div>
-            </a>
+                <a href="index.html" class="brand-logo footer-logo">
+                    <div class="brand-icon">
+                        <img src="p-logo.png" alt="PrimeTech">
+                    </div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
             <div class="footer-col">
@@ -192,7 +170,5 @@
         </div>
     </footer>
     <a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
-    <script src="main.js"></script>
 </body>
 </html>
-
