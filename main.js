@@ -152,12 +152,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Portfolio Hover
+    // Portfolio Hover & Fullscreen
     document.querySelectorAll('.portfolio-card').forEach(card => {
         const video = card.querySelector('.hover-play');
         if (video) {
             card.addEventListener('mouseenter', () => video.play().catch(() => {}));
-            card.addEventListener('mouseleave', () => video.pause());
+            
+            card.addEventListener('mouseleave', () => {
+                // Don't pause if currently in fullscreen
+                if (!document.fullscreenElement) {
+                    video.pause();
+                }
+            });
+
+            // Click to open fullscreen
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) { /* Safari */
+                    video.webkitRequestFullscreen();
+                }
+            });
         }
     });
 });

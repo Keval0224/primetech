@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | PrimeTech Digital Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
+
 <body>
-        <header class="header" id="header">
+    <header class="header" id="header">
         <div class="nav-container container">
             <a href="index.html" class="brand-logo">
                 <div class="brand-icon">
                     <img src="p-logo.png" alt="PrimeTech">
                 </div>
                 <div class="brand-text-wrap">
-                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                    </div>
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
@@ -42,48 +50,69 @@
     </header>
 
     <main>
-        <section class="portfolio section page-top" id="portfolio">
+        <!-- Website Projects Section -->
+        <section class="portfolio section page-top" id="websites">
             <div class="container">
                 <div class="section-title-wrap">
-                    <h2 class="section-title">Selected Works</h2>
-                    <p class="section-subtitle">A glimpse into our recent successful collaborations</p>
+                    <h2 class="section-title">Website Projects</h2>
+                    <p class="section-subtitle">Stunning, responsive and functional web experiences</p>
                 </div>
-                
+
+                <div class="portfolio-container grid">
+                    <!-- Website project videos will go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Applications Section -->
+        <section class="portfolio section" id="tools">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Tools & Applications</h2>
+                    <p class="section-subtitle">Powerful digital tools built for maximum productivity</p>
+                </div>
+
+                <div class="portfolio-container grid">
+                    <!-- Tools & App videos will go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- App Development Section -->
+        <section class="portfolio section" id="apps">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Apps & UI/UX Design</h2>
+                    <p class="section-subtitle">Intuitive and beautiful user interfaces for mobile and web</p>
+                </div>
+
                 <div class="portfolio-container grid">
                     <div class="portfolio-card glass-panel">
                         <div class="portfolio-img-wrap">
-                            <video src="project1.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="tata_safari.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
                         </div>
                         <div class="portfolio-content">
-                            <span>FinTech App</span>
-                            <h3>Nexus Banking</h3>
+                            <span>Web App UI/UX</span>
+                            <h3>Tata Safari Website Design</h3>
                         </div>
                     </div>
                     <div class="portfolio-card glass-panel">
                         <div class="portfolio-img-wrap">
-                            <video src="project2.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="headphones.mp4" class="portfolio-video hover-play" loop muted
+                                playsinline></video>
                         </div>
                         <div class="portfolio-content">
-                            <span>E-Commerce</span>
-                            <h3>Aura Fashion</h3>
+
+                            <h3>Headphone Website Design</h3>
                         </div>
                     </div>
                     <div class="portfolio-card glass-panel">
                         <div class="portfolio-img-wrap">
-                            <video src="project3.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="nike_shoes.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
                         </div>
                         <div class="portfolio-content">
-                            <span>SaaS Platform</span>
-                            <h3>CloudSync Pro</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-card glass-panel">
-                        <div class="portfolio-img-wrap">
-                            <video src="project4.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
-                        </div>
-                        <div class="portfolio-content">
-                            <span>Web3 / Crypto</span>
-                            <h3>EtherNode</h3>
+                            <span>E-Commerce UI</span>
+                            <h3>Nike Shoes Web Design</h3>
                         </div>
                     </div>
                 </div>
@@ -91,7 +120,7 @@
         </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
                 <a href="index.html" class="brand-logo footer-logo">
@@ -99,11 +128,13 @@
                         <img src="p-logo.png" alt="PrimeTech">
                     </div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span
+                                class="brand-tech">Tech</span></div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
-                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge
+                    technology and unparalleled design expertise.</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
@@ -126,7 +157,8 @@
             <div class="footer-col">
                 <h3>Contact</h3>
                 <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i>
+                        primetech.pvt001@gmail.com</a>
                     <a href="#" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution</a>
                     <a href="#" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
                 </div>
@@ -139,6 +171,5 @@
     <a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
     <script src="main.js"></script>
 </body>
+
 </html>
-
-
