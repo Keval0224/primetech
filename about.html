@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">Prime</span><span class="logo-accent">Tech</span>
+        <header class="header" id="header">
+        <div class="nav-container container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 50 65" width="40" height="40">
+                        <defs>
+                            <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8" />
+                                <stop offset="100%" stop-color="#2563eb" />
+                            </linearGradient>
+                            <linearGradient id="logoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1e3a8a" />
+                                <stop offset="100%" stop-color="#2563eb" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 10 40 L 10 55 L 25 47.5 L 25 32.5 Z" fill="url(#logoGrad2)" />
+                        <path d="M 10 10 L 40 25 L 10 40 Z" fill="url(#logoGrad1)" />
+                    </svg>
+                </div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
             </a>
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
                     <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="contact.html" class="nav-link btn-small">Get in Touch</a></li>
+                    <li><a href="index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
             </nav>
-            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+            </div>
         </div>
     </header>
 
@@ -61,12 +83,31 @@
         </section>
     </main>
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
-                <a href="index.html" class="logo">
-                    <span class="logo-text">Prime</span><span class="logo-accent">Tech</span>
-                </a>
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 50 65" width="40" height="40">
+                        <defs>
+                            <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8" />
+                                <stop offset="100%" stop-color="#2563eb" />
+                            </linearGradient>
+                            <linearGradient id="logoGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1e3a8a" />
+                                <stop offset="100%" stop-color="#2563eb" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 10 40 L 10 55 L 25 47.5 L 25 32.5 Z" fill="url(#logoGrad2)" />
+                        <path d="M 10 10 L 40 25 L 10 40 Z" fill="url(#logoGrad1)" />
+                    </svg>
+                </div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
             <div class="footer-col">
@@ -74,26 +115,29 @@
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Our Work</a></li>
+                    <li><a href="index.html#internship">Internships</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Legals</h3>
+                <h3>Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="services.html">Web Design</a></li>
+                    <li><a href="services.html">Web Development</a></li>
+                    <li><a href="services.html">Deployment</a></li>
+                    <li><a href="services.html">Social Media Management</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Connect</h3>
+                <h3>Contact</h3>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i> @primtech.solution</a>
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> Email Us</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution</a>
+                    <a href="#" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
+        <div class="footer-bottom">
             <p>&copy; 2026 PrimeTech. All rights reserved.</p>
         </div>
     </footer>
@@ -101,3 +145,4 @@
     <script src="main.js"></script>
 </body>
 </html>
+
