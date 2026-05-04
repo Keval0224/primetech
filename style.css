@@ -879,19 +879,51 @@ img {
 
 @media screen and (max-width: 768px) {
   .hero-title {
-    font-size: 2rem; /* Reduced slightly more for very small screens */
+    font-size: 2rem;
   }
 
-  .features-container {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .features-container,
+  .footer-container,
+  .services-container,
+  .process-container,
+  .portfolio-container {
     grid-template-columns: 1fr;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr;
+  .brand-logo {
+    margin-left: 0;
   }
 
-  .services-container {
-    grid-template-columns: 1fr;
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .pricing-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
