@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | PrimeTech Digital Solutions</title>
+    <meta name="description" content="Get in touch with PrimeTech Digital Solutions for your next web development or design project. We reach back within 24 hours.">
+    <meta name="keywords" content="contact PrimeTech, hire web developers, web design inquiry, digital agency contact">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/contact.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/contact.html">
+    <meta property="og:title" content="Contact | PrimeTech Digital Solutions">
+    <meta property="og:description" content="Get in touch with PrimeTech Digital Solutions for your next web development or design project. We reach back within 24 hours.">
+    <meta property="og:image" content="https://primetech.live/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/contact.html">
+    <meta property="twitter:title" content="Contact | PrimeTech Digital Solutions">
+    <meta property="twitter:description" content="Get in touch with PrimeTech Digital Solutions for your next web development or design project. We reach back within 24 hours.">
+    <meta property="twitter:image" content="https://primetech.live/p-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
@@ -131,7 +149,7 @@
     </main>
 
     <!-- Success Popup Modal -->
-    <div id="success-modal" class="modal-overlay">
+    <div id="success-modal" class="modal-overlay" style="opacity: 0; visibility: hidden; pointer-events: none;">
         <div class="modal-content glass-panel text-center">
             <div class="success-icon">
                 <i class='bx bx-check-circle'></i>
@@ -181,8 +199,8 @@
                 <h3>Contact</h3>
                 <div class="social-links">
                     <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
-                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution</a>
-                    <a href="#" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
                 </div>
             </div>
         </div>
@@ -190,7 +208,7 @@
             <p>&copy; 2026 PrimeTech. All rights reserved.</p>
         </div>
     </footer>
-    <a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
 
     <!-- Form Submit Logic -->
     <script>
@@ -214,6 +232,9 @@
                 .then(response => response.json())
                 .then(data => {
                     // Show success modal
+                    successModal.style.opacity = '';
+                    successModal.style.visibility = '';
+                    successModal.style.pointerEvents = '';
                     successModal.classList.add('active');
                     // Reset form
                     contactForm.reset();
@@ -231,6 +252,11 @@
 
         function closeSuccessModal() {
             successModal.classList.remove('active');
+            setTimeout(() => {
+                successModal.style.opacity = '0';
+                successModal.style.visibility = 'hidden';
+                successModal.style.pointerEvents = 'none';
+            }, 400); // match transition duration
         }
     </script>
 </body>

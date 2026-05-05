@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Plan Details | PrimeTech Digital Solutions</title>
+    <meta name="description" content="Detailed breakdown of PrimeTech's Premium web development pricing plan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="main.js" defer></script>
+    <style>
+        .pricing-detail-card {
+            padding: 4rem 3rem;
+            border-radius: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 768px) {
+            .pricing-detail-card {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+        .detail-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+        .detail-item { display: flex; align-items: flex-start; gap: 1rem; }
+        .detail-item i { color: var(--primary); font-size: 1.8rem; margin-top: 0.1rem; }
+        .detail-item div h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main); }
+        .detail-item div p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="nav-container container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon"><img src="p-logo.png" alt="PrimeTech"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle"><i class='bx bx-moon'></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-top">
+        <section class="section">
+            <div class="container">
+                <div class="pricing-detail-card gsap-fade-up">
+                    <a href="index.html#pricing" style="color: var(--primary); display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;"><i class='bx bx-left-arrow-alt'></i> Back to Pricing</a>
+                    
+                    <h2 style="font-size: 2.5rem; color: var(--text-main);">Premium Plan</h2>
+                    <h3 class="text-gradient" style="font-size: 3rem; margin: 1rem 0;">₹12,999</h3>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">The ultimate package for full-scale web applications, custom platforms, and e-commerce.</p>
+                    
+                    <div class="detail-list">
+                        <div class="detail-item">
+                            <i class='bx bx-devices'></i>
+                            <div>
+                                <h4>Unlimited Pages / Web App</h4>
+                                <p>Limitless content architecture, complex routing, dedicated user dashboards, and robust e-commerce functionality.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class='bx bx-code-block'></i>
+                            <div>
+                                <h4>Custom Backend / API</h4>
+                                <p>Dedicated scalable databases, tailored API development, secure user authentication (login/signup), and advanced data management.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class='bx bx-movie-play'></i>
+                            <div>
+                                <h4>Advanced Animations</h4>
+                                <p>Premium GSAP scroll-triggers, subtle micro-interactions, and engaging 3D elements designed to completely WOW your users.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class='bx bx-shield-quarter'></i>
+                            <div>
+                                <h4>Security Audits</h4>
+                                <p>High-level protection against SQL injection and XSS attacks, complete SSL setup, and regular security vulnerability monitoring.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h4>12 Months Support & Maintenance</h4>
+                                <p>A full year of priority 24/7 support, regular database backups, scaling assistance, and consistent performance monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary w-full mt-2" style="margin-top: 3rem; border-radius: 0.5rem; text-align: center;">Get Started with Premium</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo footer-logo">
+                    <div class="brand-icon"><img src="p-logo.png" alt="PrimeTech"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+</html>
