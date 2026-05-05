@@ -30,6 +30,7 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
                     <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                     <li><a href="index.html#internship" class="nav-link">Internship</a></li>
@@ -76,41 +77,46 @@
 
                 <div class="contact-form-wrap dark-panel">
                     <h3>Send us a message</h3>
-                    <form action="#" class="contact-form">
+                    <form action="https://formsubmit.co/ajax/primetech.pvt001@gmail.com" method="POST" class="contact-form" id="contact-form">
+                        <!-- Disable Captcha (Optional) -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Email Subject -->
+                        <input type="hidden" name="_subject" value="New Project Request from PrimeTech Website!">
+
                         <div class="grid-2">
                             <div class="input-line">
                                 <label>First Name</label>
-                                <input type="text" class="form-input-line" required>
+                                <input type="text" name="First Name" class="form-input-line" required>
                             </div>
                             <div class="input-line">
                                 <label>Last Name</label>
-                                <input type="text" class="form-input-line" required>
+                                <input type="text" name="Last Name" class="form-input-line" required>
                             </div>
                         </div>
                         <div class="grid-2 mt-2">
                             <div class="input-line">
                                 <label>Email</label>
-                                <input type="email" class="form-input-line" required>
+                                <input type="email" name="email" class="form-input-line" required>
                             </div>
                             <div class="input-line">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-input-line">
+                                <input type="tel" name="Phone Number" class="form-input-line" required>
                             </div>
                         </div>
 
                         <div class="form-group mt-2">
                             <label class="nav-link">Which service do you need?</label>
-                            <select class="form-input-select w-full mt-2" required>
-                                <option value="web">Web Development</option>
-                                <option value="ui">UI/UX Design</option>
-                                <option value="deploy">Web Deployment</option>
-                                <option value="other">Other</option>
+                            <select name="Service Needed" class="form-input-select w-full mt-2" required>
+                                <option value="Web Development">Web Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Web Deployment">Web Deployment</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div class="input-line mt-2">
                             <label>Project Details</label>
-                            <textarea rows="2" class="form-input-line" style="resize: none;" placeholder="Brief description..." required></textarea>
+                            <textarea name="Project Details" rows="2" class="form-input-line" style="resize: none;" placeholder="Brief description..." required></textarea>
                         </div>
                         
                         <div class="form-group mt-2" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); cursor: pointer;">
@@ -123,6 +129,20 @@
             </div>
         </section>
     </main>
+
+    <!-- Success Popup Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content glass-panel text-center">
+            <div class="success-icon">
+                <i class='bx bx-check-circle'></i>
+            </div>
+            <h3 class="mt-2 text-gradient" style="font-size: 1.8rem; font-weight: 700;">Thank You!</h3>
+            <p class="mt-2" style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+                Thank you for contacting us! The PrimeTech team will connect with you within 24 hours.
+            </p>
+            <button class="btn btn-primary mt-2 w-full" onclick="closeSuccessModal()" style="border-radius: 0.5rem;">Done</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container grid footer-container">
@@ -142,6 +162,7 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Our Work</a></li>
                     <li><a href="index.html#internship">Internships</a></li>
@@ -170,5 +191,47 @@
         </div>
     </footer>
     <a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
+
+    <!-- Form Submit Logic -->
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state on button
+                const btn = contactForm.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Sending... <i class="bx bx-loader-alt bx-spin"></i>';
+                btn.disabled = true;
+
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Show success modal
+                    successModal.classList.add('active');
+                    // Reset form
+                    contactForm.reset();
+                    // Restore button
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                })
+                .catch(error => {
+                    alert('There was an error sending your message. Please try again.');
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
+            });
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
