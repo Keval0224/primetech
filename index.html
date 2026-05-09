@@ -15,14 +15,14 @@
     <meta property="og:url" content="https://primetech.live/">
     <meta property="og:title" content="PrimeTech Digital Solutions | Web Development & UI/UX Design">
     <meta property="og:description" content="PrimeTech builds high-converting websites, scalable web applications, and intuitive UI/UX designs.">
-    <meta property="og:image" content="https://primetech.live/p-logo.png">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://primetech.live/">
     <meta property="twitter:title" content="PrimeTech Digital Solutions | Web Development & UI/UX Design">
     <meta property="twitter:description" content="PrimeTech builds high-converting websites, scalable web applications, and intuitive UI/UX designs.">
-    <meta property="twitter:image" content="https://primetech.live/p-logo.png">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,12 @@
     <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <!-- Custom JS -->
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
         <div class="nav-container container">
             <a href="index.html" class="brand-logo">
                 <div class="brand-icon">
-                    <img src="p-logo.png" alt="PrimeTech">
+                    <img src="assets/images/p-logo.png" alt="PrimeTech">
                 </div>
                 <div class="brand-text-wrap">
                     <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
@@ -57,11 +57,11 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="pages/portfolio.html" class="nav-link">Portfolio</a></li>
                     <li><a href="#internship" class="nav-link">Internship</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
             </nav>
@@ -181,7 +181,7 @@
                 <div class="portfolio-container grid">
                     <div class="portfolio-card gsap-portfolio">
                         <div class="portfolio-img-wrap">
-                            <video src="project1.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="assets/videos/project1.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
                         </div>
                         <div class="portfolio-overlay">
                             <span class="portfolio-category">E-Commerce</span>
@@ -191,7 +191,7 @@
                     </div>
                     <div class="portfolio-card gsap-portfolio">
                         <div class="portfolio-img-wrap">
-                            <video src="project2.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="assets/videos/project2.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
                         </div>
                         <div class="portfolio-overlay">
                             <span class="portfolio-category">FinTech App</span>
@@ -201,7 +201,7 @@
                     </div>
                     <div class="portfolio-card gsap-portfolio">
                         <div class="portfolio-img-wrap">
-                            <video src="project3.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+                            <video src="assets/videos/project3.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
                         </div>
                         <div class="portfolio-overlay">
                             <span class="portfolio-category">Corporate Web</span>
@@ -262,7 +262,7 @@
                             <li><i class='bx bx-check'></i> Basic SEO Optimization</li>
                             <li><i class='bx bx-check'></i> 1 Month Support</li>
                         </ul>
-                        <a href="pricing-basic.html" class="btn btn-outline w-full">Choose Basic</a>
+                        <a href="pages/pricing-basic.html" class="btn btn-outline w-full">Choose Basic</a>
                     </div>
                     <!-- Standard (Highlighted) -->
                     <div class="pricing-card popular gsap-pricing">
@@ -276,7 +276,7 @@
                             <li><i class='bx bx-check'></i> Performance Optimization</li>
                             <li><i class='bx bx-check'></i> 3 Months Support</li>
                         </ul>
-                        <a href="pricing-standard.html" class="btn btn-primary w-full">Choose Standard</a>
+                        <a href="pages/pricing-standard.html" class="btn btn-primary w-full">Choose Standard</a>
                     </div>
                     <!-- Premium -->
                     <div class="pricing-card gsap-pricing">
@@ -289,7 +289,7 @@
                             <li><i class='bx bx-check'></i> Security Audits</li>
                             <li><i class='bx bx-check'></i> 12 Months Support</li>
                         </ul>
-                        <a href="pricing-premium.html" class="btn btn-outline w-full">Choose Premium</a>
+                        <a href="pages/pricing-premium.html" class="btn btn-outline w-full">Choose Premium</a>
                     </div>
                 </div>
             </div>
@@ -322,7 +322,7 @@
                     <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="btn btn-whatsapp">
                         <i class='bx bxl-whatsapp'></i> Chat on WhatsApp
                     </a>
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="pages/contact.html" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </section>
@@ -334,7 +334,7 @@
             <div class="footer-col">
                 <a href="index.html" class="brand-logo footer-logo">
                     <div class="brand-icon">
-                        <img src="p-logo.png" alt="PrimeTech">
+                        <img src="assets/images/p-logo.png" alt="PrimeTech">
                     </div>
                     <div class="brand-text-wrap">
                         <div class="brand-name"><span class="brand-prime">Prime</span><span
@@ -349,9 +349,9 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Our Work</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/portfolio.html">Our Work</a></li>
                     <li><a href="#internship">Internships</a></li>
                 </ul>
             </div>
@@ -386,3 +386,4 @@
 </body>
 
 </html>
+
