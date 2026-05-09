@@ -65,48 +65,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero Section
+    // Hero Section - Subtler & Snappier
     if (document.querySelector('.gsap-hero')) {
         const heroTimeline = gsap.timeline();
         heroTimeline.fromTo(".gsap-hero", 
-            { y: 50, opacity: 0 }, 
-            { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }
+            { y: 25, opacity: 0 }, 
+            { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: "power2.out" }
         );
         if (document.querySelector('.gsap-mockup')) {
             heroTimeline.fromTo(".gsap-mockup", 
-                { x: 100, opacity: 0 }, 
-                { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" },
-                "-=0.8"
+                { x: 30, opacity: 0 }, 
+                { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.5"
             );
         }
     }
 
-    // General Fade Up
+    // General Fade Up - Clean, Snappy & Play Once (prevents elements hiding on scroll up!)
     gsap.utils.toArray('.gsap-fade-up').forEach(section => {
         gsap.fromTo(section, 
-            { y: 50, opacity: 0 },
+            { y: 25, opacity: 0 },
             {
-                y: 0, opacity: 1, duration: 1, ease: "power2.out",
+                y: 0, opacity: 1, duration: 0.5, ease: "power1.out",
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 80%",
-                    toggleActions: "play none none reverse"
+                    start: "top 85%",
+                    toggleActions: "play none none none"
                 }
             }
         );
     });
 
-    // Sections Stagger Helpers
+    // Sections Stagger Helpers - Subtle Rise, Fast Play, Play Once
     const animateStagger = (target, trigger) => {
         if (document.querySelector(target) && document.querySelector(trigger)) {
             gsap.fromTo(target, 
-                { y: 50, opacity: 0 },
+                { y: 20, opacity: 0 },
                 {
-                    y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out",
+                    y: 0, opacity: 1, duration: 0.45, stagger: 0.1, ease: "power1.out",
                     scrollTrigger: {
                         trigger: trigger,
-                        start: "top 80%",
-                        toggleActions: "play none none reverse"
+                        start: "top 85%",
+                        toggleActions: "play none none none"
                     }
                 }
             );
@@ -114,66 +114,196 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     animateStagger(".gsap-service", ".services-container");
-    animateStagger(".gsap-portfolio", ".portfolio-container");
+    animateStagger(".gsap-portfolio", ".portfolio-rows-container");
     animateStagger(".gsap-pricing", ".pricing-container");
 
-    // Features Stagger
+    // Features Stagger - Gentle Fade-up
     if (document.querySelector('.gsap-feature')) {
         gsap.fromTo(".gsap-feature", 
-            { scale: 0.8, opacity: 0 },
+            { y: 15, opacity: 0 },
             {
-                scale: 1, opacity: 1, duration: 0.6, stagger: 0.15, ease: "back.out(1.7)",
+                y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: "power1.out",
                 scrollTrigger: {
                     trigger: ".features-container",
                     start: "top 85%",
-                    toggleActions: "play none none reverse"
+                    toggleActions: "play none none none"
                 }
             }
         );
     }
 
-    // Process Animation
+    // Process Animation - Minimalist Flow
     if (document.querySelector('.process-container')) {
         gsap.fromTo(".gsap-process", 
-            { y: 30, opacity: 0 },
+            { y: 15, opacity: 0 },
             {
-                y: 0, opacity: 1, duration: 0.6, stagger: 0.25, ease: "power2.out",
-                scrollTrigger: { trigger: ".process-container", start: "top 80%" }
+                y: 0, opacity: 1, duration: 0.4, stagger: 0.12, ease: "power1.out",
+                scrollTrigger: { 
+                    trigger: ".process-container", 
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                }
             }
         );
 
         if (document.getElementById('process-line-fill')) {
             gsap.to("#process-line-fill", {
                 width: "100%",
-                duration: 1.5,
-                ease: "power1.inOut",
-                scrollTrigger: { trigger: ".process-container", start: "top 70%" }
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: { 
+                    trigger: ".process-container", 
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
             });
         }
     }
 
-    // Portfolio Hover & Fullscreen
-    document.querySelectorAll('.portfolio-card').forEach(card => {
-        const video = card.querySelector('.hover-play');
-        if (video) {
-            card.addEventListener('mouseenter', () => video.play().catch(() => {}));
-            
-            card.addEventListener('mouseleave', () => {
-                // Don't pause if currently in fullscreen
-                if (!document.fullscreenElement) {
-                    video.pause();
-                }
-            });
+    // Portfolio Filtering and Dynamic Alternating Row Fix
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioRows = document.querySelectorAll('.portfolio-row');
 
-            // Click to open fullscreen
-            card.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.webkitRequestFullscreen) { /* Safari */
-                    video.webkitRequestFullscreen();
+    const filterProjects = (category) => {
+        let visibleCount = 0;
+        portfolioRows.forEach(row => {
+            const matches = category === 'all' || row.getAttribute('data-category') === category;
+            if (matches) {
+                row.style.display = 'flex';
+                // Delay slightly to trigger transition smoothly
+                setTimeout(() => {
+                    row.style.opacity = '1';
+                    row.style.transform = 'translateY(0)';
+                }, 50);
+
+                // Dynamically alternate layout for visible rows
+                if (visibleCount % 2 === 1) {
+                    row.classList.add('row-reverse');
+                } else {
+                    row.classList.remove('row-reverse');
                 }
-            });
+                visibleCount++;
+            } else {
+                row.style.opacity = '0';
+                row.style.transform = 'translateY(15px)';
+                row.style.display = 'none';
+            }
+        });
+
+        // REFRESH ScrollTrigger: recalculate heights instantly to prevent lower sections from hiding!
+        setTimeout(() => {
+            if (window.ScrollTrigger) {
+                ScrollTrigger.refresh();
+            }
+        }, 150);
+    };
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const category = btn.getAttribute('data-filter');
+            filterProjects(category);
+        });
+    });
+
+    // Initialize layout direction
+    filterProjects('all');
+
+    // Skeleton Loader and Lazy Loading State Manager
+    const portfolioMedias = document.querySelectorAll('.portfolio-media, .portfolio-img-wrap');
+
+    portfolioMedias.forEach(media => {
+        const img = media.querySelector('img');
+        const video = media.querySelector('video');
+
+        if (img) {
+            if (img.complete) {
+                media.classList.remove('skeleton');
+                media.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => {
+                    media.classList.remove('skeleton');
+                    media.classList.add('loaded');
+                });
+                img.addEventListener('error', () => {
+                    media.classList.remove('skeleton');
+                    media.classList.add('loaded');
+                });
+            }
+        } else if (video) {
+            const onVideoLoad = () => {
+                media.classList.remove('skeleton');
+                media.classList.add('loaded');
+            };
+
+            // Wait for metadata or first frames to avoid layout flashing
+            video.addEventListener('loadeddata', onVideoLoad);
+            video.addEventListener('loadedmetadata', onVideoLoad);
+            video.addEventListener('canplay', onVideoLoad);
+            video.addEventListener('error', onVideoLoad);
+            
+            if (video.readyState >= 1) {
+                onVideoLoad();
+            }
         }
+    });
+
+    // Video Hover-Play & Fullscreen Manager
+    const videoContainers = document.querySelectorAll('.portfolio-media, .portfolio-img-wrap, .portfolio-card, .portfolio-row');
+    
+    videoContainers.forEach(container => {
+        const video = container.querySelector('.portfolio-video');
+        if (!video) return;
+
+        // Ensure clean fallback state
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        // Hover Play / Pause
+        container.addEventListener('mouseenter', () => {
+            video.play().catch(err => {
+                // Ignore autoplay/user-interaction blocks
+            });
+        });
+
+        container.addEventListener('mouseleave', () => {
+            video.pause();
+        });
+
+        // Click for Fullscreen with Unmute
+        video.style.cursor = 'zoom-in'; // visually indicate zoom-ability
+        video.title = 'Click to view fullscreen with sound';
+        
+        video.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent card events
+            
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { /* Safari/iOS */
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { /* IE/Edge */
+                video.msRequestFullscreen();
+            }
+            
+            // Unmute in fullscreen for premium audio experience
+            video.muted = false;
+            video.play().catch(err => console.log(err));
+        });
+
+        // Auto-mute again when exiting fullscreen
+        const handleFullscreenChange = () => {
+            const isFullscreen = document.fullscreenElement || 
+                                 document.webkitFullscreenElement || 
+                                 document.msFullscreenElement;
+            if (!isFullscreen) {
+                video.muted = true;
+            }
+        };
+
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('msfullscreenchange', handleFullscreenChange);
     });
 });

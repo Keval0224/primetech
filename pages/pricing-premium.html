@@ -64,51 +64,120 @@
     <main class="page-top">
         <section class="section">
             <div class="container">
-                <div class="pricing-detail-card gsap-fade-up">
-                    <a href="../index.html#pricing" style="color: var(--primary); display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;"><i class='bx bx-left-arrow-alt'></i> Back to Pricing</a>
+                <div class="pricing-explain-container gsap-fade-up">
                     
-                    <h2 style="font-size: 2.5rem; color: var(--text-main);">Premium Plan</h2>
-                    <h3 class="text-gradient" style="font-size: 3rem; margin: 1rem 0;">₹12,999</h3>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">The ultimate package for full-scale web applications, custom platforms, and e-commerce.</p>
-                    
-                    <div class="detail-list">
-                        <div class="detail-item">
-                            <i class='bx bx-devices'></i>
-                            <div>
-                                <h4>Unlimited Pages / Web App</h4>
-                                <p>Limitless content architecture, complex routing, dedicated user dashboards, and robust e-commerce functionality.</p>
-                            </div>
+                    <!-- Left Sidebar Sticky Block -->
+                    <aside class="pricing-sidebar-card">
+                        <a href="../index.html#pricing" class="pricing-back-link">
+                            <i class='bx bx-left-arrow-alt'></i> Back to Pricing
+                        </a>
+                        <span class="pricing-plan-badge">Enterprise</span>
+                        <h2>Premium Plan</h2>
+                        <div class="pricing-price-tag">
+                            <span class="pricing-price-val text-gradient">₹12,999</span>
+                            <span class="pricing-price-cycle">One-Time Development Fee</span>
                         </div>
-                        <div class="detail-item">
-                            <i class='bx bx-code-block'></i>
-                            <div>
-                                <h4>Custom Backend / API</h4>
-                                <p>Dedicated scalable databases, tailored API development, secure user authentication (login/signup), and advanced data management.</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class='bx bx-movie-play'></i>
-                            <div>
-                                <h4>Advanced Animations</h4>
-                                <p>Premium GSAP scroll-triggers, subtle micro-interactions, and engaging 3D elements designed to completely WOW your users.</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
+                        <p class="pricing-explain-desc">The ultimate corporate package designed for large-scale operations, complex database portals, custom backends, and jaw-dropping bespoke digital interfaces.</p>
+                        
+                        <div class="pricing-trust-shield">
                             <i class='bx bx-shield-quarter'></i>
-                            <div>
-                                <h4>Security Audits</h4>
-                                <p>High-level protection against SQL injection and XSS attacks, complete SSL setup, and regular security vulnerability monitoring.</p>
+                            <span>100% Custom Security & SLA Architecture</span>
+                        </div>
+                        
+                        <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I'm%20interested%20in%20the%20Premium%20Plan%20for%20my%20business." target="_blank" class="btn btn-primary" style="text-align: center; justify-content: center;">
+                            Select Premium Plan <i class='bx bx-right-arrow-alt' style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </aside>
+
+                    <!-- Right Main Features Detailed Block -->
+                    <div class="pricing-features-grid">
+                        
+                        <!-- Feature 1 -->
+                        <div class="explain-feature-card">
+                            <div class="explain-icon-box">
+                                <i class='bx bx-devices'></i>
+                            </div>
+                            <div class="explain-info">
+                                <h3>Limitless Web App & Portal Architecture</h3>
+                                <p>Unshackle your digital boundaries. We construct complex multi-level page structures, dedicated client dashboard portals, custom routing logic, and fully scalable corporate directories.</p>
+                                <div class="explain-bullets">
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Unlimited Web Pages</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Interactive Admin Panels</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Bespoke Dashboard Panels</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Custom Subdomain Routing</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="detail-item">
-                            <i class='bx bx-badge-check'></i>
-                            <div>
-                                <h4>12 Months Support & Maintenance</h4>
-                                <p>A full year of priority 24/7 support, regular database backups, scaling assistance, and consistent performance monitoring.</p>
+
+                        <!-- Feature 2 -->
+                        <div class="explain-feature-card">
+                            <div class="explain-icon-box">
+                                <i class='bx bx-code-block'></i>
+                            </div>
+                            <div class="explain-info">
+                                <h3>Scalable Custom Backend & Database Architecture</h3>
+                                <p>Power your application with high-octane engineering. We write dedicated RESTful APIs, design scalable database schemas, and deploy secure token-based user authentication states (login/signup) so your clients' sessions are perfectly guarded.</p>
+                                <div class="explain-bullets">
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> JWT Secure Authentication</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> RESTful API Engineering</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> PostgreSQL & MongoDB Setup</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Encrypted Data Tables</span>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Feature 3 -->
+                        <div class="explain-feature-card">
+                            <div class="explain-icon-box">
+                                <i class='bx bx-movie-play'></i>
+                            </div>
+                            <div class="explain-info">
+                                <h3>High-End Bespoke Cinematic Interactions</h3>
+                                <p>Captivate your prospects instantly. We write beautiful, lightweight, customized WebGL canvas renders, inertia scroll layouts, and micro-physics hover states that establish your brand as a market pioneer.</p>
+                                <div class="explain-bullets">
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Inertia Smooth Scrolling</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> 3D Particle Canvas Backgrounds</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Exquisite GSAP Scroll-Triggers</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Fluid Interactive Hover Effects</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="explain-feature-card">
+                            <div class="explain-icon-box">
+                                <i class='bx bx-shield-quarter'></i>
+                            </div>
+                            <div class="explain-info">
+                                <h3>Enterprise Grade Security Scans & Backups</h3>
+                                <p>Maximum operational shielding. We protect your application code against Cross-Site Scripting (XSS) and SQL injections, implement hardware firewalls, and configure automated daily database backups to secure cloud vaults.</p>
+                                <div class="explain-bullets">
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> XSS & SQL Protection Firewalls</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Automated Daily DB Backups</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Deep Code Security Audits</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> 256-Bit SSL Encryption Setup</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 5 -->
+                        <div class="explain-feature-card">
+                            <div class="explain-icon-box">
+                                <i class='bx bx-badge-check'></i>
+                            </div>
+                            <div class="explain-info">
+                                <h3>1 Year Priority Dedicated SLA Support</h3>
+                                <p>Never walk alone. Enjoy a full 365 days of 24/7 system monitoring, priority core security patches, custom layout scalability, and super-fast SLA troubleshooting responses.</p>
+                                <div class="explain-bullets">
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> 365-Day Dedicated SLA Support</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> 24/7 Automated Server Heartbeats</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Instant SLA Troubleshooting Turnaround</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <a href="contact.html" class="btn btn-primary w-full mt-2" style="margin-top: 3rem; border-radius: 0.5rem; text-align: center;">Get Started with Premium</a>
+
                 </div>
             </div>
         </section>
@@ -118,15 +187,50 @@
         <div class="container grid footer-container">
             <div class="footer-col">
                 <a href="../index.html" class="brand-logo footer-logo">
-                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
+                    <div class="brand-icon">
+                        <img src="../assets/images/p-logo.png" alt="PrimeTech">
+                    </div>
                     <div class="brand-text-wrap">
                         <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Our Work</a></li>
+                    <li><a href="../index.html#internship">Internships</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Web Design</a></li>
+                    <li><a href="services.html">Web Development</a></li>
+                    <li><a href="services.html">Deployment</a></li>
+                    <li><a href="services.html">Social Media Management</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
         </div>
     </footer>
     <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
+    <script src="../js/main.js"></script>
 </body>
 </html>
 

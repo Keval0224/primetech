@@ -148,23 +148,28 @@
             <div class="container">
                 <div class="section-title-wrap gsap-fade-up">
                     <h2 class="section-title">Why Choose Us</h2>
+                    <p class="section-subtitle">We combine technical expertise, beautiful designs, and business strategies to deliver exceptional results.</p>
                 </div>
                 <div class="features-container grid">
                     <div class="feature-item gsap-feature">
                         <div class="feature-icon"><i class='bx bx-stopwatch'></i></div>
                         <h3 class="feature-title">Fast Delivery</h3>
+                        <p class="feature-description">Get your fully functional, high-performance website deployed and online in just 15 days.</p>
                     </div>
                     <div class="feature-item gsap-feature">
                         <div class="feature-icon"><i class='bx bx-purchase-tag-alt'></i></div>
                         <h3 class="feature-title">Affordable Pricing</h3>
+                        <p class="feature-description">Highly competitive premium plans starting at just ₹4,999 with absolutely no hidden costs.</p>
                     </div>
                     <div class="feature-item gsap-feature">
                         <div class="feature-icon"><i class='bx bx-support'></i></div>
                         <h3 class="feature-title">24/7 Support</h3>
+                        <p class="feature-description">Round-the-clock dedicated assistance to ensure your platform remains up, running, and seamless.</p>
                     </div>
                     <div class="feature-item gsap-feature">
                         <div class="feature-icon"><i class='bx bx-medal'></i></div>
                         <h3 class="feature-title">Professional Work</h3>
+                        <p class="feature-description">Meticulously clean code and responsive, user-friendly layouts handcrafted by industry experts.</p>
                     </div>
                 </div>
             </div>
@@ -175,38 +180,79 @@
             <div class="container">
                 <div class="section-title-wrap gsap-fade-up">
                     <h2 class="section-title">Selected Works</h2>
-                    <p class="section-subtitle">Take a look at some of the high-converting digital solutions we've
-                        built.</p>
+                    <p class="section-subtitle">Take a look at some of the high-converting digital solutions we've built.</p>
                 </div>
-                <div class="portfolio-container grid">
-                    <div class="portfolio-card gsap-portfolio">
-                        <div class="portfolio-img-wrap">
-                            <video src="assets/videos/project1.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+
+                <!-- Portfolio Filters -->
+                <div class="portfolio-filters gsap-fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="website">Websites</button>
+                    <button class="filter-btn" data-filter="design">Designs</button>
+                </div>
+
+                <div class="portfolio-rows-container animate-fade-in">
+                    <!-- Project 1: Websites -->
+                    <div class="portfolio-row gsap-portfolio" data-category="website">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Travel & Tourism Booking Platform</span>
+                            <h3 class="portfolio-title">Travler</h3>
+                            <p class="portfolio-desc">A premium travel booking website featuring dynamic destination showcases, detailed booking systems, and smooth exploration filters. Tailored to captivate adventure seekers and deliver effortless travel planning.</p>
+                            <a href="https://traveler.chirag-dev.online" target="_blank" class="btn btn-primary btn-small">View Project</a>
                         </div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">E-Commerce</span>
-                            <h3 class="portfolio-title">Aura Fashion</h3>
-                            <a href="#" class="btn btn-primary btn-small" style="width: max-content;">View Project</a>
+                        <div class="portfolio-media skeleton">
+                            <img src="assets/images/traveler.png" class="portfolio-img" alt="Travler Project" loading="lazy">
                         </div>
                     </div>
-                    <div class="portfolio-card gsap-portfolio">
-                        <div class="portfolio-img-wrap">
-                            <video src="assets/videos/project2.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+
+                    <!-- Project 2: Designs -->
+                    <div class="portfolio-row gsap-portfolio" data-category="design">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Web UI/UX Design</span>
+                            <h3 class="portfolio-title">Tata Safari Web Experience</h3>
+                            <p class="portfolio-desc">A highly cinematic and dark-themed web interface showcase built for automotive enthusiasts. Incorporates smooth glassmorphism, responsive parallax layouts, and stunning visual hierarchies.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Tata%20Safari." target="_blank" class="btn btn-primary btn-small">View Project</a>
                         </div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">FinTech App</span>
-                            <h3 class="portfolio-title">Nexus Banking</h3>
-                            <a href="#" class="btn btn-primary btn-small" style="width: max-content;">View Project</a>
+                        <div class="portfolio-media skeleton">
+                            <video src="assets/videos/tata_safari.mp4" class="portfolio-video" loop muted playsinline preload="metadata"></video>
                         </div>
                     </div>
-                    <div class="portfolio-card gsap-portfolio">
-                        <div class="portfolio-img-wrap">
-                            <video src="assets/videos/project3.mp4" class="portfolio-video hover-play" loop muted playsinline></video>
+
+                    <!-- Project 3: Websites -->
+                    <div class="portfolio-row gsap-portfolio" data-category="website">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Digital E-Book Photo Album</span>
+                            <h3 class="portfolio-title">Memoria</h3>
+                            <p class="portfolio-desc">An exquisite digital e-book and photo album application designed to preserve memories beautifully. Combines sleek page-turn simulations, high-definition gallery systems, and customizable elegant templates.</p>
+                            <a href="https://e-book.chirag-dev.online" target="_blank" class="btn btn-primary btn-small">View Project</a>
                         </div>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Corporate Web</span>
-                            <h3 class="portfolio-title">Zenith Corp</h3>
-                            <a href="#" class="btn btn-primary btn-small" style="width: max-content;">View Project</a>
+                        <div class="portfolio-media skeleton">
+                            <img src="assets/images/e-book.png" class="portfolio-img" alt="Memoria Project" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Designs -->
+                    <div class="portfolio-row gsap-portfolio" data-category="design">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">E-Commerce Product Design</span>
+                            <h3 class="portfolio-title">Nike Shoes Concept Store</h3>
+                            <p class="portfolio-desc">An interactive design landing page tailored for modern sports footwear. Built to highlight aesthetic details with hover-triggered zooming, micro-animations, and fluid responsive grid layouts.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Nike%20Shoes." target="_blank" class="btn btn-primary btn-small">View Project</a>
+                        </div>
+                        <div class="portfolio-media skeleton">
+                            <video src="assets/videos/nike_shoes.mp4" class="portfolio-video" loop muted playsinline preload="metadata"></video>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Designs -->
+                    <div class="portfolio-row gsap-portfolio" data-category="design">
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Audio Brand Landing Page</span>
+                            <h3 class="portfolio-title">Premium Headphone Showcase</h3>
+                            <p class="portfolio-desc">A gorgeous and immersive brand concept showcasing high-end audio devices. Featuring deep gradients, smooth text fades, and rich media assets to tell an emotional product story.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Headphones." target="_blank" class="btn btn-primary btn-small">View Project</a>
+                        </div>
+                        <div class="portfolio-media skeleton">
+                            <video src="assets/videos/headphones.mp4" class="portfolio-video" loop muted playsinline preload="metadata"></video>
                         </div>
                     </div>
                 </div>

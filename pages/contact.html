@@ -66,7 +66,18 @@
     </header>
 
     <main>
-        <section class="contact section page-top" id="contact">
+        <section class="page-hero-section">
+            <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="container gsap-fade-up">
+                <div class="page-hero-breadcrumbs">
+                    <a href="../index.html">Home</a> <i class='bx bx-chevron-right'></i> <span>Contact</span>
+                </div>
+                <h1 class="page-hero-title">Contact Us</h1>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact" style="padding-top: 4rem;">
             <div class="contact-bg-visual">
                <svg viewBox="0 0 800 1000" preserveAspectRatio="none">
                    <path d="M0,0 L0,1000 L500,1000 C800,600 200,300 800,0 Z" fill="url(#contactGrad)" />
@@ -81,7 +92,7 @@
                </svg>
             </div>
 
-            <div class="container grid contact-container">
+            <div class="container grid contact-container" style="position: relative; z-index: 10;">
                 <div class="contact-info">
                     <div>
                         <h2 class="contact-heading">Get in touch</h2>
