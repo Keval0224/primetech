@@ -1,44 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Plan Details | PrimeTech Digital Solutions</title>
-    <meta name="description" content="Detailed breakdown of PrimeTech's Basic web development pricing plan.">
+    <meta name="description" content="Detailed breakdown of PrimeTech's Basic web development pricing plan. Startup package parameters.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom JS -->
     <script src="../js/main.js" defer></script>
-    <style>
-        .pricing-detail-card {
-            padding: 4rem 3rem;
-            border-radius: 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        @media screen and (max-width: 768px) {
-            .pricing-detail-card {
-                padding: 2.5rem 1.5rem;
-            }
-        }
-        .detail-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
-        .detail-item { display: flex; align-items: flex-start; gap: 1rem; }
-        .detail-item i { color: var(--primary); font-size: 1.8rem; margin-top: 0.1rem; }
-        .detail-item div h4 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main); }
-        .detail-item div p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
-    </style>
 </head>
 
 <body>
+    <!-- Immersive Backdrop Glow Orbs -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+    <!-- 3D Floating Shape System -->
+    <div class="scene-3d" id="scene-3d" aria-hidden="true">
+        <div class="float-shape float-shape--ring" data-depth="0.3"></div>
+        <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
+        <div class="float-shape float-shape--cube" data-depth="0.2"></div>
+        <div class="float-shape float-shape--torus" data-depth="0.4"></div>
+        <div class="float-shape float-shape--dot-grid" data-depth="0.15"></div>
+        <div class="float-shape float-shape--blob" data-depth="0.6"></div>
+        <div class="float-shape float-shape--line" data-depth="0.25"></div>
+    </div>
+    <!-- Floating Navigation Bar -->
     <header class="header" id="header">
-        <div class="nav-container container">
+        <div class="nav-container">
             <a href="../index.html" class="brand-logo">
                 <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                 <div class="brand-text-wrap">
@@ -46,22 +50,29 @@
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
+            
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
                     <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
+            
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle"><i class='bx bx-moon'></i></button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class='bx bx-moon' aria-hidden="true"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
-    <main class="page-top">
+    <main style="padding-top: calc(var(--header-height) + 2rem);">
         <section class="section">
             <div class="container">
                 <div class="pricing-explain-container gsap-fade-up">
@@ -77,11 +88,11 @@
                             <span class="pricing-price-val text-gradient">₹4,999</span>
                             <span class="pricing-price-cycle">One-Time Development Fee</span>
                         </div>
-                        <p class="pricing-explain-desc">Perfect for startup businesses, freelancers, or local brands seeking to establish an elite, fully responsive, and professional web presence quickly.</p>
+                        <p class="pricing-explain-desc">Perfect for startups and individuals looking to establish a professional online presence with minimal investment.</p>
                         
                         <div class="pricing-trust-shield">
                             <i class='bx bx-shield-quarter'></i>
-                            <span>100% Pixel Perfect Delivery Guarantee</span>
+                            <span>100% Quality Assurance Guarantee</span>
                         </div>
                         
                         <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I'm%20interested%20in%20the%20Basic%20Plan%20for%20my%20business." target="_blank" class="btn btn-primary" style="text-align: center; justify-content: center;">
@@ -95,17 +106,15 @@
                         <!-- Feature 1 -->
                         <div class="explain-feature-card">
                             <div class="explain-icon-box">
-                                <i class='bx bx-file'></i>
+                                <i class='bx bx-layout'></i>
                             </div>
                             <div class="explain-info">
-                                <h3>5 Pages Custom Crafted Architecture</h3>
-                                <p>We craft 5 completely custom, high-end pages specifically designed around your company's branding rules. This includes crucial sections to convert visitors into prospective buyers.</p>
+                                <h3>5 Pages Custom Architecture</h3>
+                                <p>A custom-designed, lightweight multi-page setup built to present your core business details. Ideal for landing structures, contact portals, service info, and product summaries.</p>
                                 <div class="explain-bullets">
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Homepage</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> About Brand</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Services Detail</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Creative Gallery</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Contact Page</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Clean HTML5/CSS3 Validation</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Fully Customized Design Blocks</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Speed-Optimized Page Routing</span>
                                 </div>
                             </div>
                         </div>
@@ -113,15 +122,15 @@
                         <!-- Feature 2 -->
                         <div class="explain-feature-card">
                             <div class="explain-icon-box">
-                                <i class='bx bx-mobile-alt'></i>
+                                <i class='bx bx-devices'></i>
                             </div>
                             <div class="explain-info">
-                                <h3>Responsive Mobile Design & Optimization</h3>
-                                <p>Over 60% of search traffic originates from mobile devices. Your website's layout transitions in flawless fluid precision across mobile phones, tablets, and full desktop displays.</p>
+                                <h3>Responsive Mobile Design</h3>
+                                <p>A device-responsive fluid layout optimized to render flawlessly on tablets, smartphones, and large screens. Focus on tap-friendly elements, text scaling, and image resizing.</p>
                                 <div class="explain-bullets">
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Smart Touch Interactions</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Cross-Browser Tested</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> High DPI Responsive Screens</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Responsive Grid Frameworks</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Multi-Platform QA Audits</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> High-Quality Media Renders</span>
                                 </div>
                             </div>
                         </div>
@@ -129,15 +138,15 @@
                         <!-- Feature 3 -->
                         <div class="explain-feature-card">
                             <div class="explain-icon-box">
-                                <i class='bx bx-search-alt-2'></i>
+                                <i class='bx bx-search-alt'></i>
                             </div>
                             <div class="explain-info">
-                                <h3>Modern On-Page SEO Foundations</h3>
-                                <p>A beautiful website is only valuable if clients can locate it. We program solid SEO standards—including semantic headers, keyword titles, and rapid structural indexing tags—directly into the code.</p>
+                                <h3>Modern On-Page SEO</h3>
+                                <p>Incorporate keyword tagging, clean meta titles, structured headings, and search optimization foundations to get your website index-ready for Google search results.</p>
                                 <div class="explain-bullets">
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Google Search Console Setup</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Semantic Header Hierarchy</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Image Metadata Alt tags</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Structural Heading Hierarchy</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Custom Title & Meta Setup</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Image Alt Tags Formatting</span>
                                 </div>
                             </div>
                         </div>
@@ -145,15 +154,15 @@
                         <!-- Feature 4 -->
                         <div class="explain-feature-card">
                             <div class="explain-icon-box">
-                                <i class='bx bx-headphone'></i>
+                                <i class='bx bx-support'></i>
                             </div>
                             <div class="explain-info">
-                                <h3>30-Days Complete Support coverage</h3>
-                                <p>We stand fully behind our development quality. After your platform goes live on the internet, we provide 30 days of free ongoing maintenance support to protect your operations.</p>
+                                <h3>30 Days Complete Support</h3>
+                                <p>Dedicated post-launch bug fixing, standard text updates, and general performance assistance to ensure your platform runs smoothly after launch.</p>
                                 <div class="explain-bullets">
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Bug & Fix Diagnostics</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Copywriting Minor Edits</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Layout Tuning</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Fast Email Support Responses</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Server Connection Audits</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Core File Updates</span>
                                 </div>
                             </div>
                         </div>
@@ -161,15 +170,15 @@
                         <!-- Feature 5 -->
                         <div class="explain-feature-card">
                             <div class="explain-icon-box">
-                                <i class='bx bx-server'></i>
+                                <i class='bx bx-cloud-lightning'></i>
                             </div>
                             <div class="explain-info">
                                 <h3>Hosting Setup & Domain Integration</h3>
-                                <p>Configuring DNS setups can be exhausting. Our technical experts handle the entire hosting deployment pipeline, mapping your custom domain name and establishing secure HTTPS access.</p>
+                                <p>Seamless DNS record setup, SSL certificate integration, and modern cloud deployment, helping you launch on your own custom domain smoothly.</p>
                                 <div class="explain-bullets">
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Free Cloud Deployment</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Secure SSL Certificate</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> DNS Domain Mapping</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> DNS Mapping & Propagation</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Free SSL Encryption Binding</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> CDN Performance Routing</span>
                                 </div>
                             </div>
                         </div>
@@ -181,20 +190,24 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
-                <a href="../index.html" class="brand-logo footer-logo">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
                     <div class="brand-icon">
                         <img src="../assets/images/p-logo.png" alt="PrimeTech">
                     </div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-name">
+                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                        </div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
+            
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -205,6 +218,7 @@
                     <li><a href="../index.html#internship">Internships</a></li>
                 </ul>
             </div>
+            
             <div class="footer-col">
                 <h3>Services</h3>
                 <ul class="footer-links">
@@ -214,22 +228,33 @@
                     <li><a href="services.html">Social Media Management</a></li>
                 </ul>
             </div>
+            
             <div class="footer-col">
                 <h3>Contact</h3>
                 <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
+                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
+                    </a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
+                        <i class='bx bxl-instagram'></i> @primetech.solution_
+                    </a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
+                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        
+        <div class="container footer-bottom">
             <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
         </div>
     </footer>
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
-    <script src="../js/main.js"></script>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
 </body>
+
 </html>
-
-

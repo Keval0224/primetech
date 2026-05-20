@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | PrimeTech Digital Solutions</title>
-    <meta name="description" content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
-    <meta name="keywords" content="about PrimeTech, tech agency team, Keval Parmar, Chirag Parmar, digital solutions company">
+    <meta name="description"
+        content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
+    <meta name="keywords"
+        content="about PrimeTech, tech agency team, Keval Parmar, Chirag Parmar, digital solutions company">
     <meta name="author" content="PrimeTech Digital Solutions">
     <link rel="canonical" href="https://primetech.live/about.html">
 
@@ -14,42 +16,75 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://primetech.live/about.html">
     <meta property="og:title" content="About Us | PrimeTech Digital Solutions">
-    <meta property="og:description" content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
+    <meta property="og:description"
+        content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
     <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://primetech.live/about.html">
     <meta property="twitter:title" content="About Us | PrimeTech Digital Solutions">
-    <meta property="twitter:description" content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
+    <meta property="twitter:description"
+        content="Learn about PrimeTech Digital Solutions, our vision, and the leadership team driving innovation in web development and design.">
     <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- GSAP -->
+
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
     <!-- Custom JS -->
     <script src="../js/main.js" defer></script>
 </head>
 
 <body>
+    <!-- Immersive Backdrop Glow Orbs -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+    <!-- 3D Floating Shape System -->
+    <div class="scene-3d" id="scene-3d" aria-hidden="true">
+        <div class="float-shape float-shape--ring" data-depth="0.3"></div>
+        <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
+        <div class="float-shape float-shape--cube" data-depth="0.2"></div>
+        <div class="float-shape float-shape--torus" data-depth="0.4"></div>
+        <div class="float-shape float-shape--dot-grid" data-depth="0.15"></div>
+        <div class="float-shape float-shape--blob" data-depth="0.6"></div>
+        <div class="float-shape float-shape--line" data-depth="0.25"></div>
+    </div>
+
+    <!-- Floating Navigation Bar -->
     <header class="header" id="header">
-        <div class="nav-container container">
+        <div class="nav-container">
             <a href="../index.html" class="brand-logo">
                 <div class="brand-icon">
-                    <img src="../assets/images/p-logo.png" alt="PrimeTech">
+                    <img src="../assets/images/p-logo.png" alt="PrimeTech logo">
                 </div>
                 <div class="brand-text-wrap">
-                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                    <div class="brand-name">
+                        <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
                     </div>
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
+
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -59,20 +94,21 @@
                     <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
+
             <div class="nav-actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class='bx bx-moon'></i>
+                    <i class='bx bx-moon' aria-hidden="true"></i>
                 </button>
-                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Page Hero Section -->
         <section class="page-hero-section">
-            <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="page-hero-overlay"></div>
             <div class="container gsap-fade-up">
                 <div class="page-hero-breadcrumbs">
@@ -82,122 +118,159 @@
             </div>
         </section>
 
+        <!-- About Intro Section -->
         <section class="about section" id="about" style="padding-top: 4rem;">
             <div class="container">
-                
-                <div class="about-container grid">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;"
+                    class="grid md-col-1">
                     <div class="about-data gsap-fade-up">
-                        <h3 class="contact-subheading">Who We Are</h3>
-                        <p class="mt-2 text-muted" style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-                            At PrimeTech Digital Solutions, we don't just write code—we craft digital experiences. Founded with a vision to empower businesses, we specialize in building high-performing, user-centric websites, scalable web applications, and intuitive UI/UX designs.
+                        <span class="section-tag">Who We Are</span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">We craft exceptional
+                            digital experiences</h2>
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            At PrimeTech Digital Solutions, we don't just write code—we craft digital experiences.
+                            Founded with a vision to empower businesses, we specialize in building high-performing,
+                            user-centric websites, scalable web applications, and intuitive UI/UX designs.
                         </p>
-                        <p class="mt-2" style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-                            Our team of expert developers, designers, and strategists work collaboratively to transform complex problems into elegant digital solutions. Whether you're a startup looking to make your mark or an established enterprise ready for a digital overhaul, we have the skills and dedication to bring your vision to life.
+                        <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                            Our team of expert developers, designers, and strategists work collaboratively to transform
+                            complex problems into elegant digital solutions. Whether you're a startup looking to make
+                            your mark or an established enterprise ready for a digital overhaul, we have the skills and
+                            dedication to bring your vision to life.
                         </p>
-                        
-                        <div class="stats-grid grid mt-2" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem; text-align: center; margin-top: 3rem;">
-                            <div class="stat-box dark-panel" style="padding: 1.5rem;">
+
+                        <!-- Statistics Panels -->
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem;"
+                            class="grid col-3">
+                            <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
                                 <h3 class="text-gradient" style="font-size: 2.5rem; font-weight: 800;">50+</h3>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Projects Delivered</p>
+                                <p
+                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-top: 0.25rem;">
+                                    Projects Delivered</p>
                             </div>
-                            <div class="stat-box dark-panel" style="padding: 1.5rem;">
+                            <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
                                 <h3 class="text-gradient" style="font-size: 2.5rem; font-weight: 800;">100%</h3>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Client Satisfaction</p>
+                                <p
+                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-top: 0.25rem;">
+                                    Client Satisfaction</p>
                             </div>
-                            <div class="stat-box dark-panel" style="padding: 1.5rem;">
+                            <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
                                 <h3 class="text-gradient" style="font-size: 2.5rem; font-weight: 800;">24/7</h3>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Support</p>
+                                <p
+                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-top: 0.25rem;">
+                                    Dedicated Support</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="about-image gsap-fade-up" style="display: flex; justify-content: center; align-items: center;">
-                        <!-- You can replace this placeholder with an actual team photo or office image -->
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PrimeTech Team" style="border-radius: 1.5rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); width: 100%; object-fit: cover; aspect-ratio: 4/3;">
+
+                    <div class="about-image gsap-fade-up">
+                        <div class="mockup-wrapper skeleton" style="aspect-ratio: 4/3;">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="PrimeTech Team" class="mockup-img"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Team Section -->
         <section class="team section" id="team">
             <div class="container">
                 <div class="section-title-wrap gsap-fade-up">
-                    <h2 class="section-title">Our Leadership</h2>
-                    <p class="section-subtitle">The driving force behind PrimeTech</p>
+                    <span class="section-tag">Leadership</span>
+                    <h2 class="section-title">Our Leaders</h2>
+                    <p class="section-subtitle">The driving force behind PrimeTech digital excellence.</p>
                 </div>
-                
-                <div class="team-container grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem;">
+
+                <div class="team-container grid">
                     <!-- Founder -->
-                    <div class="team-card dark-panel text-center gsap-fade-up" style="border-color: var(--primary);">
-                        <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);">
-                            <img src="../assets/images/keval.jpg.jpeg" alt="Keval Parmar" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    <div class="team-card glass-panel gsap-fade-up">
+                        <div class="team-avatar">
+                            <img src="../assets/images/keval.jpg.jpeg" alt="Keval Parmar Photo">
                         </div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Keval Parmar</h3>
-                        <p class="text-gradient" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Founder</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Visionary leader passionate about tech innovation and digital solutions.</p>
+                        <h3>Keval Parmar</h3>
+                        <p class="text-gradient" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem;">
+                            Founder</p>
+                        <p class="text-muted">Visionary leader passionate about tech innovation and digital solutions.
+                        </p>
                     </div>
 
                     <!-- Co-Founder 1 -->
-                    <div class="team-card dark-panel text-center gsap-fade-up">
-                        <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 3px solid var(--border-color);">
-                            <img src="../assets/images/chirag parmar.jpeg" alt="Chirag Parmar" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    <div class="team-card glass-panel gsap-fade-up">
+                        <div class="team-avatar">
+                            <img src="../assets/images/chirag parmar.jpeg" alt="Chirag Parmar Photo">
                         </div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Chirag Parmar</h3>
-                        <p style="color: var(--text-muted); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Co-Founder & Tech Leader</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Passionate developer focused on building efficient, modern web applications.</p>
+                        <h3>Chirag Parmar</h3>
+                        <p class="text-gradient" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem;">
+                            Co-Founder & Tech Leader</p>
+                        <p class="text-muted">Passionate developer focused on building efficient, modern web
+                            applications.</p>
                     </div>
 
                     <!-- Co-Founder 2 -->
-                    <div class="team-card dark-panel text-center gsap-fade-up">
-                        <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 3px solid var(--border-color);">
-                            <img src="../assets/images/Rishabh.jpeg" alt="Rishabh Parmar" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    <div class="team-card glass-panel gsap-fade-up">
+                        <div class="team-avatar">
+                            <img src="../assets/images/Rishabh.jpeg" alt="Rishabh Parmar Photo">
                         </div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Rishabh Parmar</h3>
-                        <p style="color: var(--text-muted); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Co-Founder & DevOps Specialist</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Enthusiastic about cloud technologies, automating deployments, and smooth operations.</p>
+                        <h3>Rishabh Parmar</h3>
+                        <p class="text-gradient" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem;">
+                            Co-Founder & DevOps Specialist</p>
+                        <p class="text-muted">Enthusiastic about cloud technologies, automating deployments, and smooth
+                            operations.</p>
                     </div>
 
                     <!-- Co-Founder 3 -->
-                    <div class="team-card dark-panel text-center gsap-fade-up">
-                        <div class="team-avatar" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 3px solid var(--border-color);">
-                            <img src="../assets/images/mahin.jpeg" alt="Mahin Gunjal" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    <div class="team-card glass-panel gsap-fade-up">
+                        <div class="team-avatar">
+                            <img src="../assets/images/mahin.jpeg" alt="Mahin Gunjal Photo">
                         </div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Mahin Gunjal</h3>
-                        <p style="color: var(--text-muted); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Co-Founder & Design Leader</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Creative mind behind intuitive user experiences and stunning aesthetics.</p>
+                        <h3>Mahin Gunjal</h3>
+                        <p class="text-gradient" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem;">
+                            Co-Founder & Design Leader</p>
+                        <p class="text-muted">Creative mind behind intuitive user experiences and stunning aesthetics.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="vision section" style="background: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+
+        <!-- Mission Quote Section -->
+        <section class="vision section"
+            style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container text-center gsap-fade-up" style="max-width: 800px; margin: 0 auto;">
-                <i class='bx bxs-quote-alt-left text-gradient' style="font-size: 3rem; margin-bottom: 1.5rem; display: inline-block;"></i>
-                <h2 style="font-size: 2rem; font-weight: 600; line-height: 1.4; margin-bottom: 2rem;">
-                    "Our mission is to bridge the gap between imagination and technology, delivering products that not only work flawlessly but leave a lasting impression."
+                <i class='bx bxs-quote-alt-left text-gradient'
+                    style="font-size: 4rem; margin-bottom: 1.5rem; display: inline-block;"></i>
+                <h2 style="font-size: 2.25rem; font-weight: 700; line-height: 1.4; margin-bottom: 2rem;">
+                    "Our mission is to bridge the gap between imagination and technology, delivering products that not
+                    only work flawlessly but leave a lasting impression."
                 </h2>
-                <h4 style="color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">The PrimeTech Vision</h4>
+                <h4
+                    style="color: var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">
+                    The PrimeTech Vision</h4>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
-                <a href="../index.html" class="brand-logo footer-logo">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
                     <div class="brand-icon">
-                        <img src="../assets/images/p-logo.png" alt="PrimeTech">
+                        <img src="../assets/images/p-logo.png" alt="PrimeTech Logo">
                     </div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name"><span class="brand-prime">Prime</span><span
-                                class="brand-tech">Tech</span></div>
+                        <div class="brand-name">
+                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                        </div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge
                     technology and unparalleled design expertise.</p>
             </div>
+
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -208,6 +281,7 @@
                     <li><a href="../index.html#internship">Internships</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h3>Services</h3>
                 <ul class="footer-links">
@@ -217,23 +291,34 @@
                     <li><a href="services.html">Social Media Management</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h3>Contact</h3>
                 <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i>
-                        primetech.pvt001@gmail.com</a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
+                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
+                    </a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
+                        <i class='bx bxl-instagram'></i> @primetech.solution_
+                    </a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
+                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+
+        <div class="container footer-bottom">
             <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
         </div>
     </footer>
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project."
+        target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
 </body>
 
 </html>
-
-

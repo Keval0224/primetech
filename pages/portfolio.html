@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -23,31 +23,61 @@
     <meta property="twitter:title" content="Portfolio | PrimeTech Digital Solutions">
     <meta property="twitter:description" content="View PrimeTech's portfolio of high-converting websites, applications, and UI/UX design projects.">
     <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- GSAP -->
+    
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    
+    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom JS -->
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
+    <!-- Immersive Backdrop Glow Orbs -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+    <!-- 3D Floating Shape System -->
+    <div class="scene-3d" id="scene-3d" aria-hidden="true">
+        <div class="float-shape float-shape--ring" data-depth="0.3"></div>
+        <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
+        <div class="float-shape float-shape--cube" data-depth="0.2"></div>
+        <div class="float-shape float-shape--torus" data-depth="0.4"></div>
+        <div class="float-shape float-shape--dot-grid" data-depth="0.15"></div>
+        <div class="float-shape float-shape--blob" data-depth="0.6"></div>
+        <div class="float-shape float-shape--line" data-depth="0.25"></div>
+    </div>
+    <!-- Floating Navigation Bar -->
     <header class="header" id="header">
-        <div class="nav-container container">
+        <div class="nav-container">
             <a href="../index.html" class="brand-logo">
                 <div class="brand-icon">
                     <img src="../assets/images/p-logo.png" alt="PrimeTech">
                 </div>
                 <div class="brand-text-wrap">
-                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                    <div class="brand-name">
+                        <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
                     </div>
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
+            
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -57,17 +87,20 @@
                     <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="nav-close" id="nav-close"><i class='bx bx-x'></i></div>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
+            
             <div class="nav-actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class='bx bx-moon'></i>
+                    <i class='bx bx-moon' aria-hidden="true"></i>
                 </button>
-                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
+    <main>
+        <!-- Page Hero Section -->
         <section class="page-hero-section">
             <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="page-hero-overlay"></div>
@@ -82,12 +115,13 @@
         <!-- Website Projects Section -->
         <section class="portfolio section" id="websites" style="padding-top: 4rem;">
             <div class="container">
-                <div class="section-title-wrap">
+                <div class="section-title-wrap gsap-fade-up">
                     <h2 class="section-title">Website Projects</h2>
                     <p class="section-subtitle">Stunning, responsive and functional web experiences</p>
                 </div>
 
-                <div class="portfolio-container grid">
+                <div class="portfolio-container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                    <!-- Project 1 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <img src="../assets/images/traveler.png" class="portfolio-img" alt="Travler Project" loading="lazy">
@@ -95,10 +129,12 @@
                         <div class="portfolio-content">
                             <span>Travel & Booking Platform</span>
                             <h3>Travler</h3>
-                            <p class="mt-1" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">A premium travel booking website featuring dynamic destination showcases, detailed booking systems, and smooth exploration filters.</p>
-                            <a href="https://traveler.chirag-dev.online" target="_blank" class="btn btn-primary btn-small">View Project</a>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A premium travel booking website featuring dynamic destination showcases, detailed booking systems, and smooth exploration filters.</p>
+                            <a href="https://traveler.chirag-dev.online" target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
+                    
+                    <!-- Project 2 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <img src="../assets/images/e-book.png" class="portfolio-img" alt="Memoria Project" loading="lazy">
@@ -106,8 +142,8 @@
                         <div class="portfolio-content">
                             <span>Digital Photo Album</span>
                             <h3>Memoria</h3>
-                            <p class="mt-1" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">A digital e-book photo album platform providing dynamic memories sharing, personalized pages, and high-fidelity layouts.</p>
-                            <a href="https://e-book.chirag-dev.online" target="_blank" class="btn btn-primary btn-small">View Project</a>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A digital e-book photo album platform providing dynamic memories sharing, personalized pages, and high-fidelity layouts.</p>
+                            <a href="https://e-book.chirag-dev.online" target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -115,45 +151,53 @@
         </section>
 
         <!-- Creative UI/UX Designs Section -->
-        <section class="portfolio section" id="designs">
+        <section class="portfolio section" id="designs" style="padding-top: 2rem;">
             <div class="container">
-                <div class="section-title-wrap">
+                <div class="section-title-wrap gsap-fade-up">
                     <h2 class="section-title">Creative UI/UX Designs</h2>
                     <p class="section-subtitle">Cinematic interfaces and micro-interactions built to engage</p>
                 </div>
 
-                <div class="portfolio-container grid">
+                <div class="portfolio-container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                    <!-- Project 3 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
-                            <video src="../assets/videos/tata_safari.mp4" class="portfolio-video hover-play" loop muted playsinline preload="metadata"></video>
+                            <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
+                            <video src="../assets/videos/tata_safari.mp4" class="portfolio-video" loop muted playsinline preload="metadata" style="cursor: zoom-in;"></video>
                         </div>
                         <div class="portfolio-content">
                             <span>Automotive Cinematic UI</span>
                             <h3>Tata Safari Experience</h3>
-                            <p class="mt-1" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">A high-fidelity immersive web experience showcase with parallax layouts and dark-mode aesthetics.</p>
-                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Tata%20Safari." target="_blank" class="btn btn-primary btn-small">View Project</a>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A high-fidelity immersive web experience showcase with parallax layouts and dark-mode aesthetics.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Tata%20Safari." target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
+                    
+                    <!-- Project 4 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
-                            <video src="../assets/videos/nike_shoes.mp4" class="portfolio-video hover-play" loop muted playsinline preload="metadata"></video>
+                            <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
+                            <video src="../assets/videos/nike_shoes.mp4" class="portfolio-video" loop muted playsinline preload="metadata" style="cursor: zoom-in;"></video>
                         </div>
                         <div class="portfolio-content">
                             <span>Dynamic E-Commerce</span>
                             <h3>Nike Shoes Store</h3>
-                            <p class="mt-1" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">An interactive conceptual footwear store with fluid animations, micro-interactions, and premium showcases.</p>
-                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Nike%20Shoes%20Store." target="_blank" class="btn btn-primary btn-small">View Project</a>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">An interactive conceptual footwear store with fluid animations, micro-interactions, and premium showcases.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Nike%20Shoes%20Store." target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
+                    
+                    <!-- Project 5 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
-                            <video src="../assets/videos/headphones.mp4" class="portfolio-video hover-play" loop muted playsinline preload="metadata"></video>
+                            <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
+                            <video src="../assets/videos/headphones.mp4" class="portfolio-video" loop muted playsinline preload="metadata" style="cursor: zoom-in;"></video>
                         </div>
                         <div class="portfolio-content">
                             <span>Immersive Audio Landing</span>
                             <h3>Premium Headphones</h3>
-                            <p class="mt-1" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">An elegant minimal presentation for audio hardware, focusing on typography, sleek transitions, and detailed features.</p>
-                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Premium%20Headphones." target="_blank" class="btn btn-primary btn-small">View Project</a>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">An elegant minimal presentation for audio hardware, focusing on typography, sleek transitions, and detailed features.</p>
+                            <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Premium%20Headphones." target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -161,22 +205,24 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
-                <a href="../index.html" class="brand-logo footer-logo">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
                     <div class="brand-icon">
                         <img src="../assets/images/p-logo.png" alt="PrimeTech">
                     </div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name"><span class="brand-prime">Prime</span><span
-                                class="brand-tech">Tech</span></div>
+                        <div class="brand-name">
+                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
+                        </div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
-                <p class="footer-description">Forging the next generation of digital products with cutting-edge
-                    technology and unparalleled design expertise.</p>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
+            
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -187,6 +233,7 @@
                     <li><a href="../index.html#internship">Internships</a></li>
                 </ul>
             </div>
+            
             <div class="footer-col">
                 <h3>Services</h3>
                 <ul class="footer-links">
@@ -196,23 +243,33 @@
                     <li><a href="services.html">Social Media Management</a></li>
                 </ul>
             </div>
+            
             <div class="footer-col">
                 <h3>Contact</h3>
                 <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i>
-                        primetech.pvt001@gmail.com</a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
+                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
+                    </a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
+                        <i class='bx bxl-instagram'></i> @primetech.solution_
+                    </a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
+                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        
+        <div class="container footer-bottom">
             <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
         </div>
     </footer>
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp"><i class='bx bxl-whatsapp'></i></a>
-    <script src="../js/main.js"></script>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
 </body>
 
 </html>
-
