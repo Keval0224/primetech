@@ -1,0 +1,159 @@
+/* inner-pages.css */
+/* Centralized CSS for Blog, Locations, and Services detailed pages */
+
+.detailed-content-section {
+    padding: 5rem 0;
+    background: var(--bg-main);
+    overflow: hidden; /* Prevent horizontal scroll on mobile */
+    box-sizing: border-box;
+}
+
+.detailed-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    width: 100%;
+}
+
+.deep-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.deep-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+    word-break: break-word;
+}
+
+.deep-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    word-break: break-word;
+}
+
+.deep-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+}
+
+.deep-content ul, .deep-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.deep-content li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
+}
+
+/* Sidebar widgets */
+.service-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.sidebar-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--glass-shadow);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    color: var(--text-main);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+.cta-box {
+    text-align: center;
+}
+
+.cta-box p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* FAQ Mobile Fixes overriding inline styles if needed */
+.inner-faq {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inner-faq > div {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+    .detailed-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .detailed-content-section {
+        padding: 3rem 0;
+    }
+    .detailed-layout {
+        gap: 2.5rem;
+    }
+    .deep-content h2 {
+        font-size: 1.75rem;
+        margin-top: 2rem;
+    }
+    .deep-content h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+    .sidebar-card {
+        padding: 1.5rem;
+    }
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
