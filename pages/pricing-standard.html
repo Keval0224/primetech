@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 
 <head>
@@ -11,26 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
-    
-    <!-- Lenis Smooth Scroll CDN -->
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-    
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    
-    <!-- Custom JS -->
     <script src="../js/main.js" defer></script>
 </head>
 
 <body>
-    <!-- Immersive Backdrop Glow Orbs -->
     <div class="noise-overlay"></div>
     <div class="glow-wrapper">
         <div class="glow-orb glow-orb-1"></div>
         <div class="glow-orb glow-orb-2"></div>
     </div>
-    <!-- 3D Floating Shape System -->
     <div class="scene-3d" id="scene-3d" aria-hidden="true">
         <div class="float-shape float-shape--ring" data-depth="0.3"></div>
         <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
@@ -40,7 +32,7 @@
         <div class="float-shape float-shape--blob" data-depth="0.6"></div>
         <div class="float-shape float-shape--line" data-depth="0.25"></div>
     </div>
-    <!-- Floating Navigation Bar -->
+
     <header class="header" id="header">
         <div class="nav-container">
             <a href="../index.html" class="brand-logo">
@@ -50,7 +42,6 @@
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
-            
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -62,27 +53,100 @@
                 </ul>
                 <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
-            
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class='bx bx-moon' aria-hidden="true"></i>
-                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
                 <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: calc(var(--header-height) + 2rem);">
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="../index.html#pricing">Pricing</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Standard Plan</span>
+                        </div>
+                        <p class="pg-hero-kicker">Most Popular</p>
+                        <h1 class="pg-hero-title">
+                            Standard <br><span>Plan</span>
+                        </h1>
+                        <p class="pg-hero-sub">Ideal for growing brands — custom CMS integration, local SEO optimization, 90+ Lighthouse performance score, and 90 days of dedicated SLA support.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="contact.html?package=standard" class="btn btn-primary btn-cta">
+                                Get Started <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <a href="pricing-premium.html" class="btn btn-outline btn-cta">
+                                Upgrade Premium <i class='bx bx-chevrons-up'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-purchase-tag'></i>
+                                <span>Starting ₹9,999</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-time-five'></i>
+                                <span>30-Day Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Orbital Interactive System -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-chart'></i>
+                                    <span>High Growth</span>
+                                </div>
+                                <div class="fp-title">₹9,999 Only</div>
+                                <div class="fp-desc">Includes up to 15 responsive pages, full CMS control panels, and custom analytics.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">30d</div>
+                                <div class="fp-stat-lbl">Delivery SLA</div>
+                            </div>
+
+                            <!-- Orbit Rings -->
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Figma UI/UX"><i class='bx bxl-figma'></i></div>
+                                <div class="orbit-node" title="React Engine"><i class='bx bxl-react'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="JavaScript Code"><i class='bx bxl-javascript'></i></div>
+                                <div class="orbit-node" title="Node Backend"><i class='bx bxl-nodejs'></i></div>
+                            </div>
+
+                            <!-- Orbit Center -->
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Logo" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <div class="pricing-explain-container gsap-fade-up">
-                    
-                    <!-- Left Sidebar Sticky Block -->
                     <aside class="pricing-sidebar-card">
                         <div style="position: absolute; top: 0; right: 0; background: var(--primary); color: #ffffff; padding: 0.4rem 1.2rem; border-bottom-left-radius: 1.25rem; font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">Most Popular</div>
-                        <a href="../index.html#pricing" class="pricing-back-link">
-                            <i class='bx bx-left-arrow-alt'></i> Back to Pricing
-                        </a>
+                        <a href="../index.html#pricing" class="pricing-back-link"><i class='bx bx-left-arrow-alt'></i> Back to Pricing</a>
                         <span class="pricing-plan-badge">Growth</span>
                         <h2>Standard Plan</h2>
                         <div class="pricing-price-tag">
@@ -90,42 +154,27 @@
                             <span class="pricing-price-cycle">One-Time Development Fee</span>
                         </div>
                         <p class="pricing-explain-desc">Ideal for expanding corporate brands, agencies, and service providers requiring detailed blogging networks, CMS management, and high search visibility.</p>
-                        
-                        <div class="pricing-trust-shield">
-                            <i class='bx bx-shield-quarter'></i>
-                            <span>100% Pixel Perfect Delivery Guarantee</span>
-                        </div>
-                        
-                        <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I'm%20interested%20in%20the%20Standard%20Plan%20for%20my%20business." target="_blank" class="btn btn-primary" style="text-align: center; justify-content: center;">
-                            Select Standard Plan <i class='bx bx-right-arrow-alt' style="margin-left: 0.5rem;"></i>
-                        </a>
+                        <div class="pricing-trust-shield"><i class='bx bx-shield-quarter'></i><span>100% Pixel Perfect Delivery Guarantee</span></div>
+                        <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I'm%20interested%20in%20the%20Standard%20Plan%20for%20my%20business." target="_blank" class="btn btn-primary" style="text-align: center; justify-content: center;">Select Standard Plan <i class='bx bx-right-arrow-alt' style="margin-left: 0.5rem;"></i></a>
                     </aside>
 
-                    <!-- Right Main Features Detailed Block -->
                     <div class="pricing-features-grid">
-                        
-                        <!-- Feature 1 -->
                         <div class="explain-feature-card">
-                            <div class="explain-icon-box">
-                                <i class='bx bx-layer'></i>
-                            </div>
+                            <div class="explain-icon-box"><i class='bx bx-layer'></i></div>
                             <div class="explain-info">
                                 <h3>Up to 15 Pages Corporate Architecture</h3>
                                 <p>Broaden your digital reach. We structure up to 15 high-fidelity pages to support detailed breakdowns, multi-layered service pages, visual case studies, and corporate profiles.</p>
                                 <div class="explain-bullets">
                                     <span class="explain-bullet"><i class='bx bx-check'></i> Business Case Studies</span>
                                     <span class="explain-bullet"><i class='bx bx-check'></i> Multi-Service Landings</span>
-                                    <span class="explain-bullet"><i class='bx bx-check'></i> Team & Careers Portals</span>
+                                    <span class="explain-bullet"><i class='bx bx-check'></i> Team &amp; Careers Portals</span>
                                     <span class="explain-bullet"><i class='bx bx-check'></i> Detailed Blogging Engine</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Feature 2 -->
                         <div class="explain-feature-card">
-                            <div class="explain-icon-box">
-                                <i class='bx bx-data'></i>
-                            </div>
+                            <div class="explain-icon-box"><i class='bx bx-data'></i></div>
                             <div class="explain-info">
                                 <h3>CMS Content Management System Integration</h3>
                                 <p>Gain absolute authority over your data. We integrate an intuitive no-code admin dashboard that enables your team to publish blogs, update texts, and refresh layout graphics without writing a single line of code.</p>
@@ -137,13 +186,10 @@
                             </div>
                         </div>
 
-                        <!-- Feature 3 -->
                         <div class="explain-feature-card">
-                            <div class="explain-icon-box">
-                                <i class='bx bx-line-chart'></i>
-                            </div>
+                            <div class="explain-icon-box"><i class='bx bx-line-chart'></i></div>
                             <div class="explain-info">
-                                <h3>Advanced Professional SEO & Tracking Suite</h3>
+                                <h3>Advanced Professional SEO &amp; Tracking Suite</h3>
                                 <p>Rank above your competitors. We implement schema rich snippets, auto-updating XML sitemaps, structural index mappings, and configure Google Analytics dashboards so you can track traffic source conversions in real time.</p>
                                 <div class="explain-bullets">
                                     <span class="explain-bullet"><i class='bx bx-check'></i> Structural Schema Markup</span>
@@ -154,11 +200,8 @@
                             </div>
                         </div>
 
-                        <!-- Feature 4 -->
                         <div class="explain-feature-card">
-                            <div class="explain-icon-box">
-                                <i class='bx bx-rocket'></i>
-                            </div>
+                            <div class="explain-icon-box"><i class='bx bx-rocket'></i></div>
                             <div class="explain-info">
                                 <h3>90+ Lighthouse Performance Engineering</h3>
                                 <p>Speed is the ultimate luxury. We compress digital imagery into modern WebP formats, minify system styling/scripts, and establish robust caching headers to guarantee rapid loading and index rank priority.</p>
@@ -171,11 +214,8 @@
                             </div>
                         </div>
 
-                        <!-- Feature 5 -->
                         <div class="explain-feature-card">
-                            <div class="explain-icon-box">
-                                <i class='bx bx-support'></i>
-                            </div>
+                            <div class="explain-icon-box"><i class='bx bx-support'></i></div>
                             <div class="explain-info">
                                 <h3>90-Days Extended Operations Support</h3>
                                 <p>Maintain complete operation stability. We provide 3 full months of dedicated post-launch support coverage, handling server tracking, dependency security patches, and structural layout adjustments.</p>
@@ -186,79 +226,32 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
                 <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
-                    <div class="brand-icon">
-                        <img src="../assets/images/p-logo.png" alt="PrimeTech">
-                    </div>
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name">
-                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
-                        </div>
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Our Work</a></li>
-                    <li><a href="../index.html#internship">Internships</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="services.html">Web Design</a></li>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Deployment</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
-                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
-                    </a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
-                        <i class='bx bxl-instagram'></i> @primetech.solution_
-                    </a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
-                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
-                    </a>
-                </div>
-            </div>
+            <div class="footer-col"><h3>Quick Links</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="../index.html#internship">Internships</a></li></ul></div>
+            <div class="footer-col"><h3>Services</h3><ul class="footer-links"><li><a href="services.html">Web Design</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Deployment</a></li><li><a href="services.html">Social Media Management</a></li></ul></div>
+            <div class="footer-col"><h3>Contact</h3><div class="social-links"><a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a><a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a><a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a></div></div>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
-            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
-        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 PrimeTech. All rights reserved.</p><p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p></div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
 </body>
 
 </html>

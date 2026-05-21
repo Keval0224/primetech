@@ -1,0 +1,23 @@
+{
+  "name": "PrimeTech Digital Solutions",
+  "short_name": "PrimeTech",
+  "description": "Premium web development and UI/UX design studio in Vadodara, Gujarat.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/assets/images/p-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/p-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

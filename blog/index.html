@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology &amp; Design Blog | PrimeTech Digital Solutions</title>
+    <meta name="description" content="Read the latest articles on website development, UI/UX design trends, search optimization, and AI discoverability from the engineering team at PrimeTech.">
+    <meta name="keywords" content="web development blog, UI UX design trends, local SEO blog Vadodara, tech tutorials, website optimization tips, PrimeTech blog">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/blog/index.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/blog/index.html">
+    <meta property="og:title" content="Technology &amp; Design Blog | PrimeTech">
+    <meta property="og:description" content="Explore insights, engineering tips, and industry trends on web systems and UI/UX design.">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/blog/index.html">
+    <meta property="twitter:title" content="Technology &amp; Design Blog | PrimeTech">
+    <meta property="twitter:description" content="Insights and tips on modern web engineering and digital design.">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Lenis, GSAP & Custom Script -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Specific Schema linking back to main Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://primetech.live/blog/index.html#blog",
+      "name": "PrimeTech Technology & Design Blog",
+      "url": "https://primetech.live/blog/index.html",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://primetech.live/#organization"
+      },
+      "description": "Insights, tutorials, and engineering reviews regarding high-performance web development, UI/UX design, and SEO/AEO optimizations from PrimeTech."
+    }
+    </script>
+
+    <style>
+        .blog-section {
+            padding: 5rem 0;
+            background: var(--bg-main);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(var(--primary-rgb), 0.3);
+            box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.1);
+        }
+
+        .blog-media {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-media i {
+            font-size: 5rem;
+            color: rgba(var(--primary-rgb), 0.2);
+            transition: transform 0.4s ease;
+        }
+
+        .blog-card:hover .blog-media i {
+            transform: scale(1.1);
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .blog-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            transition: color 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card-title {
+            color: var(--color-primary);
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .blog-read-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: gap 0.3s ease, color 0.3s ease;
+        }
+
+        .blog-card:hover .blog-read-link {
+            color: var(--color-primary);
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 600px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow Background -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="brand-logo">
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Blog</span>
+                        </div>
+                        <p class="pg-hero-kicker">Insights &amp; Innovation</p>
+                        <h1 class="pg-hero-title">
+                            Our Technical <br><span>Journal</span>
+                        </h1>
+                        <p class="pg-hero-sub">Deep dives into website performance, modern frontend frameworks, user experience design guidelines, and search engine optimization models.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="#articles" class="btn btn-primary btn-cta">
+                                Read Articles <i class='bx bx-down-arrow-alt'></i>
+                            </a>
+                            <a href="../pages/contact.html" class="btn btn-outline btn-cta">
+                                Consultation <i class='bx bx-message-square-detail'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-calendar'></i>
+                                <span>Updated Weekly</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-user-voice'></i>
+                                <span>Developer Opinions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-edit'></i>
+                                    <span>Knowledge Hub</span>
+                                </div>
+                                <div class="fp-title">Latest Articles</div>
+                                <div class="fp-desc">Reviews of web accessibility patterns, next-generation build tools, and local search dynamics.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">1.5k+</div>
+                                <div class="fp-stat-lbl">Cornerstone Words</div>
+                            </div>
+
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="SEO Insights"><i class='bx bx-search-alt'></i></div>
+                                <div class="orbit-node" title="CSS Guides"><i class='bx bx-palette'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="JS Deep Dives"><i class='bx bx-code-alt'></i></div>
+                                <div class="orbit-node" title="Framework News"><i class='bx bx-news'></i></div>
+                            </div>
+
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Center" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Grid Section -->
+        <section class="blog-section" id="articles">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card">
+                        <div class="blog-media">
+                            <i class='bx bx-code-block'></i>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-calendar'></i>
+                                    <time datetime="2026-05-21">May 21, 2026</time>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-user'></i>
+                                    <span>Engineering Team</span>
+                                </div>
+                            </div>
+                            <h2 class="blog-card-title">Best Website Development Company in Vadodara</h2>
+                            <p class="blog-card-excerpt">An in-depth analysis of the local web engineering landscape, modern performance standards, Core Web Vitals, and why custom code matters for local businesses.</p>
+                            <a href="best-website-development-company-in-vadodara.html" class="blog-read-link">Read Full Article <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 (Future Placeholder/Coming Soon) -->
+                    <article class="blog-card" style="opacity: 0.85;">
+                        <div class="blog-media">
+                            <i class='bx bx-pulse'></i>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-calendar'></i>
+                                    <time datetime="2026-05-25">Coming Soon</time>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-category'></i>
+                                    <span>Performance</span>
+                                </div>
+                            </div>
+                            <h2 class="blog-card-title">Optimizing Core Web Vitals for Next-Gen Search</h2>
+                            <p class="blog-card-excerpt">A developer's guide to minimizing layout shifts, optimizing time to first byte, and ensuring instant interactivity on mobile networks.</p>
+                            <span class="blog-read-link" style="color: var(--text-muted);">Coming Soon <i class='bx bx-lock-alt'></i></span>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 (Future Placeholder/Coming Soon) -->
+                    <article class="blog-card" style="opacity: 0.85;">
+                        <div class="blog-media">
+                            <i class='bx bx-palette'></i>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-calendar'></i>
+                                    <time datetime="2026-05-30">Coming Soon</time>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <i class='bx bx-category'></i>
+                                    <span>UI/UX Design</span>
+                                </div>
+                            </div>
+                            <h2 class="blog-card-title">Modern Design Systems and Micro-Animations</h2>
+                            <p class="blog-card-excerpt">How subtle user interface transitions and interactive states improve user engagement, decrease bounce rate, and increase conversion rate.</p>
+                            <span class="blog-read-link" style="color: var(--text-muted);">Coming Soon <i class='bx bx-lock-alt'></i></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Link Section -->
+        <section class="section" style="padding: 5rem 0; background: var(--bg-card); border-top: 1px solid var(--border-color);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">See Our Work in Action</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.7;">
+                    Explore our portfolio of premium websites, custom applications, and brand designs that have accelerated growth for companies across Gujarat.
+                </p>
+                <a href="../pages/portfolio.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem;">
+                    Browse Case Studies <i class='bx bx-briefcase'></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="../services/web-development.html">Web Development</a></li>
+                    <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                    <li><a href="../services/web-app.html">Web Applications</a></li>
+                    <li><a href="../services/maintenance.html">Maintenance Contracts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20read%20your%20blog." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+
+</html>

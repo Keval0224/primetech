@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website Design & Development Vadodara | PrimeTech</title>
+    <meta name="description" content="PrimeTech develops high-converting corporate business websites and landing pages in Vadodara, Gujarat. Starting at ₹4999, designed to capture local search leads.">
+    <meta name="keywords" content="business websites Vadodara, corporate web design Gujarat, local business website developer, high-converting landing pages, startup websites Vadodara">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/services/business-websites.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/services/business-websites.html">
+    <meta property="og:title" content="Corporate Business Websites | PrimeTech Vadodara">
+    <meta property="og:description" content="High-converting corporate websites, local search-ready landing pages, and startup solutions in Vadodara, Gujarat.">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/services/business-websites.html">
+    <meta property="twitter:title" content="Corporate Business Websites | PrimeTech Vadodara">
+    <meta property="twitter:description" content="High-converting corporate websites, local search-ready landing pages, and startup solutions.">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Lenis, GSAP & Custom Script -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Specific Schema mapping to main Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://primetech.live/services/business-websites.html#service",
+      "serviceType": "Business Website Design & Development",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://primetech.live/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vadodara"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "India"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "4999.00",
+        "priceValidUntil": "2027-12-31",
+        "url": "https://primetech.live/pages/pricing-basic.html"
+      },
+      "description": "Premium local business websites, high-converting startup landing pages, and search-optimized corporate websites built to drive inquiries in Vadodara, Gujarat."
+    }
+    </script>
+
+    <style>
+        .detailed-content-section {
+            padding: 5rem 0;
+            background: var(--bg-main);
+        }
+
+        .detailed-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .deep-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        .deep-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .deep-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .deep-content ul, .deep-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .deep-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar widgets */
+        .service-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .cta-box {
+            text-align: center;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .detailed-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow Background -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="brand-logo">
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="../pages/services.html">Services</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Business Websites</span>
+                        </div>
+                        <p class="pg-hero-kicker">Marketing & Conversion Systems</p>
+                        <h1 class="pg-hero-title">
+                            Business <br><span>Websites</span>
+                        </h1>
+                        <p class="pg-hero-sub">Premium, high-converting digital setups structured for startups and regional companies seeking to capture local search visibility and generate leads.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="../pages/contact.html?service=business-websites" class="btn btn-primary btn-cta">
+                                Launch Your Website <i class='bx bx-paper-plane'></i>
+                            </a>
+                            <a href="../pages/pricing-basic.html" class="btn btn-outline btn-cta">
+                                Starter Package (₹4,999) <i class='bx bx-purchase-tag'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-map-pin'></i>
+                                <span>Vadodara Local Optimization</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-smile'></i>
+                                <span>Ideal for Small Businesses</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-trending-up'></i>
+                                    <span>Search Growth</span>
+                                </div>
+                                <div class="fp-title">Local Optimization</div>
+                                <div class="fp-desc">Structured address maps, custom contact funnels, and schema markup targeting local clients.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">₹4,999</div>
+                                <div class="fp-stat-lbl">Entry Pricing</div>
+                            </div>
+
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Google Map"><i class='bx bx-map'></i></div>
+                                <div class="orbit-node" title="WhatsApp Chat"><i class='bx bxl-whatsapp'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="SEO Friendly"><i class='bx bx-search-alt'></i></div>
+                                <div class="orbit-node" title="Responsive"><i class='bx bx-devices'></i></div>
+                            </div>
+
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Center" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long-Form Content Section -->
+        <section class="detailed-content-section">
+            <div class="container">
+                <div class="detailed-layout">
+                    <!-- Main Text Column -->
+                    <div class="deep-content">
+                        <h2>1. High-Converting Web Design for Startups and Local Brands</h2>
+                        <p>
+                            A corporate or local business website serves a singular, critical purpose: to act as your digital storefront and convert visiting traffic into qualified sales inquiries, phone calls, and paying clients. At PrimeTech, based in Vadodara, Gujarat, we specialize in constructing high-performance, conversion-driven websites. Starting at a highly competitive rate of just ₹4,999, our digital designs combine striking visual aesthetics with sophisticated user experience (UX) layout patterns.
+                        </p>
+                        <p>
+                            Many web design agencies focus solely on visual embellishments, ignoring the cognitive processes that drive customer decision-making. We design with intent, studying the specific behavior of consumers in Vadodara and the broader Indian market. We establish a clear information hierarchy that aligns with the F-shaped reading pattern typical of web visitors. This ensures that your unique value proposition (UVP), key service offerings, and credibility indicators are the very first elements a visitor notices.
+                        </p>
+                        <p>
+                            By integrating clear headlines, custom iconographies, and uncluttered layout spaces, we minimize user cognitive load. The result is a seamless journey that guides prospects effortlessly from their initial landing page interest down to the final call-to-action (CTA). We eliminate design friction by placing interactive contact forms, clickable click-to-call links, and direct WhatsApp routing tags in easily accessible, thumb-friendly locations. This meticulous approach to landing page layout optimization helps startup and enterprise clients achieve conversion rates that significantly outperform industry averages.
+                        </p>
+                        <p>
+                            Furthermore, we prioritize brand alignment. Your business website is an extension of your company's physical identity. Whether you are an industrial manufacturer in the Makarpura GIDC region, a professional consulting firm in Alkapuri, or a fast-growing tech startup in Gotri, we tailor the color palettes, typographic weights, and imagery layouts to echo your specific market positioning. We establish trust through the strategic placement of client testimonials, case studies, and certification badges, ensuring that your digital footprint immediately project authority and professional capability.
+                        </p>
+
+                        <h2>2. Local SEO & Search Growth Engineering</h2>
+                        <p>
+                            Operating a successful local or regional business in Gujarat requires capturing high-intent search queries from customers searching in your immediate vicinity. When a prospect in Vadodara searches for your services, your business must rank in the top spots of both Google's organic listings and the Local Map Pack. We build local SEO optimization directly into the markup of your website from day one, rather than treating it as an afterthought.
+                        </p>
+                        <p>
+                            Our search growth engineering strategy begins with localized schema architectures. We implement custom, JSON-LD formatted <code>LocalBusiness</code> schema graphs. This structured data communicates your exact Name, Address, and Phone number (NAP) data directly to search engine crawlers. We synchronize these details perfectly with your Google Business Profile (GBP), sending powerful alignment signals that improve your visibility in local search queries across Vadodara, Surat, Ahmedabad, and the surrounding Gujarat region.
+                        </p>
+                        <h3>Key Local SEO Integrations Included:</h3>
+                        <ul>
+                            <li><strong>Google Maps & Spatial NAP Integration:</strong> We embed responsive Google Map frames alongside clean text NAP listings, allowing search engines and mobile visitors to instantly verify and navigate to your physical location.</li>
+                            <li><strong>Granular Local Business Schemas:</strong> We configure specific schema types (such as <code>ProfessionalService</code>, <code>LocalBusiness</code>, or <code>Corporation</code>) linked back to the root PrimeTech organization graph, establishing a clean, non-duplicate schema system.</li>
+                            <li><strong>Neighborhood Targeting:</strong> We write content that addresses specific neighborhoods in Vadodara (e.g., Alkapuri, Akota, Vasna, Bhayli, Gotri, Manjalpur, Karelibaug, and Harni), ensuring relevance for hyper-local search intent.</li>
+                            <li><strong>Geo-Coordinates Mapping:</strong> We include precise latitude and longitude metadata in your schema tags, cementing your geographical relevance within Google's local search algorithms.</li>
+                        </ul>
+                        <p>
+                            In addition to technical schema tags, we research local keyword variations to capture buyers who are ready to make a purchase decision. For instance, rather than target generic keywords like "service provider," we optimize your page headings, meta descriptions, and image alt text for transactional terms like "best web designers in Vadodara" or "premium corporate website development in Gujarat." This deliberate alignment with search user intent drives highly qualified local traffic directly to your website.
+                        </p>
+
+                        <h2>3. Mobile-First Optimization & Responsiveness</h2>
+                        <p>
+                            With over 70% of local search traffic originating from mobile devices, your mobile site is your primary site. A business page that loads slowly, displays broken layout boxes, or forces users to pinch-and-zoom to read text will lose leads immediately. At PrimeTech, we approach every design with a mobile-first philosophy, building flexible layout foundations that automatically scale across all device viewports.
+                        </p>
+                        <p>
+                            We build using responsive CSS layouts, utilizing relative styling units such as percentages, viewport width (vw), viewport height (vh), and rem scaling. This ensures that text blocks, grid rows, and image containers resize smoothly on everything from small Android smartphones to large Apple iPad screens and widescreen desktop monitors. We maintain strict minimum touch-target dimensions of 48px by 48px for all interactive buttons and menus, preventing user frustration and ensuring effortless navigation.
+                        </p>
+                        <p>
+                            During our rigorous quality assurance (QA) process, we test your website's performance across multiple browser layout engines, including Blink (Chrome, Edge), WebKit (Safari), and Gecko (Firefox). We simulate slow 3G and 4G networks to confirm that layout shifts are prevented, fonts remain readable, and interactive elements load instantly. This dedication to responsive design guarantees a premium experience for every visitor, regardless of their connection speed or device preference.
+                        </p>
+
+                        <h2>4. Interactive Conversion Rate Optimization (CRO) & User Funnels</h2>
+                        <p>
+                            Attracting traffic is only the first step; guiding those visitors to complete a conversion is the ultimate goal. Conversion Rate Optimization (CRO) is integrated into our structural layouts to maximize the ROI of your digital investment. We design clean, frictionless contact funnels that encourage user engagement.
+                        </p>
+                        <p>
+                            Our interactive forms are designed with minimal input fields to prevent user fatigue. We implement real-time inline validation, guiding users to fill out information correctly without needing to resubmit the page. We also integrate sticky navigation headers, persistent call buttons on mobile devices, and well-timed floating WhatsApp chat triggers, allowing visitors to connect with your team at any point in their browsing experience.
+                        </p>
+                        <p>
+                            For businesses looking to capture leads before they leave, we configure exit-intent popups, interactive calculators, and service estimator tools. By providing immediate value to the user, we capture contact information that your sales team can follow up on, turning casual web traffic into active business relationships.
+                        </p>
+
+                        <h2>5. Speed Engineering & Core Web Vitals</h2>
+                        <p>
+                            Page speed is a major ranking factor in Google's search algorithms and a primary driver of user satisfaction. If a website takes longer than 3 seconds to load, more than half of the visitors will abandon the session. At PrimeTech, we implement advanced speed engineering strategies to optimize all three Core Web Vitals metrics.
+                        </p>
+                        <p>
+                            We optimize the Largest Contentful Paint (LCP) by compressing image assets and using modern formats like WebP and AVIF. We implement code-splitting to minimize Javascript payloads and defer non-critical scripts, ensuring a fast First Input Delay (FID) and Interaction to Next Paint (INP). To prevent Cumulative Layout Shift (CLS), we specify clear aspect ratios for all media containers, ensuring a stable visual experience as your page content loads.
+                        </p>
+                        <p>
+                            Our servers are configured with advanced caching policies, Brotli compression, and HTTP/2 multiplexing. This ensures static files are delivered instantly from edge servers, reducing server response times and providing a snappy browsing experience that boosts both SEO and conversion numbers.
+                        </p>
+
+                        <h2>6. Enterprise Security, Hosting & SLA Support</h2>
+                        <p>
+                            A secure website protects your customer data and preserves your company's reputation. We implement industry-standard security practices for every site we develop, configuring custom SSL/TLS certificates, security headers, and protection against common web vulnerabilities.
+                        </p>
+                        <p>
+                            We implement security configurations including Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), and X-Frame-Options to prevent unauthorized access and data injection. We partner with reliable cloud hosting providers like AWS and DigitalOcean, setting up automated daily backups and security firewalls to ensure maximum website uptime.
+                        </p>
+                        <p>
+                            For businesses requiring continuous uptime and peace of mind, we offer dedicated Service Level Agreement (SLA) support plans. Our team handles core software updates, patch applications, and page optimization, allowing you to focus on running your business while we manage your digital assets.
+                        </p>
+
+                        <h2>7. Budget-Friendly Pricing Plans & Value Analysis</h2>
+                        <p>
+                            We believe that premium web design should be accessible to startups and local businesses. We offer transparent pricing packages tailored to your company's specific goals and budget:
+                        </p>
+                        <ol>
+                            <li><strong>Basic Plan (Starting at ₹4,999):</strong> Perfect for small local businesses, startups, and independent professionals. Includes a custom-designed, mobile-responsive 5-page site, local SEO schema, WhatsApp integration, and essential contact forms.</li>
+                            <li><strong>Standard Plan (Starting at ₹9,999):</strong> Designed for growing businesses that require a more comprehensive presence. Includes up to 15 pages, custom blog layouts, advanced local schema, dynamic contact forms, and content management capability.</li>
+                            <li><strong>Premium Plan (Starting at ₹12,999):</strong> Best for corporate brands and enterprises requiring advanced features, such as database integrations, product calculators, custom client portals, and priority support.</li>
+                        </ol>
+                        <p>
+                            All our plans feature no hidden costs, clear timelines, and direct developer communication. We outline all deliverables from the start, ensuring a smooth project experience from kickoff to deployment.
+                        </p>
+
+                        <h2>8. Business Websites - Frequently Asked Questions (FAQ)</h2>
+                        <div class="inner-faq" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: What is included in the ₹4,999 basic business website package?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: The basic package includes a professional, 5-page, mobile-responsive website. It covers your Home, About, Services, Portfolio, and Contact pages. Additionally, we integrate a floating WhatsApp chat button, click-to-call functionality, custom contact forms, local business SEO schema markup, and assist with domain and hosting setup. It is a complete, production-ready solution with no hidden charges.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How does local SEO help my business in Vadodara?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Local SEO ensures that when potential customers in Vadodara search for your services or products, your website appears in Google's Local Pack (the map listings) and top organic search results. We achieve this by embedding custom JSON-LD schemas, optimizing content for local keywords (like Alkapuri, Manjalpur, and Makarpura), and ensuring your Name, Address, and Phone number (NAP) data matches your Google Business Profile.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Do you charge any hidden maintenance fees?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: No, we maintain absolute pricing transparency. The project fee is a one-time development charge. In subsequent years, your only standard expenses are your domain registration and web hosting renewals, which you can pay directly to the registrar/hosting provider. We also offer optional maintenance plans if you prefer our team to handle updates and backups.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How long does it take to launch a business website?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: For our basic and standard business website plans, we typically complete and launch the website within 10 to 15 business days, provided all content, brand assets, and logo files are provided at project kickoff. Premium and custom portal projects can take between 25 to 45 business days depending on design complexity and feature requirements.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Can I update the website content myself in the future?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Yes. For our standard and premium plans, we set up user-friendly content editors or Headless CMS integrations, allowing you to easily add new blog posts, service details, and portfolio images without writing code. For basic static sites, we provide a structured documentation guide, or you can leverage our hourly support rates for updates.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="service-sidebar">
+                        <!-- Tech Stack Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Our Focus</h3>
+                            <div class="tech-list">
+                                <span class="tech-tag">Conversion Rate Optimization</span>
+                                <span class="tech-tag">Local SEO Vadodara</span>
+                                <span class="tech-tag">Mobile First Design</span>
+                                <span class="tech-tag">Frictionless Inquiries</span>
+                                <span class="tech-tag">Google Business Link</span>
+                                <span class="tech-tag">WhatsApp Integration</span>
+                                <span class="tech-tag">Contact Form SLA</span>
+                                <span class="tech-tag">Performance Coding</span>
+                                <span class="tech-tag">Transparent Pricing</span>
+                            </div>
+                        </div>
+
+                        <!-- Service Coverage Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Service Locations</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                                We provide premium engineering and design consultations across Gujarat. Visit our location guides:
+                            </p>
+                            <ul style="list-style: none; margin: 0; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="../locations/vadodara.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-map-pin'></i> Vadodara Development Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../locations/gujarat.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-globe'></i> Gujarat Digital Agency
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Callout Card -->
+                        <div class="sidebar-card cta-box">
+                            <h3 class="sidebar-title">Launch in 15 Days</h3>
+                            <p>Ready to establish a professional web presence? Contact us to set up your design discovery call and launch your site in under two weeks.</p>
+                            <a href="../pages/contact.html" class="btn btn-primary" style="display: block; width: 100%; text-align: center;">Get Started For ₹4,999</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ui-ux.html">UI/UX Design</a></li>
+                    <li><a href="web-app.html">Web Applications</a></li>
+                    <li><a href="maintenance.html">Maintenance Contracts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20business%20website." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 
 <head>
@@ -10,76 +10,29 @@
     <meta name="author" content="PrimeTech Digital Solutions">
     <link rel="canonical" href="https://primetech.live/services.html">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://primetech.live/services.html">
     <meta property="og:title" content="Services | PrimeTech Digital Solutions">
     <meta property="og:description" content="Explore PrimeTech's premium capabilities: Web Development, UI/UX Design, Web Deployment, Social Media Management, and Digital Marketing.">
     <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://primetech.live/services.html">
     <meta property="twitter:title" content="Services | PrimeTech Digital Solutions">
-    <meta property="twitter:description" content="Explore PrimeTech's premium capabilities: Web Development, UI/UX Design, Web Deployment, Social Media Management, and Digital Marketing.">
+    <meta property="twitter:description" content="Explore PrimeTech's premium capabilities.">
     <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
-    
-    <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    
-    <!-- Lenis Smooth Scroll CDN -->
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-    
-    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    
-    <!-- Custom JS -->
     <script src="../js/main.js" defer></script>
 
     <style>
-        /* ============================================================
-           SERVICES PAGE — PREMIUM ENHANCEMENTS
-           ============================================================ */
-
-        /* ── Page Hero Enhancements ── */
-        .page-hero-section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-hero-bg {
-            transition: transform 0.5s ease;
-        }
-
-        .page-hero-section:hover .page-hero-bg {
-            transform: scale(1.05);
-        }
-
-        .page-hero-overlay::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                          rgba(37,99,235,0.04), transparent 40%);
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            opacity: 0;
-        }
-
-        .page-hero-section:hover .page-hero-overlay::after {
-            opacity: 1;
-        }
-
-        /* ── Service Cards Enhancements ── */
         .service-card-new.glass-panel {
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid var(--glass-border);
@@ -89,103 +42,44 @@
             position: relative;
             overflow: hidden;
         }
-
         .service-card-new.glass-panel:hover {
             background: var(--bg-card-hover);
             border-color: var(--border-color-glow);
             box-shadow: var(--glass-shadow-hover);
             transform: translateY(-8px) scale(1.02);
         }
-
         .service-card-hover-bg {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), 
-                          rgba(37,99,235,0.06), transparent 40%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            pointer-events: none;
-            z-index: 1;
+            position: absolute; inset: 0;
+            background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(37,99,235,0.06), transparent 40%);
+            opacity: 0; transition: opacity 0.5s ease; pointer-events: none; z-index: 1;
         }
-
-        .service-card-new:hover .service-card-hover-bg {
-            opacity: 1;
-        }
-
-        .service-icon-box {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            z-index: 2;
-        }
-
+        .service-card-new:hover .service-card-hover-bg { opacity: 1; }
+        .service-icon-box { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); position: relative; z-index: 2; }
         .service-card-new:hover .service-icon-box {
             background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #ffffff;
-            border-color: transparent;
-            transform: scale(1.1) rotate(3deg);
+            color: #ffffff; border-color: transparent; transform: scale(1.1) rotate(3deg);
             box-shadow: 0 12px 25px rgba(var(--primary-rgb), 0.2);
         }
-
-        .service-link {
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
+        .service-link { position: relative; z-index: 2; transition: all 0.3s ease; }
+        .service-card-new:hover .service-link { color: var(--primary); gap: 0.75rem; }
+        .service-card-new:hover .service-link i { transform: translateX(3px); }
+        .services-section {
+            padding-top: 4rem;
         }
-
-        .service-card-new:hover .service-link {
-            color: var(--primary);
-            gap: 0.75rem;
+        .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
-
-        .service-card-new:hover .service-link i {
-            transform: translateX(3px);
-        }
-
-        /* ── Section Enhancements ── */
-        .services.section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .services.section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                          rgba(37,99,235,0.03), transparent 40%);
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            opacity: 0;
-            z-index: 0;
-        }
-
-        .services.section:hover::before {
-            opacity: 1;
-        }
-
-        /* ── Footer Glass Enhancement (Optional) ── */
-        .footer {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ── Responsive Enhancements ── */
-        @media (max-width: 900px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 
 <body>
-    <!-- Immersive Backdrop Glow Orbs -->
     <div class="noise-overlay"></div>
     <div class="glow-wrapper">
         <div class="glow-orb glow-orb-1"></div>
         <div class="glow-orb glow-orb-2"></div>
     </div>
-    <!-- 3D Floating Shape System -->
     <div class="scene-3d" id="scene-3d" aria-hidden="true">
         <div class="float-shape float-shape--ring" data-depth="0.3"></div>
         <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
@@ -195,21 +89,16 @@
         <div class="float-shape float-shape--blob" data-depth="0.6"></div>
         <div class="float-shape float-shape--line" data-depth="0.25"></div>
     </div>
-    <!-- Floating Navigation Bar -->
+
     <header class="header" id="header">
         <div class="nav-container">
             <a href="../index.html" class="brand-logo">
-                <div class="brand-icon">
-                    <img src="../assets/images/p-logo.png" alt="PrimeTech">
-                </div>
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                 <div class="brand-text-wrap">
-                    <div class="brand-name">
-                        <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
-                    </div>
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
-            
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -221,169 +110,195 @@
                 </ul>
                 <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
-            
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class='bx bx-moon' aria-hidden="true"></i>
-                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
                 <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Page Hero Section -->
-        <section class="page-hero-section">
-            <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
-            <div class="page-hero-overlay"></div>
-            <div class="container gsap-fade-up">
-                <div class="page-hero-breadcrumbs">
-                    <a href="../index.html">Home</a> <i class='bx bx-chevron-right'></i> <span>Services</span>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Services</span>
+                        </div>
+                        <p class="pg-hero-kicker">What We Offer</p>
+                        <h1 class="pg-hero-title">
+                            Our <br><span>Capabilities</span>
+                        </h1>
+                        <p class="pg-hero-sub">End-to-end digital services — from pixel-perfect design to scalable cloud deployment. We handle everything so you can focus on growth.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="contact.html" class="btn btn-primary btn-cta">
+                                Start Your Project <i class='bx bx-message-square-detail'></i>
+                            </a>
+                            <a href="../index.html#pricing" class="btn btn-outline btn-cta">
+                                View Packages <i class='bx bx-purchase-tag-alt'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-check-double'></i>
+                                <span>6 Services Offered</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-shield-quarter'></i>
+                                <span>Premium Uptime SLA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Orbital Interactive System -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-cog'></i>
+                                    <span>Operations</span>
+                                </div>
+                                <div class="fp-title">Elite Tech Stack</div>
+                                <div class="fp-desc">Fully optimized, high performance, clean, rankable code architectures.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">100%</div>
+                                <div class="fp-stat-lbl">Clean Code</div>
+                            </div>
+
+                            <!-- Orbit Rings -->
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Figma UI/UX"><i class='bx bxl-figma'></i></div>
+                                <div class="orbit-node" title="React Engine"><i class='bx bxl-react'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="JavaScript Code"><i class='bx bxl-javascript'></i></div>
+                                <div class="orbit-node" title="Node Backend"><i class='bx bxl-nodejs'></i></div>
+                            </div>
+
+                            <!-- Orbit Center -->
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Logo" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="page-hero-title">Our Capabilities</h1>
             </div>
         </section>
 
-        <!-- Capabilities Grids -->
-        <section class="services section" id="services" style="padding-top: 4rem;">
+        <!-- Service Cards -->
+        <section class="services-section section" id="services">
             <div class="container">
-                <div class="services-grid grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
-                    
-                    <!-- Web Development -->
+                <div class="services-grid grid">
                     <div class="service-card-new glass-panel">
                         <div class="service-card-hover-bg"></div>
                         <div class="service-icon-box"><i class='bx bx-code-alt'></i></div>
                         <div class="service-info-wrap">
                             <h3 class="service-card-title">Web Development</h3>
-                            <p class="service-card-desc">Scalable, fast, and secure web applications built with cutting-edge technologies.</p>
+                            <p class="service-card-desc">Bespoke corporate websites built with speed, scale, and search rankings in mind.</p>
                         </div>
-                        <div class="service-card-footer">
-                            <a href="contact.html" class="service-link">Get Started <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        <div class="service-card-footer"><a href="../services/web-development.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
                     </div>
-                    
-                    <!-- UI/UX Design -->
+
                     <div class="service-card-new glass-panel">
                         <div class="service-card-hover-bg"></div>
                         <div class="service-icon-box"><i class='bx bx-palette'></i></div>
                         <div class="service-info-wrap">
                             <h3 class="service-card-title">UI/UX Design</h3>
-                            <p class="service-card-desc">Intuitive user interfaces and immersive experiences that engage and convert.</p>
+                            <p class="service-card-desc">Premium interfaces and user experiences structured for conversion and engagement.</p>
                         </div>
-                        <div class="service-card-footer">
-                            <a href="contact.html" class="service-link">Get Started <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        <div class="service-card-footer"><a href="../services/ui-ux.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
                     </div>
-                    
-                    <!-- Web Deployment -->
+
                     <div class="service-card-new glass-panel">
                         <div class="service-card-hover-bg"></div>
-                        <div class="service-icon-box"><i class='bx bx-cloud-upload'></i></div>
+                        <div class="service-icon-box"><i class='bx bx-rocket'></i></div>
                         <div class="service-info-wrap">
-                            <h3 class="service-card-title">Web Deployment</h3>
-                            <p class="service-card-desc">Seamless cloud CI/CD deployment, reliable hosting, and infrastructure management.</p>
+                            <h3 class="service-card-title">Custom Web Applications</h3>
+                            <p class="service-card-desc">Robust SaaS engines, portal systems, and bespoke administrative software.</p>
                         </div>
-                        <div class="service-card-footer">
-                            <a href="contact.html" class="service-link">Get Started <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        <div class="service-card-footer"><a href="../services/web-app.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
                     </div>
-                    
-                    <!-- Social Media Management -->
+
                     <div class="service-card-new glass-panel">
                         <div class="service-card-hover-bg"></div>
-                        <div class="service-icon-box"><i class='bx bx-share-alt'></i></div>
+                        <div class="service-icon-box"><i class='bx bx-store'></i></div>
                         <div class="service-info-wrap">
-                            <h3 class="service-card-title">Social Media Management</h3>
-                            <p class="service-card-desc">Engaging content strategies to grow your audience and build brand awareness.</p>
+                            <h3 class="service-card-title">Business Websites</h3>
+                            <p class="service-card-desc">High-converting landing pages and promotional sites tailored for startups and local businesses.</p>
                         </div>
-                        <div class="service-card-footer">
-                            <a href="contact.html" class="service-link">Get Started <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        <div class="service-card-footer"><a href="../services/business-websites.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
                     </div>
-                    
-                    <!-- Digital Marketing -->
+
                     <div class="service-card-new glass-panel">
                         <div class="service-card-hover-bg"></div>
-                        <div class="service-icon-box"><i class='bx bx-bar-chart-alt-2'></i></div>
+                        <div class="service-icon-box"><i class='bx bx-book-reader'></i></div>
                         <div class="service-info-wrap">
-                            <h3 class="service-card-title">Digital Marketing</h3>
-                            <p class="service-card-desc">Data-driven marketing campaigns to increase visibility and drive targeted traffic.</p>
+                            <h3 class="service-card-title">Internship Programs</h3>
+                            <p class="service-card-desc">Practical, real-world experience for students and developers seeking agency project credits.</p>
                         </div>
-                        <div class="service-card-footer">
-                            <a href="contact.html" class="service-link">Get Started <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
+                        <div class="service-card-footer"><a href="../services/internship.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
                     </div>
-                    
+
+                    <div class="service-card-new glass-panel">
+                        <div class="service-card-hover-bg"></div>
+                        <div class="service-icon-box"><i class='bx bx-wrench'></i></div>
+                        <div class="service-info-wrap">
+                            <h3 class="service-card-title">SLA Maintenance & Support</h3>
+                            <p class="service-card-desc">Comprehensive support contracts, speed audits, security updates, and daily cloud backups.</p>
+                        </div>
+                        <div class="service-card-footer"><a href="../services/maintenance.html" class="service-link">Get Details <i class='bx bx-right-arrow-alt'></i></a></div>
+                    </div>
+                </div>
+        <!-- Service Areas Section -->
+        <section class="section" style="padding: 5rem 0; background: var(--bg-card); border-top: 1px solid var(--border-color);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">Serving Vadodara & Gujarat</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.7;">
+                    PrimeTech delivers cutting-edge digital solutions and custom engineering from our local development hubs.
+                </p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="../locations/vadodara.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem;">
+                        <i class='bx bx-map-pin'></i> Vadodara Hub
+                    </a>
+                    <a href="../locations/gujarat.html" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem;">
+                        <i class='bx bx-globe'></i> Gujarat Coverage
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
                 <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
-                    <div class="brand-icon">
-                        <img src="../assets/images/p-logo.png" alt="PrimeTech">
-                    </div>
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name">
-                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
-                        </div>
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Our Work</a></li>
-                    <li><a href="../index.html#internship">Internships</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="services.html">Web Design</a></li>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Deployment</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
-                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
-                    </a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
-                        <i class='bx bxl-instagram'></i> @primetech.solution_
-                    </a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
-                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
-                    </a>
-                </div>
-            </div>
+            <div class="footer-col"><h3>Quick Links</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="../index.html#internship">Internships</a></li></ul></div>
+            <div class="footer-col"><h3>Services</h3><ul class="footer-links"><li><a href="services.html">Web Design</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Deployment</a></li><li><a href="services.html">Social Media Management</a></li></ul></div>
+            <div class="footer-col"><h3>Contact</h3><div class="social-links"><a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a><a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a><a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a></div></div>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
-            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
-        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 PrimeTech. All rights reserved.</p><p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p></div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
 </body>
 
 </html>

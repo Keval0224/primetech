@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Maintenance & SLA Support Vadodara | PrimeTech</title>
+    <meta name="description" content="PrimeTech offers premium website maintenance, secure hosting, 24/7 uptime monitoring, and SLA-guaranteed support contracts in Vadodara and Gujarat.">
+    <meta name="keywords" content="website maintenance Vadodara, SLA support Gujarat, server maintenance, web support contract, website security audits, Core Web Vitals maintenance, PrimeTech maintenance">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/services/maintenance.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/services/maintenance.html">
+    <meta property="og:title" content="Website Maintenance & SLA Support | PrimeTech Vadodara">
+    <meta property="og:description" content="Premium website maintenance and guaranteed SLA support contracts for startups and enterprises in Vadodara, Gujarat.">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/services/maintenance.html">
+    <meta property="twitter:title" content="Website Maintenance & SLA Support | PrimeTech Vadodara">
+    <meta property="twitter:description" content="Premium website maintenance and SLA-backed support contracts.">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Lenis, GSAP & Custom Script -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Specific Schema mapping to main Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://primetech.live/services/maintenance.html#service",
+      "serviceType": "Website Maintenance & SLA Support",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://primetech.live/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vadodara"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "India"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "4999.00",
+        "priceValidUntil": "2027-12-31",
+        "url": "https://primetech.live/pages/pricing-basic.html"
+      },
+      "description": "Enterprise-grade website maintenance contracts, continuous uptime monitoring, performance audit optimizations, security patches, and SLA support in Vadodara and Gujarat."
+    }
+    </script>
+
+    <style>
+        .detailed-content-section {
+            padding: 5rem 0;
+            background: var(--bg-main);
+        }
+
+        .detailed-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .deep-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        .deep-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .deep-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .deep-content ul, .deep-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .deep-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar widgets */
+        .service-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .cta-box {
+            text-align: center;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .detailed-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow Background -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="brand-logo">
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="../pages/services.html">Services</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Maintenance &amp; SLA</span>
+                        </div>
+                        <p class="pg-hero-kicker">Operations &amp; Security</p>
+                        <h1 class="pg-hero-title">
+                            SLA &amp; <br><span>Maintenance</span>
+                        </h1>
+                        <p class="pg-hero-sub">Proactive system updates, continuous vulnerability patches, performance optimizations, and guaranteed response support to keep your business running smoothly.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="../pages/contact.html?service=maintenance" class="btn btn-primary btn-cta">
+                                SLA Consultation <i class='bx bx-shield-quarter'></i>
+                            </a>
+                            <a href="../pages/pricing-standard.html" class="btn btn-outline btn-cta">
+                                View Packages <i class='bx bx-purchase-tag'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-timer'></i>
+                                <span>99.9% Uptime Guarantee</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-support'></i>
+                                <span>1-Hour Response Window</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-shield-alt-2'></i>
+                                    <span>Monitoring System</span>
+                                </div>
+                                <div class="fp-title">Active Security</div>
+                                <div class="fp-desc">Automated penetration scripts and threat mitigation systems running continuously.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">99.99%</div>
+                                <div class="fp-stat-lbl">Server Uptime SLA</div>
+                            </div>
+
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Uptime Monitoring"><i class='bx bx-pulse'></i></div>
+                                <div class="orbit-node" title="Database Backups"><i class='bx bx-data'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="SSL Security"><i class='bx bx-lock-alt'></i></div>
+                                <div class="orbit-node" title="Cloud Server"><i class='bx bx-cloud'></i></div>
+                            </div>
+
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Center" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long-Form Content Section -->
+        <section class="detailed-content-section">
+            <div class="container">
+                <div class="detailed-layout">
+                    <!-- Main Text Column -->
+                    <div class="deep-content">
+                        <h2>1. Immersive Maintenance & Proactive Upkeep</h2>
+                        <p>
+                            In the competitive digital ecosystem of 2026, launching a website is only the first step towards building an online presence. A premium platform requires regular updates, active monitoring, and immediate resolution of technical issues to remain successful. At PrimeTech, based in Vadodara, Gujarat, we offer website maintenance contracts designed to safeguard your online business, keeping it fast, secure, and continuously optimized.
+                        </p>
+                        <p>
+                            Rather than responding only when things break, our engineers take a proactive approach to website maintenance. We continuously monitor your servers, databases, and system layers, intercepting potential vulnerabilities and performance bottlenecks before they affect your customers. This systematic methodology ensures maximum uptime, protects your brand reputation, and keeps your search engine rankings strong.
+                        </p>
+                        <p>
+                            Many companies underestimate the impact of regular system upkeep on search engine performance. Search algorithms continuously evaluate page speed, responsiveness, and security signals. A site that becomes sluggish due to bloated database tables, unpatched scripts, or expired security configurations will quickly drop in organic search results. Our proactive maintenance services address these issues by running scheduled database prunings, script minifications, and asset optimization audits, ensuring your site meets Google's search requirements.
+                        </p>
+                        <p>
+                            Furthermore, as web standards evolve, older technologies can become incompatible with modern browsers, causing layouts to break and features to malfunction. Our team monitors browser updates and testing guidelines to verify that your website renders correctly across Chrome, Safari, Edge, and Firefox. By resolving small rendering issues before they impact your visitors, we help you maintain a professional digital image and protect your marketing investment.
+                        </p>
+
+                        <h2>2. SLA Support Levels & Critical Response Windows</h2>
+                        <p>
+                            When a technical emergency occurs, every minute of downtime counts. A slow-loading or offline website directly results in lost revenue, frustrated visitors, and reduced organic reach. Our Service Level Agreements (SLAs) guarantee that our engineering team is available exactly when you need them.
+                        </p>
+                        <p>
+                            We classify requests into distinct priority tiers, each backed by a strict response time guarantee:
+                        </p>
+                        <ul>
+                            <li><strong>Priority 1 (P1) - Critical Outage:</strong> If your web application is completely offline or a critical transaction flow is broken, we initiate resolution within 60 minutes. We work continuously until full functionality is restored. Our on-call engineers are notified immediately through automated alerting systems, ensuring rapid response times day or night.</li>
+                            <li><strong>Priority 2 (P2) - Major Feature Impairment:</strong> If a core service is malfunctioning (such as a broken checkout page or unresponsive contact forms) but the site is still online, we guarantee a response within 4 hours. We prioritize these issues to minimize impact on your business operations.</li>
+                            <li><strong>Priority 3 (P3) - Minor Adjustments:</strong> For non-disruptive requests, such as text updates, minor styling changes, or new asset uploads, we complete the work within 24 to 48 hours. This allows you to keep your website content fresh and updated without distracting developers from critical tasks.</li>
+                        </ul>
+                        <p>
+                            Our support channels are designed to be accessible and efficient. Clients have direct access to our developers via email, dedicated WhatsApp threads, and emergency phone hotlines, eliminating slow ticketing systems. We provide monthly support reports detailing resolved issues, server uptime metrics, and remaining plan hours, giving you full visibility into our services.
+                        </p>
+
+                        <h2>3. Continuous Security Audits & Vulnerability Patching</h2>
+                        <p>
+                            Web security is a major priority for modern digital platforms. Threat vectors change constantly, and outdated plugins, scripts, or server configurations leave your business vulnerable to data breaches and code injection attacks.
+                        </p>
+                        <p>
+                            To maintain strong security, our maintenance program includes:
+                        </p>
+                        <ol>
+                            <li><strong>Automated Malware Scans:</strong> We run daily background security sweeps to detect unauthorized file changes, code injections, or hidden scripts. Any anomalies are flagged and addressed immediately by our security team.</li>
+                            <li><strong>Patch Management:</strong> We regularly update server software, database frameworks, and scripting modules, ensuring your tech stack runs the latest stable, secure releases. We apply security patches for PHP, Node.js, and other core libraries as soon as they are released.</li>
+                            <li><strong>Security Header Audits:</strong> We configure and verify HTTP response headers (including Content Security Policy (CSP), X-Frame-Options, and HSTS) to protect your users from cross-site scripting (XSS), clickjacking, and data injection attacks.</li>
+                            <li><strong>SSL Certificate Management:</strong> We automate the provisioning, renewal, and verification of SSL certificates, ensuring your site remains encrypted and displays the padlock symbol in browsers.</li>
+                        </ol>
+                        <p>
+                            We also perform periodic manual penetration testing to identify potential vulnerabilities in your custom code. By simulating real-world attacks, we find security gaps before malicious actors do, protecting your customer records and business credibility.
+                        </p>
+
+                        <h2>4. Automated Cloud Backups & Rapid Disaster Recovery</h2>
+                        <p>
+                            In the event of user error, server failure, or external threats, having a reliable recovery system is critical. Our backup infrastructure ensures that your data is securely stored and easily restorable at any time.
+                        </p>
+                        <p>
+                            We implement a redundant, multi-tier backup strategy:
+                        </p>
+                        <p>
+                            We perform full daily backups of your website's database, user uploads, and source files. These backups are encrypted and stored in secure off-site cloud repositories separate from your main web server. This isolation ensures that even in a worst-case hosting outage, your data remains safe. We leverage cloud storage providers like AWS S3 and Google Cloud, setting up geographical replication for added redundancy.
+                        </p>
+                        <p>
+                            Our disaster recovery drills test our restore procedures regularly. We guarantee a maximum Recovery Point Objective (RPO) of 24 hours and a Recovery Time Objective (RTO) of under 2 hours, meaning we can bring your website back online with minimal data loss in any situation.
+                        </p>
+
+                        <h2>5. Core Web Vitals & Performance Monitoring</h2>
+                        <p>
+                            Google and other major search engines heavily favor websites that load quickly and remain stable during interaction. A website that slows down over time due to unoptimized database tables, bloated media files, or legacy scripts will drop in search rankings.
+                        </p>
+                        <p>
+                            As part of our standard maintenance package, we conduct monthly performance tune-ups:
+                        </p>
+                        <ul>
+                            <li><strong>Database Optimization:</strong> We clean up overhead tables, optimize indexes, and prune log files, ensuring your backend queries execute in milliseconds. We also review database execution logs to identify and resolve slow-running queries.</li>
+                            <li><strong>Media Compression:</strong> We monitor new media uploads, converting images to next-gen formats (WebP/AVIF) and compressing videos to maintain high visual quality at minimal file sizes.</li>
+                            <li><strong>Core Web Vitals Checkups:</strong> We measure and fine-tune your Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and Interaction to Next Paint (INP) scores, keeping your site fast and responsive for search algorithms and users.</li>
+                        </ul>
+
+                        <h2>6. Infrastructure Scaling & Devops Lifecycle Management</h2>
+                        <p>
+                            As your business grows, your hosting infrastructure must scale with it. We handle the technical complexities of cloud management, hosting migrations, and server optimization, allowing you to focus on your operations.
+                        </p>
+                        <p>
+                            Whether you are preparing for a major marketing campaign or need to transition to a dedicated virtual private server (VPS), we manage the entire migration process with zero downtime. We configure automated deployment pipelines (CI/CD) so that code updates are tested and deployed seamlessly, reducing the risk of manual deployment errors.
+                        </p>
+                        <p>
+                            We also monitor server utilization metrics, such as CPU usage, memory consumption, and disk I/O. If your site experiences a traffic spike, we scale server resources dynamically or configure load balancers to distribute traffic, ensuring your platform remains fast and responsive under heavy loads.
+                        </p>
+
+                        <h2>7. Continuous Integration, Code Health & Testing Pipelines</h2>
+                        <p>
+                            For complex web applications and modern corporate portals, website maintenance extends beyond servers and security to the code repository itself. Legacy codebases often suffer from technical debt, obsolete dependencies, and undocumented changes that lead to unstable deployments.
+                        </p>
+                        <p>
+                            At PrimeTech, we integrate automated testing pipelines (CI/CD) into your development cycle. Every update, layout revision, or new feature is first deployed to a staging environment that mirrors your live site. Automated tests evaluate form submissions, API endpoints, navigation anchors, and checkout flows to verify that nothing is broken before deployment.
+                        </p>
+                        <p>
+                            We also run code linters and dependency audits on every build. This continuous feedback loop ensures that code quality remains high, reducing browser rendering errors, memory leaks, and broken links that frustrate visitors and damage search rankings.
+                        </p>
+
+                        <h2>8. Regulatory Compliance, WCAG Accessibility & GDPR Audits</h2>
+                        <p>
+                            Digital compliance has become a critical business requirement. Websites operating in Gujarat, India, and internationally must adhere to privacy regulations like GDPR and web accessibility guidelines like the Web Content Accessibility Guidelines (WCAG). Non-compliance can expose your business to legal risks and alienate users with visual or motor impairments.
+                        </p>
+                        <p>
+                            Our maintenance program includes quarterly accessibility and compliance audits. We verify that your website supports keyboard navigation, screen reader compatibility, proper color contrast ratios, and clear descriptive alt attributes for images.
+                        </p>
+                        <p>
+                            Additionally, we verify that privacy policies, cookie consent banners, and secure contact forms function correctly. By protecting user privacy and ensuring accessibility, we help your business build trust and improve engagement across all demographics.
+                        </p>
+
+                        <h2>9. Custom Maintenance Cycles & Performance Reporting</h2>
+                        <p>
+                            We believe in transparency and data-backed decisions. Our website maintenance clients receive a comprehensive monthly report summarizing system metrics, performed security updates, backup status, and optimization tasks.
+                        </p>
+                        <p>
+                            This report includes a breakdown of resource usage, bandwidth peaks, and detailed performance audits showing page load times and Core Web Vitals scores. We also outline recommendations for future optimizations, such as asset consolidation or server configuration adjustments, ensuring your platform continues to meet your business goals.
+                        </p>
+
+                        <h2>10. Dedicated SLA & Support FAQ</h2>
+                        <div class="inner-faq" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Do you support websites built by other agencies?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Yes. Before taking over an existing codebase, our engineering team performs a thorough audit of your site's structure, performance, and security. Once the audit is complete, we outline a stabilization plan, fix any critical vulnerabilities, and onboard your platform to our maintenance infrastructure for ongoing support.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Can we cancel or upgrade our SLA support plan?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Our maintenance contracts are designed to be flexible. You can choose from monthly, quarterly, or annual agreements. You can upgrade your support tier (e.g., adding faster response guarantees or additional developer hours) at any time as your business needs scale, or cancel with a standard 30-day notice.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: What happens if we exceed our included monthly support hours?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: If a request requires more than your plan's included developer hours, we will provide a detailed time estimate before beginning work. Additional hours are billed at a discounted rate for contracted clients, ensuring transparent pricing and no unexpected charges on your invoice.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How do you guarantee the security of our customer data?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: We implement end-to-end encryption using SSL/TLS, secure server ports, and configure database access firewalls. We run daily security scans, patch software vulnerabilities, and enforce strong password policies. Our backups are also encrypted both in transit and at rest, ensuring your records remain confidential.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: What is included in your 99.9% uptime guarantee?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Our uptime guarantee ensures that your website remains accessible to users at least 99.9% of the time each month. We monitor accessibility using automated ping services. If we fail to meet this standard due to server or configuration issues under our control, we provide service credits as outlined in your SLA agreement.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How do you handle software and plugin updates without breaking the live website?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: We use a multi-stage deployment process. Updates are first tested on a staging site to verify compatibility. Once we confirm everything functions correctly, we schedule the deployment to the live server during off-peak traffic hours, keeping your services online without disruption.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: What is the onboarding process for new website maintenance contracts?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Onboarding begins with a security and configuration audit of your current setup. We verify hosting resources, database integrity, and code standards. We then establish backups, update credentials, and transition your platform to our monitoring and maintenance systems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="service-sidebar">
+                        <!-- Tech Stack Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Maintenance Stack</h3>
+                            <div class="tech-list">
+                                <span class="tech-tag">24/7 Monitoring</span>
+                                <span class="tech-tag">Cloud Backups</span>
+                                <span class="tech-tag">Vulnerability Patching</span>
+                                <span class="tech-tag">SSL Encryption</span>
+                                <span class="tech-tag">Database Cleaning</span>
+                                <span class="tech-tag">CI/CD Pipelines</span>
+                                <span class="tech-tag">Uptime Alerts</span>
+                                <span class="tech-tag">DevOps Support</span>
+                                <span class="tech-tag">Core Web Vitals</span>
+                            </div>
+                        </div>
+
+                        <!-- Service Coverage Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Service Locations</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                                We provide premium engineering and design consultations across Gujarat. Visit our location guides:
+                            </p>
+                            <ul style="list-style: none; margin: 0; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="../locations/vadodara.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-map-pin'></i> Vadodara Development Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../locations/gujarat.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-globe'></i> Gujarat Digital Agency
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Callout Card -->
+                        <div class="sidebar-card cta-box">
+                            <h3 class="sidebar-title">Need Reliable SLA?</h3>
+                            <p>Speak with our support lead about tailored maintenance agreements for your application or business website.</p>
+                            <a href="../pages/contact.html" class="btn btn-primary" style="display: block; width: 100%; text-align: center;">Request Support Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ui-ux.html">UI/UX Design</a></li>
+                    <li><a href="web-app.html">Web Applications</a></li>
+                    <li><a href="maintenance.html">Maintenance Contracts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20maintenance." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+
+</html>

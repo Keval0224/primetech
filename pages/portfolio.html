@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 
 <head>
@@ -10,50 +10,35 @@
     <meta name="author" content="PrimeTech Digital Solutions">
     <link rel="canonical" href="https://primetech.live/portfolio.html">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://primetech.live/portfolio.html">
     <meta property="og:title" content="Portfolio | PrimeTech Digital Solutions">
     <meta property="og:description" content="View PrimeTech's portfolio of high-converting websites, applications, and UI/UX design projects.">
     <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://primetech.live/portfolio.html">
     <meta property="twitter:title" content="Portfolio | PrimeTech Digital Solutions">
-    <meta property="twitter:description" content="View PrimeTech's portfolio of high-converting websites, applications, and UI/UX design projects.">
+    <meta property="twitter:description" content="View PrimeTech's portfolio of high-converting websites and UI/UX design projects.">
     <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
-    
-    <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    
-    <!-- Lenis Smooth Scroll CDN -->
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-    
-    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    
-    <!-- Custom JS -->
     <script src="../js/main.js" defer></script>
 </head>
 
 <body>
-    <!-- Immersive Backdrop Glow Orbs -->
     <div class="noise-overlay"></div>
     <div class="glow-wrapper">
         <div class="glow-orb glow-orb-1"></div>
         <div class="glow-orb glow-orb-2"></div>
     </div>
-    <!-- 3D Floating Shape System -->
     <div class="scene-3d" id="scene-3d" aria-hidden="true">
         <div class="float-shape float-shape--ring" data-depth="0.3"></div>
         <div class="float-shape float-shape--sphere" data-depth="0.5"></div>
@@ -63,21 +48,16 @@
         <div class="float-shape float-shape--blob" data-depth="0.6"></div>
         <div class="float-shape float-shape--line" data-depth="0.25"></div>
     </div>
-    <!-- Floating Navigation Bar -->
+
     <header class="header" id="header">
         <div class="nav-container">
             <a href="../index.html" class="brand-logo">
-                <div class="brand-icon">
-                    <img src="../assets/images/p-logo.png" alt="PrimeTech">
-                </div>
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                 <div class="brand-text-wrap">
-                    <div class="brand-name">
-                        <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
-                    </div>
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
                     <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                 </div>
             </a>
-            
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -89,30 +69,93 @@
                 </ul>
                 <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
             </nav>
-            
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                    <i class='bx bx-moon' aria-hidden="true"></i>
-                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
                 <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Page Hero Section -->
-        <section class="page-hero-section">
-            <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
-            <div class="page-hero-overlay"></div>
-            <div class="container gsap-fade-up">
-                <div class="page-hero-breadcrumbs">
-                    <a href="../index.html">Home</a> <i class='bx bx-chevron-right'></i> <span>Portfolio</span>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Portfolio</span>
+                        </div>
+                        <p class="pg-hero-kicker">Our Work</p>
+                        <h1 class="pg-hero-title">
+                            Featured <br><span>Portfolio</span>
+                        </h1>
+                        <p class="pg-hero-sub">Real projects, real results. Browse our collection of live websites, custom web apps, and immersive product experiences.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="contact.html" class="btn btn-primary btn-cta">
+                                Discuss Your Project <i class='bx bx-message-square-detail'></i>
+                            </a>
+                            <a href="../index.html#internship" class="btn btn-outline btn-cta">
+                                View Intern Work <i class='bx bx-laptop'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-check-double'></i>
+                                <span>50+ Live Deployments</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-bolt'></i>
+                                <span>100% Performance Score</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Orbital Interactive System -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-folder'></i>
+                                    <span>Projects</span>
+                                </div>
+                                <div class="fp-title">Live Production</div>
+                                <div class="fp-desc">Fully optimized setups showing zero layout shifts and fast load speeds.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">100/100</div>
+                                <div class="fp-stat-lbl">Lighthouse score</div>
+                            </div>
+
+                            <!-- Orbit Rings -->
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Figma UI/UX"><i class='bx bxl-figma'></i></div>
+                                <div class="orbit-node" title="React Engine"><i class='bx bxl-react'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="JavaScript Code"><i class='bx bxl-javascript'></i></div>
+                                <div class="orbit-node" title="Node Backend"><i class='bx bxl-nodejs'></i></div>
+                            </div>
+
+                            <!-- Orbit Center -->
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Logo" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="page-hero-title">Our Portfolio</h1>
             </div>
         </section>
 
-        <!-- Website Projects Section -->
+        <!-- Website Projects -->
         <section class="portfolio section" id="websites" style="padding-top: 4rem;">
             <div class="container">
                 <div class="section-title-wrap gsap-fade-up">
@@ -121,20 +164,18 @@
                 </div>
 
                 <div class="portfolio-container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
-                    <!-- Project 1 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <img src="../assets/images/traveler.png" class="portfolio-img" alt="Travler Project" loading="lazy">
                         </div>
                         <div class="portfolio-content">
-                            <span>Travel & Booking Platform</span>
+                            <span>Travel &amp; Booking Platform</span>
                             <h3>Travler</h3>
                             <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">A premium travel booking website featuring dynamic destination showcases, detailed booking systems, and smooth exploration filters.</p>
                             <a href="https://traveler.chirag-dev.online" target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
-                    
-                    <!-- Project 2 -->
+
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <img src="../assets/images/e-book.png" class="portfolio-img" alt="Memoria Project" loading="lazy">
@@ -150,7 +191,7 @@
             </div>
         </section>
 
-        <!-- Creative UI/UX Designs Section -->
+        <!-- Creative UI/UX Designs -->
         <section class="portfolio section" id="designs" style="padding-top: 2rem;">
             <div class="container">
                 <div class="section-title-wrap gsap-fade-up">
@@ -159,7 +200,6 @@
                 </div>
 
                 <div class="portfolio-container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
-                    <!-- Project 3 -->
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
@@ -172,8 +212,7 @@
                             <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Tata%20Safari." target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
-                    
-                    <!-- Project 4 -->
+
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
@@ -186,8 +225,7 @@
                             <a href="https://wa.me/918141787035?text=Hi,%20I'm%20interested%20in%20a%20design%20similar%20to%20Nike%20Shoes%20Store." target="_blank" class="btn btn-primary btn-small mt-auto">View Project</a>
                         </div>
                     </div>
-                    
-                    <!-- Project 5 -->
+
                     <div class="portfolio-card glass-panel gsap-fade-up">
                         <div class="portfolio-img-wrap skeleton">
                             <div class="portfolio-media-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.3s; z-index: 5;"><div class="portfolio-play-btn"><i class='bx bx-play-circle'></i></div></div>
@@ -205,71 +243,26 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container grid footer-container">
             <div class="footer-col">
                 <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
-                    <div class="brand-icon">
-                        <img src="../assets/images/p-logo.png" alt="PrimeTech">
-                    </div>
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech"></div>
                     <div class="brand-text-wrap">
-                        <div class="brand-name">
-                            <span class="brand-prime">Prime</span><span class="brand-tech">Tech</span>
-                        </div>
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
                         <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
                     </div>
                 </a>
                 <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
             </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Our Work</a></li>
-                    <li><a href="../index.html#internship">Internships</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="services.html">Web Design</a></li>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Deployment</a></li>
-                    <li><a href="services.html">Social Media Management</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <div class="social-links">
-                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link">
-                        <i class='bx bx-envelope'></i> primetech.pvt001@gmail.com
-                    </a>
-                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link">
-                        <i class='bx bxl-instagram'></i> @primetech.solution_
-                    </a>
-                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link">
-                        <i class='bx bxl-linkedin'></i> PrimeTech Agency
-                    </a>
-                </div>
-            </div>
+            <div class="footer-col"><h3>Quick Links</h3><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="../index.html#internship">Internships</a></li></ul></div>
+            <div class="footer-col"><h3>Services</h3><ul class="footer-links"><li><a href="services.html">Web Design</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Deployment</a></li><li><a href="services.html">Social Media Management</a></li></ul></div>
+            <div class="footer-col"><h3>Contact</h3><div class="social-links"><a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a><a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a><a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a></div></div>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
-            <p style="font-size: 0.85rem;">Designed for cinematic immersion & performance.</p>
-        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 PrimeTech. All rights reserved.</p><p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p></div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
 </body>
 
 </html>

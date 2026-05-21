@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development &amp; Custom Software Gujarat | PrimeTech</title>
+    <meta name="description" content="PrimeTech provides top-tier website development, UI/UX design, custom web systems, and IT consulting services across Gujarat including Ahmedabad, Vadodara, and Surat.">
+    <meta name="keywords" content="web development Gujarat, website design Gujarat, IT solutions Gujarat, custom web applications Gujarat, software developers Ahmedabad, website developers Surat, PrimeTech Gujarat">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/locations/gujarat.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/locations/gujarat.html">
+    <meta property="og:title" content="Website Development &amp; Custom Software Gujarat | PrimeTech">
+    <meta property="og:description" content="PrimeTech engineers custom, high-converting digital platforms and responsive business applications for companies throughout Gujarat, India.">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/locations/gujarat.html">
+    <meta property="twitter:title" content="Website Development &amp; Custom Software Gujarat | PrimeTech">
+    <meta property="twitter:description" content="Custom web development, application engineering, and UI/UX design across Gujarat.">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Lenis, GSAP & Custom Script -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Specific LocalBusiness schema pointing back to organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://primetech.live/locations/gujarat.html#localbusiness",
+      "name": "PrimeTech Digital Solutions Gujarat",
+      "image": "https://primetech.live/assets/images/p-logo.png",
+      "telephone": "+918141787035",
+      "priceRange": "₹4999 - ₹12999",
+      "url": "https://primetech.live/locations/gujarat.html",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manjalpur",
+        "addressLocality": "Vadodara",
+        "addressRegion": "Gujarat",
+        "postalCode": "390011",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.2694",
+        "longitude": "73.1938"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "India"
+        }
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "https://primetech.live/#organization"
+      }
+    }
+    </script>
+
+    <style>
+        .detailed-content-section {
+            padding: 5rem 0;
+            background: var(--bg-main);
+        }
+
+        .detailed-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .deep-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        .deep-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .deep-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .deep-content ul, .deep-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .deep-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar widgets */
+        .service-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .cta-box {
+            text-align: center;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .detailed-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow Background -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="brand-logo">
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="../pages/services.html">Locations</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Gujarat</span>
+                        </div>
+                        <p class="pg-hero-kicker">Regional Digital Leader</p>
+                        <h1 class="pg-hero-title">
+                            Gujarat <br><span>Digital Scale</span>
+                        </h1>
+                        <p class="pg-hero-sub">Providing high-performance web development, custom software engineering, and search optimization solutions to businesses across Gujarat's industrial centers.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="../pages/contact.html?location=gujarat" class="btn btn-primary btn-cta">
+                                Regional Consultation <i class='bx bx-globe'></i>
+                            </a>
+                            <a href="../pages/services.html" class="btn btn-outline btn-cta">
+                                Explore Services <i class='bx bx-category'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-network-chart'></i>
+                                <span>Gujarat-Wide Operations</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-rocket'></i>
+                                <span>15-Day Premium Launch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-desktop'></i>
+                                    <span>Regional Technology</span>
+                                </div>
+                                <div class="fp-title">Enterprise Systems</div>
+                                <div class="fp-desc">Serving Ahmedabad, Vadodara, Surat, Rajkot, and Gandhinagar with zero latency.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">100%</div>
+                                <div class="fp-stat-lbl">Mobile Core Web Vitals</div>
+                            </div>
+
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Ahmedabad Dev"><i class='bx bx-network-chart'></i></div>
+                                <div class="orbit-node" title="Surat Scale"><i class='bx bx-diamond'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="Rajkot Tech"><i class='bx bx-cog'></i></div>
+                                <div class="orbit-node" title="GIFT City"><i class='bx bx-buildings'></i></div>
+                            </div>
+
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Center" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long-Form Content Section -->
+        <section class="detailed-content-section">
+            <div class="container">
+                <div class="detailed-layout">
+                    <!-- Main Text Column -->
+                    <div class="deep-content">
+                        <h2>1. Gujarat's Technology Growth and Industrial Expansion</h2>
+                        <p>
+                            Gujarat has established itself as one of India's most industrially and economically advanced states. With key initiatives like the Gujarat International Finance Tec-City (GIFT City) in Gandhinagar, the chemical and manufacturing centers in Vadodara and Ankleshwar, the diamond and textile industries in Surat, and the diverse business landscape of Ahmedabad, the state is undergoing rapid digital transformation. Traditional business models are adapting, and companies across Gujarat are investing in premium digital platforms to scale their operations nationally and globally.
+                        </p>
+                        <p>
+                            At PrimeTech, we build high-performance web infrastructure to support Gujarat's business growth. With our primary engineering office based in Vadodara, we deliver custom web development, web application engineering, and UI/UX design services to businesses across Ahmedabad, Surat, Rajkot, and Gandhinagar. We help local enterprises, family-owned businesses, and technology startups establish a strong digital presence built for speed, security, and long-term scaling.
+                        </p>
+
+                        <h2>2. Scalable Custom Web Engineering for Gujarati Startups and Corporates</h2>
+                        <p>
+                            A generic website template is often not enough to support growing business operations. Heavy themes and unoptimized plugins can slow down loading speeds, impact user experience, and leave platforms vulnerable to security threats.
+                        </p>
+                        <p>
+                            We build custom websites and web applications from the ground up. This engineering-first approach offers significant benefits:
+                        </p>
+                        <ul>
+                            <li><strong>Optimized Core Web Vitals:</strong> We focus on key performance metrics like Largest Contentful Paint (LCP) and Interaction to Next Paint (INP), ensuring pages load quickly on regional mobile networks.</li>
+                            <li><strong>Custom Business Logic Integration:</strong> We tailor your platform's backend to match your business processes, whether you need to connect with ERP systems, manage inventory, or build custom client portals.</li>
+                            <li><strong>Responsive Design Standards:</strong> Every layout is built using modern CSS, ensuring a seamless user experience across mobile phones, tablets, and desktop computers.</li>
+                        </ul>
+
+                        <h2>3. Regional Search Optimization & AI Discoverability</h2>
+                        <p>
+                            Having a fast website is only part of the solution; your target audience must also be able to find it easily online.
+                        </p>
+                        <p>
+                            We integrate Search Engine Optimization (SEO) and AI Engine Optimization (AEO) configurations directly into your platform's architecture:
+                        </p>
+                        <ol>
+                            <li><strong>Structured JSON-LD Schema:</strong> We embed clean metadata schemas on your pages, helping search crawlers and AI search assistants accurately catalog your services and locations.</li>
+                            <li><strong>Localized Content Strategy:</strong> We optimize your pages for key regional search terms, helping your business rank high for high-intent searches in Ahmedabad, Vadodara, and Surat.</li>
+                            <li><strong>Fast Load Times:</strong> Search engine algorithms favor websites that load quickly. Our clean codebase gives you a distinct advantage in organic search rankings.</li>
+                            <li><strong>Secure Configurations:</strong> We protect your search rankings and build customer trust by configuring SSL certificates, secure hosting, and standard security headers.</li>
+                        </ol>
+
+                        <h2>4. Core Technical Capabilities and Custom Solutions</h2>
+                        <p>
+                            Our development team offers a range of services designed for businesses across Gujarat:
+                        </p>
+                        <h3>Enterprise Web Applications</h3>
+                        <p>
+                            For manufacturing and logistics companies in industrial zones like Halol, Ankleshwar, and Hazira, we build custom database applications, dashboard systems, and internal portals. We utilize Node.js, React, and SQL/NoSQL databases to deliver secure, scalable web systems.
+                        </p>
+                        <h3>E-Commerce & Digital Commerce Platforms</h3>
+                        <p>
+                            For retail and textile brands in Surat and Ahmedabad, we build custom, high-speed e-commerce stores designed for smooth browsing, fast search, and secure payment integrations.
+                        </p>
+                        <h3>UI/UX Design and Branding</h3>
+                        <p>
+                            We combine premium aesthetics with clean layouts, using modern typography, curated color palettes, and glassmorphism styling to create a memorable brand experience.
+                        </p>
+
+                        <h2>5. Tech Career Development and Internship Programs in Gujarat</h2>
+                        <p>
+                            At PrimeTech, we support the growth of the local technology community. We offer hands-on internship programs for engineering and design students in Vadodara and across Gujarat.
+                        </p>
+                        <p>
+                            Through these programs, interns work alongside experienced developers on active commercial projects. They gain valuable experience with modern technologies like React, custom styling, and Git workflows, helping them prepare for successful careers in the technology industry.
+                        </p>
+
+                        <h2>6. Detailed Regional Tech Ecosystems & Growth Pillars</h2>
+                        <p>
+                            Gujarat's business landscape is characterized by diverse industry verticals scattered across key metropolitan centers. Understanding the digital requirements of each region allows us to build targeted solutions:
+                        </p>
+                        <ul>
+                            <li><strong>Ahmedabad's Startup & Service Economy:</strong> As the commercial capital of Gujarat, Ahmedabad is home to an active startup hub, e-commerce brands, real estate firms, and service agencies. These organizations require fast-scaling web applications, custom CRM platforms, and conversion-optimized websites. We help Ahmedabad startups build responsive frontend experiences and robust backend APIs that attract investors and retain users.</li>
+                            <li><strong>Surat's Textile & Diamond Commerce:</strong> The economic powerhouse of South Gujarat, Surat hosts massive diamond trading complexes and textile manufacturing units. These businesses require highly visual catalog sites, multi-vendor e-commerce marketplaces, secure supplier portals, and wholesale billing systems. We engineer custom Shopify configurations, WooCommerce portals, and bespoke web catalogs that allow Surat traders to display their products globally.</li>
+                            <li><strong>Rajkot's Casting & Engineering Hub:</strong> A key manufacturing corridor, Rajkot is famous for pump manufacturing, automotive castings, and machine tools. B2B businesses in this region rely on PrimeTech to build search-optimized corporate websites, technical catalog management systems, and inquiry lead captures that convert web search traffic into direct RFQs.</li>
+                            <li><strong>Gandhinagar & GIFT City (Gujarat International Finance Tec-City):</strong> Gandhinagar is evolving into a global financial tech powerhouse. FinTech firms, banking units, and multinational offices located in GIFT City demand high-security standards, zero-latency database integrations, and compliance-ready architectures. We implement SSL-encrypted systems, multi-factor authentication, and secure rest APIs that satisfy strict financial standards.</li>
+                        </ul>
+
+                        <h2>7. Regional Case Studies: Digitalizing Traditional Businesses in Gujarat</h2>
+                        <p>
+                            We have worked with diverse clients across the state to help them transition from traditional marketing methods to high-performance, automated online systems. Here are three examples:
+                        </p>
+                        <h3>Textile Exporter in Surat</h3>
+                        <p>
+                            A textile export firm in Surat wanted to showcase their fabric designs to global buyers. We designed a premium B2B catalog site with optimized image arrays and search filters. By implementing structured schema and optimizing their LCP score, we helped them achieve top page rankings, resulting in a 180% increase in export inquiries within four months.
+                        </p>
+                        <h3>FinTech Startup in Ahmedabad</h3>
+                        <p>
+                            A financial advisory startup in Ahmedabad needed a web portal where clients could view investment reports and track advisory hours. We built a custom React portal backed by Express and PostgreSQL. The system features secure client logins, automated PDF reports, and real-time dashboard analytics, reducing administrative hours by 60%.
+                        </p>
+                        <h3>Pump Manufacturer in Rajkot</h3>
+                        <p>
+                            An engineering firm in Rajkot was losing inquiries due to a slow, mobile-unfriendly website. We rebuilt their entire site using semantic HTML and custom CSS, creating a responsive product directory with built-in quote requests. The new site loads in 0.8 seconds on Jio mobile networks, increasing lead submissions by 220%.
+                        </p>
+
+                        <h2>8. Multilingual & Localized Language Support Systems</h2>
+                        <p>
+                            To reach all customer segments in Gujarat, a website must speak their language. We build multilingual web systems that support English, Hindi, and Gujarati.
+                        </p>
+                        <p>
+                            We implement localized translations using structured sub-directories or dynamic language switchers. This ensures that your brand speaks clearly to local suppliers in Rajkot or Vadodara, while still appealing to international clients. A multilingual structure also improves search engine results by targeting regional searches in multiple languages.
+                        </p>
+
+                        <h2>9. DevOps Infrastructure & Server Orchestration in Gujarat</h2>
+                        <p>
+                            A premium digital experience depends on reliable, secure hosting. We manage the technical complexities of server management and cloud hosting:
+                        </p>
+                        <ul>
+                            <li><strong>Zero-Downtime Deployment:</strong> We set up automated CI/CD pipelines using GitHub Actions, ensuring that updates and styling revisions are tested in staging environments before going live.</li>
+                            <li><strong>Secure Cloud Architectures:</strong> We deploy sites on AWS, Google Cloud, and DigitalOcean, configuring firewalls, database access rules, and automated backup routines to prevent data loss.</li>
+                            <li><strong>High-Speed CDN Networks:</strong> We integrate Cloudflare CDN to cache assets and distribute content quickly, keeping your site responsive for visitors across Gandhinagar, Surat, and Ahmedabad.</li>
+                        </ul>
+
+                        <h2>10. Security Compliance, Data Residency & GIFT City Web Regulations</h2>
+                        <p>
+                            Operating in Gujarat’s modern regulatory landscape means web systems must adhere to strict security and compliance standards. With the establishment of GIFT City in Gandhinagar as an international financial gateway, the demand for compliance-ready web development has surged.
+                        </p>
+                        <p>
+                            At PrimeTech, we implement data localization and residency configurations that comply with Reserve Bank of India (RBI) directives and the Digital Personal Data Protection (DPDP) Act of India. For FinTech and enterprise platforms, we ensure all database storage, transaction logs, and client backups are hosted on secure Indian cloud servers (AWS Mumbai region or local Microsoft Azure hubs).
+                        </p>
+                        <p>
+                            Furthermore, for export-focused enterprises in Surat and Vadodara, we engineer GDPR-compliant data processing flows, secure cookie consent management, and strict encryption protocols (AES-256 for data at rest and TLS 1.3 for data in transit). We design our custom APIs and database transactions to resist common vulnerabilities outlined in the OWASP Top 10 list, including SQL injections, cross-site scripting (XSS), and insecure direct object references (IDOR), ensuring that auditing bodies find your system completely secure.
+                        </p>
+
+                        <h2>11. FAQ on Web Development Services in Gujarat</h2>
+                        <p>
+                            Here are answers to common questions about our regional web services:
+                        </p>
+                        <h3>Do you service clients outside of Vadodara, such as in Ahmedabad or Surat?</h3>
+                        <p>
+                            Yes. While our office is based in Vadodara, we work with startups and established enterprises throughout Gujarat, including Ahmedabad, Surat, Rajkot, and Gandhinagar. We conduct project planning, reviews, and support sessions through video conferencing, ensuring clear communication throughout the project.
+                        </p>
+                        <h3>What is the starting price for a custom business website?</h3>
+                        <p>
+                            Our web development packages start at ₹4,999 for a basic 5-page custom site. This starting package includes professional layout configurations, mobile responsiveness, basic on-page SEO integration, and secure hosting deployments. For complex web applications, database portals, or custom e-commerce systems, we provide tailored pricing based on your specific system requirements.
+                        </p>
+                        <h3>How do you ensure our website remains secure and up-to-date?</h3>
+                        <p>
+                            We offer website maintenance contracts that include daily backups, continuous security scans, regular performance audits, and software updates to keep your platform secure and running smoothly.
+                        </p>
+                        <h3>How long does the development process take for a standard project?</h3>
+                        <p>
+                            For standard business sites, the average timeline is 15 days. For complex web applications, e-commerce stores, or custom SaaS dashboards, development can take between 4 to 8 weeks depending on the database and feature specifications.
+                        </p>
+                        <h3>Do we have direct communication with the developers?</h3>
+                        <p>
+                            Yes. We believe in direct communication without administrative barriers. Clients have direct access to their assigned developers via dedicated communication channels (Slack, WhatsApp, and Zoom) to ensure updates are completed quickly.
+                        </p>
+                        <h3>Can you assist in migrating legacy websites to modern frameworks?</h3>
+                        <p>
+                            Yes. We migrate old, slow websites built on legacy systems (such as old PHP files or outdated WordPress themes) to custom lightweight HTML5/CSS, React, or modern headless CMS architectures without losing search rankings or historical data. Our migration engineers carefully audit your incoming link patterns, configure precise server-level 301 redirects, verify XML sitemaps, and map canonical metadata to ensure your hard-earned SEO positioning in Gujarat and beyond remains fully protected and intact.
+                        </p>
+                        <h3>What analytics and tracking integrations do you set up?</h3>
+                        <p>
+                            We integrate standard traffic analysis and reporting tools including Google Analytics 4 (GA4), Google Search Console, heatmaps (such as Microsoft Clarity), and custom event triggers to help you monitor conversion funnels and marketing performance. We also set up custom goals to track contact form submissions, phone clicks, and WhatsApp chat initiations directly, giving you clear visibility into your ROI.
+                        </p>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="service-sidebar">
+                        <!-- Tech Stack Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Gujarat Reach</h3>
+                            <div class="tech-list">
+                                <span class="tech-tag">Ahmedabad Startups</span>
+                                <span class="tech-tag">Surat Commerce</span>
+                                <span class="tech-tag">Vadodara IT Hub</span>
+                                <span class="tech-tag">Rajkot Engineering</span>
+                                <span class="tech-tag">GIFT City Systems</span>
+                                <span class="tech-tag">Regional Scaling</span>
+                                <span class="tech-tag">Multilingual Support</span>
+                                <span class="tech-tag">Enterprise DevOps</span>
+                                <span class="tech-tag">SLA Maintenance</span>
+                            </div>
+                        </div>
+
+                        <!-- Blog Reference Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Featured Industry Guide</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                                Learn why clean coding practices, Core Web Vitals, and localized SEO schemas are critical for regional growth:
+                            </p>
+                            <a href="../blog/best-website-development-company-in-vadodara.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class='bx bx-book-open'></i> Read Our SEO Growth Guide
+                            </a>
+                        </div>
+
+                        <!-- CTA Callout Card -->
+                        <div class="sidebar-card cta-box">
+                            <h3 class="sidebar-title">Scale in Gujarat</h3>
+                            <p>Discuss your regional expansion plans with our strategy team. We will help design a scalable web solution for your business.</p>
+                            <a href="../pages/contact.html" class="btn btn-primary" style="display: block; width: 100%; text-align: center;">Get Gujarat Proposal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="../services/web-development.html">Web Development</a></li>
+                    <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                    <li><a href="../services/web-app.html">Web Applications</a></li>
+                    <li><a href="../services/maintenance.html">Maintenance Contracts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20web%20development%20in%20Gujarat." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+
+</html>

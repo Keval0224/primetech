@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development & UI/UX Internship Vadodara | PrimeTech</title>
+    <meta name="description" content="Join PrimeTech's premium internship program in Vadodara, Gujarat. Work on live commercial projects, receive mentorship, and earn verified certification.">
+    <meta name="keywords" content="web development internship Vadodara, UI UX design internship Gujarat, coding training Vadodara, IT student projects, software development course">
+    <meta name="author" content="PrimeTech Digital Solutions">
+    <link rel="canonical" href="https://primetech.live/services/internship.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primetech.live/services/internship.html">
+    <meta property="og:title" content="Web Development & UI/UX Internships | PrimeTech Vadodara">
+    <meta property="og:description" content="Hands-on coding, live commercial project exposure, and mentorship for IT students in Vadodara, Gujarat.">
+    <meta property="og:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://primetech.live/services/internship.html">
+    <meta property="twitter:title" content="Web Development & UI/UX Internships | PrimeTech Vadodara">
+    <meta property="twitter:description" content="Hands-on coding, live commercial project exposure, and mentorship for IT students in Vadodara.">
+    <meta property="twitter:image" content="https://primetech.live/assets/images/p-logo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Lenis, GSAP & Custom Script -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Specific Schema mapping to main Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://primetech.live/services/internship.html#service",
+      "serviceType": "Web Development and UI/UX Design Internship Program",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://primetech.live/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vadodara"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "India"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "4999.00",
+        "priceValidUntil": "2027-12-31",
+        "url": "https://primetech.live/pages/pricing-basic.html"
+      },
+      "description": "Professional IT training and development program in Vadodara offering hands-on workspace experience, live client project tasks, and validated IT certifications."
+    }
+    </script>
+
+    <style>
+        .detailed-content-section {
+            padding: 5rem 0;
+            background: var(--bg-main);
+        }
+
+        .detailed-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .deep-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        .deep-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .deep-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .deep-content ul, .deep-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .deep-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar widgets */
+        .service-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .sidebar-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .cta-box {
+            text-align: center;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .detailed-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow Background -->
+    <div class="noise-overlay"></div>
+    <div class="glow-wrapper">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="../index.html" class="brand-logo">
+                <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                <div class="brand-text-wrap">
+                    <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                    <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                </div>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../index.html#internship" class="nav-link">Internship</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close"><i class='bx bx-x' aria-hidden="true"></i></div>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class='bx bx-moon' aria-hidden="true"></i></button>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu' aria-hidden="true"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="pg-hero pg-hero--split">
+            <div class="pg-hero-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="pg-hero-grid-layout">
+                    <!-- Left Column -->
+                    <div class="pg-hero-left">
+                        <div class="pg-hero-breadcrumbs">
+                            <a href="../index.html">Home</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="../pages/services.html">Services</a>
+                            <i class='bx bx-chevron-right'></i>
+                            <span>Internships</span>
+                        </div>
+                        <p class="pg-hero-kicker">Professional IT Mentorship</p>
+                        <h1 class="pg-hero-title">
+                            Elite <br><span>Internship</span>
+                        </h1>
+                        <p class="pg-hero-sub">Hands-on industrial training designed for IT, Computer Engineering, and MCA/BCA students wanting verified commercial project experience.</p>
+                        
+                        <div class="pg-hero-cta-group">
+                            <a href="../pages/contact.html?inquiry=internship" class="btn btn-primary btn-cta">
+                                Apply for Batch <i class='bx bx-edit-alt'></i>
+                            </a>
+                            <a href="../index.html#internship" class="btn btn-outline btn-cta">
+                                Program Overview <i class='bx bx-graduation'></i>
+                            </a>
+                        </div>
+                        
+                        <div class="pg-hero-trust-metrics">
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-briefcase-alt-2'></i>
+                                <span>Active Client Work Tasks</span>
+                            </div>
+                            <div class="pg-metric-badge">
+                                <i class='bx bx-check-shield'></i>
+                                <span>Verified Credentials</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="pg-hero-right" aria-hidden="true">
+                        <div class="interactive-orbit-wrapper">
+                            <!-- Floating panels -->
+                            <div class="floating-panel panel-project-info glass-panel">
+                                <div class="fp-header">
+                                    <i class='bx bx-graduation'></i>
+                                    <span>Training Track</span>
+                                </div>
+                                <div class="fp-title">Expert Mentors</div>
+                                <div class="fp-desc">Learn code reviews, system design, Git flow, and premium UI layouts with lead engineers.</div>
+                            </div>
+                            
+                            <div class="floating-panel panel-speed-stat glass-panel">
+                                <div class="fp-stat-val">100%</div>
+                                <div class="fp-stat-lbl">Practical Hands-on</div>
+                            </div>
+
+                            <div class="orbit-ring orbit-ring--inner">
+                                <div class="orbit-node" title="Coding"><i class='bx bx-code'></i></div>
+                                <div class="orbit-node" title="Figma UI"><i class='bx bxl-figma'></i></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring--outer">
+                                <div class="orbit-node" title="Collaborative Git"><i class='bx bxl-git'></i></div>
+                                <div class="orbit-node" title="Verification"><i class='bx bx-badge-check'></i></div>
+                            </div>
+
+                            <div class="orbit-center">
+                                <div class="orbit-center-glow"></div>
+                                <img src="../assets/images/p-logo.png" alt="PrimeTech Center" class="orbit-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long-Form Content Section -->
+        <section class="detailed-content-section">
+            <div class="container">
+                <div class="detailed-layout">
+                    <!-- Main Text Column -->
+                    <div class="deep-content">
+                        <h2>1. Bridging the Gap Between Classroom Theory and Agency Engineering</h2>
+                        <p>
+                            Many computer science and information technology graduates enter the job market with extensive theoretical knowledge but struggle when faced with a real-world developer environment. Academic curriculums often focus on static concepts, leaving students unprepared for the fast-paced, collaborative workflows of modern web development and digital agency operations. At PrimeTech, based in Vadodara, Gujarat, we offer structured industrial internship programs specifically designed to bridge this gap. We provide a space where IT, MCA, BCA, and computer engineering students can transition from academic learners into capable industry professionals.
+                        </p>
+                        <p>
+                            Rather than teaching from generic textbooks or presenting outdated coding tutorials, our internship programs place you in the middle of active digital agency operations. Interns work alongside senior frontend developers, UI/UX designers, and systems architects. You will contribute to actual code repositories, participate in UI design sprints, and learn how to configure production deployment pipelines. This hands-on, practical approach ensures that you develop not only technical coding skills but also the problem-solving mindsets and collaborative work habits that top technology companies look for when hiring.
+                        </p>
+                        <p>
+                            Working in a professional setting helps you understand the "why" behind development practices. You will learn why clean, self-documenting code is essential for team projects, how user research shapes UI layouts, and how optimization impacts business metrics. Our goal is to make every intern who completes our program highly competitive in the job market, equipped with real project portfolios and verified credentials that demonstrate their readiness to contribute from day one.
+                        </p>
+
+                        <h2>2. Our Structured Internship Tracks</h2>
+                        <p>
+                            To cater to different interests and career paths, we offer two main internship tracks. Both tracks are structured to align with modern industry standards and satisfy your university's academic internship requirements.
+                        </p>
+                        <h3>Track A: Frontend & Full-Stack Web Development</h3>
+                        <p>
+                            This track is designed for students aiming to build careers as software developers, frontend engineers, or full-stack web applications developers. You will focus on writing clean, scalable code and using modern frameworks.
+                        </p>
+                        <ul>
+                            <li><strong>Modern Layout Engineering:</strong> Master pixel-perfect web development using semantic HTML5, advanced CSS Grid, Flexbox, responsive layouts, and utility-first CSS frameworks like Tailwind. You will learn how to translate complex Figma visual designs into clean, accessible code. We teach you how to write responsive media queries, establish flexible typography systems, and use CSS custom properties to build dynamic, themeable interfaces that perform beautifully across all devices.</li>
+                            <li><strong>JavaScript & React Systems:</strong> Write clean, modular ES6+ JavaScript. Develop reactive user interfaces using React.js and Next.js, focusing on state management, asynchronous API integration, and modular component structures. Interns learn state management libraries (like Zustand or Redux Toolkit), handle asynchronous API requests with fetch and Axios, and understand how to manage component lifecycles, hooks, and performance profiling.</li>
+                            <li><strong>Code Optimization & Core Web Vitals:</strong> Learn how to audit site performance, optimize images, configure proper metadata structures, and hit perfect Lighthouse scores to ensure fast loading times and strong SEO performance. You will get hands-on experience using tools like Google PageSpeed Insights, Chrome DevTools, and WebPageTest to isolate and fix performance bottlenecks like layout shifts and excessive script payloads.</li>
+                            <li><strong>Modern Build Tools & Deployment:</strong> Gain experience with npm, Vite, Webpack, and configure automated deployment workflows on platforms like Vercel, Netlify, and AWS. You will understand package management, build scripts, environment variables configuration, and continuous integration / continuous deployment (CI/CD) pipelines.</li>
+                        </ul>
+                        <h3>Track B: UI/UX & Interactive Product Design</h3>
+                        <p>
+                            This track is tailored for creative problem-solvers looking to build careers as product designers, UI developers, or UX researchers. You will focus on user-centric design processes and industry-standard design tools.
+                        </p>
+                        <ul>
+                            <li><strong>User Research & Wireframing:</strong> Learn how to conduct user interviews, design user personas, build site maps, and construct low-fidelity wireframes that organize website content and navigation. You will learn how to map out user journeys, identify pain points, and define logical content flows before any visual design begins.</li>
+                            <li><strong>Figma Design Systems:</strong> Build comprehensive, scalable design systems in Figma. Learn how to manage typographic scales, harmonious color schemes, spacing grids, and interactive button and form libraries. We cover advanced Figma features like Auto-Layout, variables, interactive components, and nesting, ensuring your design files are ready for developers to implement.</li>
+                            <li><strong>High-Fidelity Prototyping & Micro-Animations:</strong> Create realistic, interactive prototypes with smooth screen transitions and micro-animations that communicate design behaviors to engineering teams. You will learn how to use Figma's prototyping tools to showcase hover states, loading sequences, modal overlays, and page transitions.</li>
+                            <li><strong>Usability Testing & Accessibility:</strong> Run usability tests with real users to identify design bottlenecks, and learn how to design websites that meet WCAG accessibility guidelines. We emphasize color contrast, screen reader compatibility, and logical tab orders, ensuring your designs are inclusive for everyone.</li>
+                        </ul>
+
+                        <h2>3. Collaborative Engineering & Git-Flow Standards</h2>
+                        <p>
+                            One of the biggest challenges for junior developers is learning how to collaborate on a single codebase. In school, most projects are completed individually, but in the industry, teamwork is the standard. At PrimeTech, we place a strong emphasis on mastering collaborative workflows.
+                        </p>
+                        <p>
+                            Every developer intern is integrated into our version control systems on GitHub. You will learn how to use Git-Flow, working on dedicated feature branches, submitting Pull Requests (PRs), and resolving merge conflicts. You will participate in daily standups and learn how to write descriptive commit messages that document your code updates.
+                        </p>
+                        <p>
+                            Our senior engineering team reviews every pull request, providing feedback on code quality, performance, and structure. This process helps you understand how to write clean, maintainable code that meets professional standards, preparing you for the engineering practices of top tech firms. You will learn to accept constructive feedback, understand architectural patterns, and implement code reviews as a core tool for learning and engineering quality.
+                        </p>
+
+                        <h2>4. Mentorship, Code Reviews & Portfolio Building</h2>
+                        <p>
+                            We believe that mentorship is key to professional growth. Every intern is paired with a dedicated senior developer or designer who acts as a mentor throughout the program, providing guidance and feedback on all assignments.
+                        </p>
+                        <p>
+                            We host weekly code and design reviews, providing constructive critiques that help you identify areas for improvement. You will learn how to refactor your code for better performance, clean up CSS files, and refine UI layouts. We focus on writing DRY (Don't Repeat Yourself) code, minimizing dependency bloat, and ensuring all assets are optimized for web environments.
+                        </p>
+                        <p>
+                            Additionally, we guide you in building a professional portfolio website. We help you choose your best projects, write clear case studies that explain your problem-solving process, and present your work in a clean, professional format. A strong portfolio is your best asset when applying for jobs, and we make sure yours stands out. We assist with hosting setups, domain routing, and SEO optimization for your personal portfolio, ensuring your digital resume is discoverable by recruiters.
+                        </p>
+
+                        <h2>5. Verified Credentials, Career Placement, & Academic Integration</h2>
+                        <p>
+                            We understand that academic integration is important. Our internship programs are designed to satisfy the industrial training requirements of leading universities in Gujarat, including Maharaja Sayajirao University (MSU) Vadodara, Parul University, Gujarat Technological University (GTU), ITM Universe, and Navrachana University. We handle all required academic paperwork, including weekly logs, evaluation forms, and project report reviews.
+                        </p>
+                        <p>
+                            Upon successful completion, you will receive a verified Certificate of Completion and a Letter of Recommendation (LOR) from our directors. Every certificate features a unique verification code, allowing potential employers to confirm your credentials on our verification portal, helping you stand out in competitive job markets. We also provide direct LinkedIn recommendations and serve as professional references for your future employment search.
+                        </p>
+
+                        <h2>6. Practical Industry Tools & Agile Scrum Practices</h2>
+                        <p>
+                            Working in a modern tech company requires understanding the tools and processes that keep projects organized. In our internship program, you will learn to navigate the Agile Scrum methodology, which is used by top development teams worldwide.
+                        </p>
+                        <p>
+                            You will learn how to manage tasks using boards like Jira and Trello. You will participate in sprint planning sessions, learn how to estimate task complexities using story points, and track your daily progress on burndown charts. We also cover communication tools like Slack and Google Workspace, preparing you to fit into corporate workflows.
+                        </p>
+                        <p>
+                            By learning these agile practices, you gain a significant advantage over candidates who only have technical skills. You will show potential employers that you can join their team and adapt to their existing workflows, reducing onboarding time and demonstrating professional maturity.
+                        </p>
+
+                        <h2>8. Practical Workspaces, Infrastructure, & Professional Development</h2>
+                        <p>
+                            At PrimeTech, we provide a modern workspace equipped with the latest software and hardware configurations. Interns gain experience working with developer-grade machines, high-speed fiber internet, and collaborative design and staging servers. By experiencing a professional agency setup, you become comfortable in corporate settings and learn how physical and digital infrastructure supports project execution.
+                        </p>
+                        <p>
+                            In addition to technical skills, we emphasize the development of professional soft skills. You will participate in client meetings, present your designs and code to stakeholders, and write detailed progress reports. This exposure helps you build communication skills, learn how to handle professional criticism, and understand client expectations, turning you into a well-rounded candidate for any technology firm.
+                        </p>
+
+                        <h2>9. IT Internships - Frequently Asked Questions (FAQ)</h2>
+                        <div class="inner-faq" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: What is the duration of the PrimeTech internship program?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Our internship programs typically run for either 3 months or 6 months, depending on your academic syllabus requirements and career goals. We offer both full-time (8 hours/day) and part-time (4 hours/day) schedules, with flexible timings that allow you to balance internship tasks with university classes and exams. This allows you to complete your university requirements while gaining actual project experience.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Will I get to work on actual client projects?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Yes, our interns contribute directly to active agency projects. Once you complete your initial orientation and demonstrate competency in Git and our development guidelines, you will be assigned to support tasks on active client builds under the supervision of a senior developer, giving you real-world commercial experience. You will see how your code is compiled, tested, and pushed to live environments, giving you a complete understanding of the software development lifecycle.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How do you support academic project submission?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: We help you define a comprehensive project scope, review your design documentation, and guide you in building your system architecture. We also review your project reports and sign off on weekly diaries, ensuring your internship meets all university guidelines for final year assessments. We can assist in preparing the documentation, structural diagrams, database schemas, and presentation materials required for your final university viva exams.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: Do you offer placement support after the internship?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Yes, we provide placement assistance. Outstanding interns are often offered full-time roles within PrimeTech upon graduation. For others, we share job openings from our network of partner agencies in Vadodara and Gujarat, provide resume reviews, and conduct mock interview prep to support your job search. We also help you optimize your LinkedIn profile and GitHub portfolio to attract tech recruiters.</p>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                                <h3 style="margin-top: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">Q: How do potential employers verify my PrimeTech internship credentials?</h3>
+                                <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">A: Every Certificate of Completion we issue includes a unique, secure credential ID. Employers can visit the verification section of our website or email our HR team with this ID to instantly verify your internship details, key project contributions, and performance ratings. This transparency provides employers with confidence in your resume details and helps you build trust during the recruitment process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="service-sidebar">
+                        <!-- Tech Stack Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Program Features</h3>
+                            <div class="tech-list">
+                                <span class="tech-tag">Industrial IT Mentorship</span>
+                                <span class="tech-tag">Live Project Assignments</span>
+                                <span class="tech-tag">Git Flow & Collaboration</span>
+                                <span class="tech-tag">Weekly Code Reviews</span>
+                                <span class="tech-tag">Figma UI/UX Systems</span>
+                                <span class="tech-tag">Verified Credentials</span>
+                                <span class="tech-tag">Portfolio Compiling</span>
+                                <span class="tech-tag">Interview Prep</span>
+                                <span class="tech-tag">Flexible Timings</span>
+                            </div>
+                        </div>
+
+                        <!-- Service Coverage Card -->
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Service Locations</h3>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                                We provide premium engineering and design consultations across Gujarat. Visit our location guides:
+                            </p>
+                            <ul style="list-style: none; margin: 0; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="../locations/vadodara.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-map-pin'></i> Vadodara Development Hub
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../locations/gujarat.html" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class='bx bx-globe'></i> Gujarat Digital Agency
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Callout Card -->
+                        <div class="sidebar-card cta-box">
+                            <h3 class="sidebar-title">Next Batch Opening</h3>
+                            <p>We accept a limited number of interns per batch to guarantee high-quality, individual mentorship. Apply today to secure your spot.</p>
+                            <a href="../pages/contact.html" class="btn btn-primary" style="display: block; width: 100%; text-align: center;">Apply Online Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid footer-container">
+            <div class="footer-col">
+                <a href="../index.html" class="brand-logo" style="margin-bottom: 2rem;">
+                    <div class="brand-icon"><img src="../assets/images/p-logo.png" alt="PrimeTech Logo"></div>
+                    <div class="brand-text-wrap">
+                        <div class="brand-name"><span class="brand-prime">Prime</span><span class="brand-tech">Tech</span></div>
+                        <div class="brand-tagline">TECHNOLOGY YOU CAN TRUST</div>
+                    </div>
+                </a>
+                <p class="footer-description">Forging the next generation of digital products with cutting-edge technology and unparalleled design expertise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/portfolio.html">Our Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ui-ux.html">UI/UX Design</a></li>
+                    <li><a href="web-app.html">Web Applications</a></li>
+                    <li><a href="maintenance.html">Maintenance Contracts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="social-links">
+                    <a href="mailto:primetech.pvt001@gmail.com" class="social-link"><i class='bx bx-envelope'></i> primetech.pvt001@gmail.com</a>
+                    <a href="https://www.instagram.com/primetech.solution_/" target="_blank" class="social-link"><i class='bx bxl-instagram'></i> @primetech.solution_</a>
+                    <a href="https://www.linkedin.com/company/121024077/" target="_blank" class="social-link"><i class='bx bxl-linkedin'></i> PrimeTech Agency</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 PrimeTech. All rights reserved.</p>
+            <p style="font-size: 0.85rem;">Designed for cinematic immersion &amp; performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20the%20internship%20program." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+</body>
+
+</html>

@@ -596,6 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroShowcase();
   initMarqueeSection();
   initInternStarfield();
+  initSplitHeroParallax();
 });
 
 /* ============================================================
@@ -738,4 +739,59 @@ function initInternStarfield() {
     // Just re-init for density difference between themes if desired.
     setTimeout(initStars, 50);
   });
+}
+
+/* ============================================================
+   SUBPAGE SPLIT-HERO PARALLAX INTERACTION
+   ============================================================ */
+function initSplitHeroParallax() {
+  const hero = document.querySelector('.pg-hero--split');
+  const orbitWrapper = document.querySelector('.interactive-orbit-wrapper');
+  if (!hero || !orbitWrapper) return;
+
+  // Check prefers-reduced-motion
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (mediaQuery.matches) return;
+
+  const panels = orbitWrapper.querySelectorAll('.floating-panel');
+  const center = orbitWrapper.querySelector('.orbit-center');
+
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    // Normalize coordinates around center of hero section
+    mouseX = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+    mouseY = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+  }, { passive: true });
+
+  hero.addEventListener('mouseleave', () => {
+    mouseX = 0;
+    mouseY = 0;
+  });
+
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  function tick() {
+    currentX = lerp(currentX, mouseX, 0.06);
+    currentY = lerp(currentY, mouseY, 0.06);
+
+    // Apply parallax offset to floating panels via CSS Custom Properties
+    panels.forEach((panel) => {
+      const isSpeed = panel.classList.contains('panel-speed-stat');
+      const factor = isSpeed ? 30 : -30;
+      panel.style.setProperty('--para-x', `${(currentX * factor).toFixed(1)}px`);
+      panel.style.setProperty('--para-y', `${(currentY * factor).toFixed(1)}px`);
+    });
+
+    // Apply subtle parallax to orbit center
+    if (center) {
+      center.style.transform = `translate(${(currentX * 15).toFixed(1)}px, ${(currentY * 15).toFixed(1)}px)`;
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  tick();
 }
