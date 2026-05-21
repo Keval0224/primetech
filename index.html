@@ -29,8 +29,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- BoxIcons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- BoxIcons (Async for FCP) -->
+    <link rel="preload" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></noscript>
+    
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="https://i.ibb.co/sVWfnWX/keyboard-black.png">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -294,7 +298,7 @@
 
                             <div class="bottom_part">
                                 <div class="keyboard">
-                                    <img src="https://i.ibb.co/sVWfnWX/keyboard-black.png" alt="Keyboard">
+                                    <img src="https://i.ibb.co/sVWfnWX/keyboard-black.png" alt="Keyboard" fetchpriority="high" width="800" height="600">
                                 </div>
                                 <div style="display:flex;justify-content:center;align-items:center;">
                                     <div class="touchpad"></div>

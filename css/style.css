@@ -164,6 +164,8 @@ video {
   padding-block: 8rem 6rem;
   position: relative;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
 }
 
 .section-title-wrap {
@@ -879,8 +881,9 @@ video {
 
 .hero-line-inner {
   display: block;
-  transform: translateY(110%);
-  will-change: transform;
+  opacity: 0.01;
+  transform: translateY(30px);
+  will-change: transform, opacity;
 }
 
 .hero-line--accent .hero-line-inner {

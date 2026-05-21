@@ -110,8 +110,9 @@ const runHeroReveal = () => {
   const lines = document.querySelectorAll('.hero-line-inner');
   lines.forEach((inner, i) => {
     setTimeout(() => {
-      inner.style.transition = `transform 1.1s cubic-bezier(0.16, 1, 0.3, 1)`;
+      inner.style.transition = `transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1)`;
       inner.style.transform = 'translateY(0%)';
+      inner.style.opacity = '1';
     }, 200 + i * 130);
   });
 
