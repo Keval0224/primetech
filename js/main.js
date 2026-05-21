@@ -573,6 +573,30 @@ const initMarqueeSection = () => {
   observer.observe(section);
 };
 
+/* ==========================================
+   14. FAQ ACCORDION INTERACTION
+   ========================================== */
+const initFAQ = () => {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const faqItem = btn.closest('.faq-item');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+      // Toggle current
+      if (isExpanded) {
+        btn.setAttribute('aria-expanded', 'false');
+        faqItem.classList.remove('is-open');
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        faqItem.classList.add('is-open');
+      }
+    });
+  });
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
   initLenis();
 
@@ -597,6 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMarqueeSection();
   initInternStarfield();
   initSplitHeroParallax();
+  initFAQ();
 });
 
 /* ============================================================
