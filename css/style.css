@@ -606,6 +606,56 @@ video {
   cursor: pointer;
 }
 
+/* Centered Logo & Split Navigation for Desktop */
+@media screen and (min-width: 1025px) {
+  .nav-container {
+    position: relative;
+  }
+
+  .nav-container .brand-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1005;
+  }
+
+  .nav-actions {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1005;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: grid;
+    /* 3 left cells (1fr each), 1 center gap (220px for logo clearance), 3 right cells (1fr each) */
+    grid-template-columns: repeat(3, 1fr) 220px repeat(3, 1fr);
+    align-items: center;
+    width: 100%;
+    max-width: 950px;
+    gap: 0;
+  }
+
+  .nav-list li {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Force the 4th child (Portfolio) to start in the 5th column, leaving column 4 empty for the logo */
+  .nav-list li:nth-child(4) {
+    grid-column-start: 5;
+  }
+}
+
 /* ==========================================
    3D FLOATING SHAPES BACKGROUND SYSTEM
    ========================================== */
@@ -1550,9 +1600,10 @@ video {
 .marquee-belt {
   position: relative;
   overflow: hidden;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  background: var(--bg-surface);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 1.5rem 0;
 
   /* Wider, softer edge fade */
   -webkit-mask-image: linear-gradient(90deg,
@@ -1567,44 +1618,28 @@ video {
       transparent 100%);
 }
 
-[data-theme="dark"] .marquee-belt {
-  background: var(--bg-card);
-}
-
-/* Grid-line overlay — reference style */
+/* Grid-line overlay removed for boxless blend */
 .mb-grid-lines {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    linear-gradient(var(--border-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-  background-size: 100px 100%;
-  opacity: 0.7;
-}
-
-[data-theme="dark"] .mb-grid-lines {
-  opacity: 0.25;
+  display: none;
 }
 
 /* Rows */
 .mb-row {
   display: flex;
   overflow: hidden;
-  padding: 1.5rem 0;
+  padding: 0.6rem 0;
   position: relative;
   z-index: 1;
 }
 
 .mb-row--b {
-  border-top: 1px solid var(--border-color);
+  border-top: none;
 }
 
 /* Scrolling track */
 .mb-track {
   display: flex;
-  gap: 4rem;
+  gap: 4.5rem;
   width: max-content;
   white-space: nowrap;
   align-items: center;
@@ -1651,47 +1686,61 @@ video {
 /* Item styles */
 .mb-item {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   color: var(--text-muted);
-  opacity: 0.55;
+  opacity: 0.7;
   flex-shrink: 0;
   transition: opacity 0.4s ease, color 0.4s ease;
   cursor: default;
   user-select: none;
 }
 
-/* Project names — italic, lighter */
+/* Project names — italic, colored */
 .mb-item--italic {
   font-style: italic;
-  font-weight: 400;
-  opacity: 0.38;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--primary);
+  opacity: 0.85;
 }
 
 /* Tech names — thin, ghost-like */
 .mb-item--light {
   font-weight: 300;
-  opacity: 0.32;
-  letter-spacing: 0.05em;
+  opacity: 0.55;
 }
 
 /* Row hover: all items lift together */
 .mb-row:hover .mb-item {
-  opacity: 0.85;
+  opacity: 0.95;
   color: var(--text-main);
 }
 
-/* Dot separators — tiny filled circles */
+.mb-row:hover .mb-item--italic {
+  color: var(--primary);
+  opacity: 1;
+}
+
+.mb-row:hover .mb-item--light {
+  opacity: 0.8;
+}
+
+/* Dot separators — tiny glowing diamonds */
 .mb-dot {
   flex-shrink: 0;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--text-muted);
-  opacity: 0.2;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: var(--primary);
+  opacity: 0.65;
   display: inline-block;
+  box-shadow: 0 0 6px var(--primary);
+  transition: opacity 0.4s ease;
+}
+
+.mb-row:hover .mb-dot {
+  opacity: 0.95;
 }
 
 /* Reduced motion */
@@ -1976,46 +2025,346 @@ video {
 /* ==========================================
    WHY CHOOSE US (STAGGERED DETAILS)
    ========================================== */
-.why-container {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
+/* ==========================================
+   WHY CHOOSE US (BENTO GRID REDESIGN)
+   ========================================== */
+.why-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
 }
 
-.why-card {
-  padding: 3rem 2.5rem;
-  text-align: left;
+.bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  min-height: 340px;
+  padding: 2.5rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card--large {
+  grid-column: span 2;
+}
+
+.bento-card--small {
+  grid-column: span 1;
+}
+
+.bento-card-content {
+  position: relative;
+  z-index: 2;
 }
 
 .why-icon-box {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
   background: rgba(var(--primary-rgb), 0.08);
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
   transition: all 0.5s ease;
 }
 
-.why-card:hover .why-icon-box {
+.bento-card:hover .why-icon-box {
   background: var(--primary);
   color: #ffffff;
   transform: rotateY(180deg) scale(1.05);
 }
 
 .why-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
 }
 
 .why-desc {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* ─── BENTO VISUALS ─── */
+.bento-visual {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* 1. Timeline Visual (15-Day Rapid Launch) */
+.timeline-visual {
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 3rem;
+  right: 3rem;
+  top: 50%;
+  height: 2px;
+  background: rgba(var(--primary-rgb), 0.15);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.timeline-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  gap: 0.5rem;
+}
+
+.step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+  border: 2px solid var(--bg-surface);
+  transition: all 0.4s ease;
+}
+
+.step-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+}
+
+.timeline-step.active .step-dot {
+  background: var(--primary);
+  opacity: 1;
+  box-shadow: 0 0 10px var(--primary);
+  transform: scale(1.3);
+}
+
+.timeline-step.active .step-label {
+  color: var(--primary);
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* 2. Price Visual (Transparent Pricing Sticker) */
+.price-visual {
+  justify-content: center;
+}
+
+.price-sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.25);
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.price-sticker:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.35);
+}
+
+.price-currency {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.price-value {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-family: var(--font-heading);
+}
+
+.price-suffix {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+/* 3. Status Visual (Uptime pulse) */
+.status-visual {
+  flex-direction: column;
+  gap: 0.4rem;
+  background: rgba(34, 197, 94, 0.04);
+  border-radius: 16px;
+  border: 1px dashed rgba(34, 197, 94, 0.15);
+  padding: 0.8rem;
+}
+
+[data-theme="dark"] .status-visual {
+  background: rgba(34, 197, 94, 0.02);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.status-pulse-ring {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 2px solid #22c55e;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulseStatus 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.status-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #22c55e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-uptime {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+@keyframes pulseStatus {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* 4. Dials Visual (Lighthouse-like Performance wheels) */
+.dials-visual {
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.dial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dial-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3.5px solid #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.05);
+  font-family: var(--font-heading);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.15);
+  animation: dialEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.dial-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes dialEntrance {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ─── RESPONSIVE BENTO GRID MEDIA QUERIES ─── */
+@media (max-width: 992px) {
+  .why-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-card--large {
+    grid-column: span 2;
+  }
+  .bento-card--small {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .bento-card--large,
+  .bento-card--small {
+    grid-column: span 1;
+    min-height: auto;
+    padding: 2rem;
+  }
+  .timeline-visual {
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  .timeline-line {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+  .dials-visual {
+    margin-top: 1.5rem;
+    padding: 0;
+  }
 }
 
 /* ==========================================
@@ -4053,7 +4402,25 @@ video {
   }
 
   .marquee-belt {
-    display: none !important;
+    display: block !important;
+    padding: 0.8rem 0 !important;
+  }
+
+  .mb-row {
+    padding: 0.3rem 0 !important;
+  }
+
+  .mb-track {
+    gap: 2.5rem !important;
+  }
+
+  .mb-item {
+    font-size: 0.95rem !important;
+  }
+
+  .mb-dot {
+    width: 4px !important;
+    height: 4px !important;
   }
 
   .portfolio-row-new {
