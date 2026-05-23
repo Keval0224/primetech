@@ -147,11 +147,9 @@
 
         @media (max-width: 768px) {
             .team-swiper {
-                width: 300px;
-                max-width: 90vw;
-                padding: 2rem 0;
-                overflow: visible;
-                margin: 0 auto;
+                width: 100%;
+                padding: 1rem 0;
+                overflow: hidden;
             }
             .team-container {
                 display: flex !important;
@@ -448,14 +446,11 @@
             const initTeamSwiper = () => {
                 if (window.innerWidth <= 768 && !teamSwiper) {
                     teamSwiper = new Swiper('.team-swiper', {
-                        effect: 'cards',
+                        slidesPerView: 1.15,
+                        centeredSlides: true,
+                        spaceBetween: 20,
                         grabCursor: true,
                         loop: true,
-                        cardsEffect: {
-                            perSlideOffset: 8, 
-                            perSlideRotate: 2,
-                            slideShadows: true,
-                        },
                     });
                 } else if (window.innerWidth > 768 && teamSwiper) {
                     teamSwiper.destroy(true, true);
