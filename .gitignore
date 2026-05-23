@@ -3,3 +3,5 @@
 autoflow.config.json
 .DS_Store
 Thumbs.db
+.agent/
+graphify-out/

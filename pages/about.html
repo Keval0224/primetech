@@ -29,10 +29,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="../js/main.js" defer></script>
     <style>
         /* ============================================================
@@ -140,6 +142,27 @@
             }
             .vision-text {
                 font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-swiper {
+                width: 300px;
+                max-width: 90vw;
+                padding: 2rem 0;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+            .team-container {
+                display: flex !important;
+                gap: 0 !important;
+            }
+            .team-card {
+                width: 100%;
+                margin: 0;
+            }
+            .pg-hero-right {
+                display: none !important;
             }
         }
     </style>
@@ -324,33 +347,35 @@
                     <p class="section-subtitle">The driving force behind PrimeTech digital excellence.</p>
                 </div>
 
-                <div class="team-container grid">
-                    <div class="team-card glass-panel gsap-fade-up">
-                        <div class="team-avatar"><img src="../assets/images/keval.jpg.jpeg" alt="Keval Parmar Photo"></div>
-                        <h3>Keval Parmar</h3>
-                        <p class="text-gradient leader-role">Founder</p>
-                        <p class="text-muted">Visionary leader passionate about tech innovation and digital solutions.</p>
-                    </div>
+                <div class="team-swiper swiper">
+                    <div class="team-container swiper-wrapper grid">
+                        <div class="team-card glass-panel gsap-fade-up swiper-slide">
+                            <div class="team-avatar"><img src="../assets/images/keval.jpg.jpeg" alt="Keval Parmar Photo"></div>
+                            <h3>Keval Parmar</h3>
+                            <p class="text-gradient leader-role">Founder</p>
+                            <p class="text-muted">Visionary leader passionate about tech innovation and digital solutions.</p>
+                        </div>
 
-                    <div class="team-card glass-panel gsap-fade-up">
-                        <div class="team-avatar"><img src="../assets/images/chirag parmar.jpeg" alt="Chirag Parmar Photo"></div>
-                        <h3>Chirag Parmar</h3>
-                        <p class="text-gradient leader-role">Co-Founder &amp; Tech Leader</p>
-                        <p class="text-muted">Passionate developer focused on building efficient, modern web applications.</p>
-                    </div>
+                        <div class="team-card glass-panel gsap-fade-up swiper-slide">
+                            <div class="team-avatar"><img src="../assets/images/chirag parmar.jpeg" alt="Chirag Parmar Photo"></div>
+                            <h3>Chirag Parmar</h3>
+                            <p class="text-gradient leader-role">Co-Founder &amp; Tech Leader</p>
+                            <p class="text-muted">Passionate developer focused on building efficient, modern web applications.</p>
+                        </div>
 
-                    <div class="team-card glass-panel gsap-fade-up">
-                        <div class="team-avatar"><img src="../assets/images/Rishabh.jpeg" alt="Rishabh Parmar Photo"></div>
-                        <h3>Rishabh Parmar</h3>
-                        <p class="text-gradient leader-role">Co-Founder &amp; DevOps Specialist</p>
-                        <p class="text-muted">Enthusiastic about cloud technologies, automating deployments, and smooth operations.</p>
-                    </div>
+                        <div class="team-card glass-panel gsap-fade-up swiper-slide">
+                            <div class="team-avatar"><img src="../assets/images/Rishabh.jpeg" alt="Rishabh Parmar Photo"></div>
+                            <h3>Rishabh Parmar</h3>
+                            <p class="text-gradient leader-role">Co-Founder &amp; DevOps Specialist</p>
+                            <p class="text-muted">Enthusiastic about cloud technologies, automating deployments, and smooth operations.</p>
+                        </div>
 
-                    <div class="team-card glass-panel gsap-fade-up">
-                        <div class="team-avatar"><img src="../assets/images/mahin.jpeg" alt="Mahin Gunjal Photo"></div>
-                        <h3>Mahin Gunjal</h3>
-                        <p class="text-gradient leader-role">Co-Founder &amp; Design Leader</p>
-                        <p class="text-muted">Creative mind behind intuitive user experiences and stunning aesthetics.</p>
+                        <div class="team-card glass-panel gsap-fade-up swiper-slide">
+                            <div class="team-avatar"><img src="../assets/images/mahin.jpeg" alt="Mahin Gunjal Photo"></div>
+                            <h3>Mahin Gunjal</h3>
+                            <p class="text-gradient leader-role">Co-Founder &amp; Design Leader</p>
+                            <p class="text-muted">Creative mind behind intuitive user experiences and stunning aesthetics.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -416,6 +441,31 @@
     </footer>
 
     <a href="https://wa.me/918141787035?text=Hi%20PrimeTech%20team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let teamSwiper = null;
+            const initTeamSwiper = () => {
+                if (window.innerWidth <= 768 && !teamSwiper) {
+                    teamSwiper = new Swiper('.team-swiper', {
+                        effect: 'cards',
+                        grabCursor: true,
+                        loop: true,
+                        cardsEffect: {
+                            perSlideOffset: 8, 
+                            perSlideRotate: 2,
+                            slideShadows: true,
+                        },
+                    });
+                } else if (window.innerWidth > 768 && teamSwiper) {
+                    teamSwiper.destroy(true, true);
+                    teamSwiper = null;
+                }
+            };
+            initTeamSwiper();
+            window.addEventListener('resize', initTeamSwiper);
+        });
+    </script>
 </body>
 
 </html>
