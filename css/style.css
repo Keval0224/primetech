@@ -477,21 +477,28 @@ video {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 16px; /* Precise icon-to-text gap */
   z-index: 1001;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  opacity: 0.95;
 }
 
 .brand-icon {
-  width: 36px;
-  height: 36px;
+  width: 48px; /* Adjusted icon width for perfect ratio */
+  height: 56px; /* Adjusted icon height to match text block height */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
 .brand-logo:hover .brand-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.02);
 }
 
 .brand-icon img {
@@ -503,31 +510,93 @@ video {
 .brand-text-wrap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Left-align the text block like a premium SaaS logo */
+  text-align: left;
 }
 
 .brand-name {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-family: var(--font-heading, "Outfit", sans-serif);
+  font-size: 26px; /* Refined typography */
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
+  margin: 0;
 }
 
 .brand-prime {
-  color: var(--text-main);
+  color: #0a192f; /* Ultra-premium dark navy */
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .brand-prime {
+  color: #ffffff;
 }
 
 .brand-tech {
-  color: #2894df;
+  background: linear-gradient(135deg, #0052cc, #00a4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .brand-tech {
+  background: linear-gradient(135deg, #3b82f6, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-digital {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.35em; /* Extremely professional wide tracking */
+  color: #64748b; /* Slate 500 */
+  margin-top: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .brand-digital {
+  color: #94a3b8;
 }
 
 .brand-tagline {
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  margin-top: 2px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #3b82f6; /* Modern tech blue */
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .brand-tagline {
+  color: #60a5fa;
+}
+
+.brand-tagline::before,
+.brand-tagline::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.brand-tagline::before {
+  margin-right: 6px;
+}
+.brand-tagline::after {
+  margin-left: 6px;
 }
 
 .nav-menu {
@@ -637,11 +706,11 @@ video {
 
   .nav-list {
     display: grid;
-    /* 3 left cells (1fr each), 1 center gap (220px for logo clearance), 3 right cells (1fr each) */
-    grid-template-columns: repeat(3, 1fr) 220px repeat(3, 1fr);
+    /* 3 left cells (1fr each), 1 center gap (260px for logo clearance), 3 right cells (1fr each) */
+    grid-template-columns: repeat(3, 1fr) 260px repeat(3, 1fr);
     align-items: center;
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
     gap: 0;
   }
 
@@ -2274,6 +2343,7 @@ video {
     transform: translateY(-50%) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateY(-50%) scale(2.4);
     opacity: 0;
@@ -2323,6 +2393,7 @@ video {
     transform: scale(0.85);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -2334,9 +2405,11 @@ video {
   .why-bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .bento-card--large {
     grid-column: span 2;
   }
+
   .bento-card--small {
     grid-column: span 1;
   }
@@ -2347,20 +2420,24 @@ video {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
   .bento-card--large,
   .bento-card--small {
     grid-column: span 1;
     min-height: auto;
     padding: 2rem;
   }
+
   .timeline-visual {
     padding: 0;
     margin-top: 1.5rem;
   }
+
   .timeline-line {
     left: 1.5rem;
     right: 1.5rem;
   }
+
   .dials-visual {
     margin-top: 1.5rem;
     padding: 0;
@@ -4177,6 +4254,31 @@ video {
 
 @media screen and (max-width: 768px) {
 
+  /* Brand Mobile Sizing */
+  .brand-logo {
+    gap: 8px;
+  }
+  .brand-icon {
+    width: 44px;
+    height: 52px;
+  }
+  .brand-text-wrap {
+    width: auto;
+  }
+  .brand-name {
+    font-size: 22px;
+  }
+  .brand-digital {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    margin-top: 2px;
+  }
+  .brand-tagline {
+    font-size: 6.5px;
+    margin-top: 3px;
+    gap: 4px;
+  }
+
   /* Layout & Section General styling */
   .section {
     padding-block: 3.5rem 2.5rem !important;
@@ -5156,10 +5258,12 @@ video {
   outline: none;
   gap: 1rem;
 }
+
 .faq-question:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: -2px;
 }
+
 .faq-question span {
   flex: 1;
 }
@@ -5173,6 +5277,7 @@ video {
   flex-shrink: 0;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
 }
+
 .faq-item.is-open .faq-icon {
   transform: rotate(180deg);
   background: rgba(var(--primary-rgb), 0.15);
@@ -5183,9 +5288,11 @@ video {
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .faq-item.is-open .faq-answer-wrapper {
   grid-template-rows: 1fr;
 }
+
 .faq-answer-inner {
   overflow: hidden;
 }
@@ -5200,6 +5307,7 @@ video {
   transform: translateY(-10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 .faq-item.is-open .faq-answer {
   opacity: 1;
   transform: translateY(0);
@@ -5211,10 +5319,12 @@ video {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
   .faq-question {
     font-size: 1.05rem;
     padding: 1.25rem;
   }
+
   .faq-answer {
     padding: 0 1.25rem 1.25rem 1.25rem;
   }
