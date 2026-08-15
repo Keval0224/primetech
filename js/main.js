@@ -431,6 +431,28 @@ const initPortfolioFilter = () => {
 
   // Init
   if (rows.length) filter('all');
+
+  // Make entire portfolio media box / card open the project link
+  document.querySelectorAll('.portfolio-row-new').forEach(row => {
+    const link = row.querySelector('.btn-primary[href]');
+    const mediaBox = row.querySelector('.portfolio-media-box');
+    if (link && mediaBox) {
+      mediaBox.addEventListener('click', () => {
+        window.open(link.href, link.target || '_blank');
+      });
+    }
+  });
+
+  document.querySelectorAll('.portfolio-card').forEach(card => {
+    const link = card.querySelector('.btn-primary[href]');
+    const imgWrap = card.querySelector('.portfolio-img-wrap');
+    if (link && imgWrap) {
+      imgWrap.style.cursor = 'pointer';
+      imgWrap.addEventListener('click', () => {
+        window.open(link.href, link.target || '_blank');
+      });
+    }
+  });
 };
 
 /* ==========================================
