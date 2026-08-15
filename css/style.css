@@ -432,7 +432,7 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 1.15rem 2rem; /* Increased top and bottom padding */
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 100px;
@@ -462,7 +462,7 @@ video {
 }
 
 .header-scrolled .nav-container {
-  padding: 0.5rem 1.75rem;
+  padding: 1.15rem 2rem; /* Keep full top/bottom padding when scrolled so logo and content never feel squeezed */
   background: rgba(255, 255, 255, 0.92);
   border-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -477,7 +477,7 @@ video {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 16px; /* Precise icon-to-text gap */
+  gap: -5px; /* Brought closer to logo text */
   z-index: 1001;
   text-decoration: none;
   transition: opacity 0.2s ease;
@@ -488,8 +488,8 @@ video {
 }
 
 .brand-icon {
-  width: 48px; /* Adjusted icon width for perfect ratio */
-  height: 56px; /* Adjusted icon height to match text block height */
+  width: 63px; /* Reduced by 10% from 70px */
+  height: 68px; /* Reduced by 10% from 76px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,11 +517,11 @@ video {
 
 .brand-name {
   font-family: var(--font-heading, "Outfit", sans-serif);
-  font-size: 26px; /* Refined typography */
+  font-size: 29px; /* Reduced by 10% from 32px */
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.02em;
-  margin: 0;
+  letter-spacing: 0.02em; /* Expanded width tracking */
+  margin: 4px 0 0 0;
 }
 
 .brand-prime {
@@ -551,11 +551,11 @@ video {
 
 .brand-digital {
   font-family: var(--font-body, "Inter", sans-serif);
-  font-size: 11px;
+  font-size: 10px; /* Reduced by 10% from 11px */
   font-weight: 700;
   letter-spacing: 0.35em; /* Extremely professional wide tracking */
   color: #64748b; /* Slate 500 */
-  margin-top: 4px;
+  margin-top: 3px;
   line-height: 1;
   text-transform: uppercase;
   transition: color 0.3s ease;
@@ -567,11 +567,11 @@ video {
 
 .brand-tagline {
   font-family: var(--font-body, "Inter", sans-serif);
-  font-size: 7px;
+  font-size: 6.5px; /* Reduced by 10% from 7px */
   font-weight: 600;
   letter-spacing: 0.15em;
   color: #3b82f6; /* Modern tech blue */
-  margin-top: 6px;
+  margin-top: 5px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -587,9 +587,9 @@ video {
 .brand-tagline::after {
   content: "";
   flex: 1;
-  height: 1px;
+  height: 1.5px;
   background: currentColor;
-  opacity: 0.3;
+  opacity: 0.85; /* Made visibly darker and solid */
 }
 
 .brand-tagline::before {
@@ -4255,26 +4255,30 @@ video {
 @media screen and (max-width: 768px) {
 
   /* Brand Mobile Sizing */
+  .nav-container {
+    padding: 0.95rem 1.25rem;
+  }
   .brand-logo {
-    gap: 8px;
+    gap: 6px;
   }
   .brand-icon {
-    width: 44px;
-    height: 52px;
+    width: 48px; /* Reduced by 10% from 54px */
+    height: 55px; /* Reduced by 10% from 62px */
   }
   .brand-text-wrap {
     width: auto;
   }
   .brand-name {
-    font-size: 22px;
+    font-size: 23px; /* Reduced by 10% from 26px */
+    letter-spacing: 0.02em;
   }
   .brand-digital {
-    font-size: 8px;
+    font-size: 7.2px;
     letter-spacing: 0.22em;
     margin-top: 2px;
   }
   .brand-tagline {
-    font-size: 6.5px;
+    font-size: 6px;
     margin-top: 3px;
     gap: 4px;
   }
