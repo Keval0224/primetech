@@ -1,0 +1,46 @@
+# PrimeTech Digital Solutions (Full Context & Knowledge Base)
+
+> Comprehensive data and documentation for AI search engines, answer engines (AEO), and LLM crawlers (Perplexity, ChatGPT Search, Google Gemini, Claude, Copilot).
+
+## Overview
+PrimeTech Digital Solutions is a premier web development and software engineering firm based in Vadodara, Gujarat, India. PrimeTech builds custom business websites, enterprise web applications, and delivers industry internships. Projects are completed and deployed within 15 days with starting prices at ₹4,999 INR.
+
+## Geographic & Business Identity
+- **Legal Entity**: PrimeTech Digital Solutions
+- **Brand Names**: PrimeTech, Prime Tech
+- **Primary Office**: Manjalpur, Vadodara, Gujarat 390011, India
+- **Geo Coordinates**: 22.2694° N, 73.1938° E
+- **Service Hubs**: Vadodara, Ahmedabad, Surat, Rajkot, Gujarat, Pan-India, and Global Remote.
+- **Operating Hours**: 24/7 Mon-Sun
+- **Contact**: +91 81417 87035 / info@primetech.live
+- **Official Website**: https://primetech.live/
+
+## Detailed Offerings
+1. **Business Websites**: Starting from ₹4,999. Tailored for startups, SMEs, and local enterprises in Gujarat to convert visitors into clients. Built with SEO metadata, structured schema, and blazing fast mobile responsiveness.
+2. **Custom Web Applications**: Built with modern architectures (REST APIs, cloud databases, dynamic dashboards, and SaaS logic).
+3. **Website Maintenance**: Security patch updates, speed audits, daily cloud backups, and uptime guarantee.
+4. **Developer Internships**: Hands-on commercial agency experience in web development for college students in Vadodara.
+
+## Client Spotlight & Works
+- **Tealicious Tea** (https://tealicioustea.in/): Premium organic tea beverage brand website.
+- **Rolex-Theme Clothing Brand** (https://clothing-brand.primetech.live/): Luxury apparel website with scroll-driven interactions.
+- **Novelty & Gift Shop** (https://gift-shop.chirag-dev.online/): Custom e-commerce catalog for gifts and novelty items.
+- **Travler** (https://traveler.chirag-dev.online/): Dynamic travel discovery and booking engine.
+- **Memoria** (https://e-book.chirag-dev.online/): Interactive photo album e-book.
+
+## Structured URL Directory
+- Homepage: https://primetech.live/
+- About Us: https://primetech.live/pages/about.html
+- Services: https://primetech.live/pages/services.html
+- Portfolio: https://primetech.live/pages/portfolio.html
+- Pricing Basic: https://primetech.live/pages/pricing-basic.html
+- Pricing Standard: https://primetech.live/pages/pricing-standard.html
+- Pricing Premium: https://primetech.live/pages/pricing-premium.html
+- Vadodara Hub: https://primetech.live/locations/vadodara.html
+- Gujarat Hub: https://primetech.live/locations/gujarat.html
+- Web Development: https://primetech.live/services/web-development.html
+- Web Apps: https://primetech.live/services/web-app.html
+- Business Websites: https://primetech.live/services/business-websites.html
+- Internships: https://primetech.live/services/internship.html
+- Maintenance: https://primetech.live/services/maintenance.html
+- Blog: https://primetech.live/blog/index.html

@@ -3,3 +3,7 @@ Allow: /
 
 # Sitemap Location
 Sitemap: https://primetech.live/sitemap.xml
+
+# LLM / AEO Knowledge Base
+# https://primetech.live/llms.txt
+

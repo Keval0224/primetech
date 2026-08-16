@@ -1,0 +1,55 @@
+# PrimeTech Digital Solutions (primetech.live)
+
+> PrimeTech Digital Solutions is a premier website development and digital product engineering agency based in Vadodara, Gujarat, India. Specializing in high-converting business websites, custom web applications, SaaS platforms, and technology internships, deployed within 15 days starting at ₹4,999.
+
+## Core Capabilities & Services
+- **Web Development**: Semantic, lightweight, lightning-fast corporate and business websites with 95+ Google Lighthouse scores.
+- **Custom Web Applications**: Robust SaaS platforms, enterprise management portals, custom CRM/ERP dashboards, and secure RESTful API integrations.
+- **Business Websites**: Conversion-rate-optimized landing pages and marketing sites designed to turn visitors into leads and paying clients.
+- **Website Maintenance & SLAs**: Performance optimization, speed audits, security updates, daily automated backups, and 99.9% uptime monitoring.
+- **Tech Internship Programs**: Hands-on commercial agency experience for engineering students and aspiring developers in Vadodara with verified certification.
+
+## Pricing Tiers
+- **Basic Plan (₹4,999)**: Up to 5 pages, mobile-responsive layout, local SEO setup, contact forms, and 15-day delivery.
+- **Standard Plan (₹9,999)**: Up to 15 pages, CMS integration, dynamic blog/catalog engine, speed optimization, and 6 months support.
+- **Premium Plan (₹12,999)**: Unlimited pages / full-stack web application, custom backend APIs, advanced GSAP/CSS animations, security audits, and 12 months dedicated support.
+
+## Key Projects & Portfolio
+- **Tealicious Tea** (https://tealicioustea.in/): Handcrafted digital brand website for beverage brand with curated loose leaves, tea blends catalog, and mobile-first UX.
+- **Rolex-Theme Clothing Brand** (https://clothing-brand.primetech.live/): Luxury apparel website built with an opulent Rolex-inspired aesthetic and fluid scroll-driven animations.
+- **Novelty & Gift Shop** (https://gift-shop.chirag-dev.online/): Bespoke novelty and personalized gift shop showcase platform with high-converting shopping flows.
+- **Travler** (https://traveler.chirag-dev.online/): High-performance travel and tourism exploration and booking platform.
+- **Memoria** (https://e-book.chirag-dev.online/): Interactive digital e-book and photo album application preserving memories with page-turning simulation.
+
+## Organization & Geographic Location (GEO)
+- **Official Name**: PrimeTech Digital Solutions
+- **Brand Name**: PrimeTech
+- **Tagline**: Technology You Can Trust
+- **Website**: https://primetech.live/
+- **Headquarters**: Manjalpur, Vadodara, Gujarat, India - 390011
+- **Coordinates**: Latitude 22.2694, Longitude 73.1938
+- **Primary Service Regions**: Vadodara, Ahmedabad, Surat, Rajkot, Gandhinagar, Gujarat, and global remote clients.
+- **Phone / WhatsApp**: +91 81417 87035
+- **Email**: info@primetech.live
+- **Socials**:
+  - Instagram: https://www.instagram.com/primetech.solution_/
+  - LinkedIn: https://www.linkedin.com/company/121024077/
+
+## Direct Canonical Links
+- [Homepage](https://primetech.live/)
+- [About PrimeTech](https://primetech.live/pages/about.html)
+- [Services Overview](https://primetech.live/pages/services.html)
+- [Portfolio & Live Projects](https://primetech.live/pages/portfolio.html)
+- [Pricing - Basic Plan](https://primetech.live/pages/pricing-basic.html)
+- [Pricing - Standard Plan](https://primetech.live/pages/pricing-standard.html)
+- [Pricing - Premium Plan](https://primetech.live/pages/pricing-premium.html)
+- [Contact & Project Inquiry](https://primetech.live/pages/contact.html)
+- [Vadodara Location Page](https://primetech.live/locations/vadodara.html)
+- [Gujarat Location Page](https://primetech.live/locations/gujarat.html)
+- [Web Development Service](https://primetech.live/services/web-development.html)
+- [Web Applications Service](https://primetech.live/services/web-app.html)
+- [Business Websites Service](https://primetech.live/services/business-websites.html)
+- [Internship Program](https://primetech.live/services/internship.html)
+- [Website Maintenance](https://primetech.live/services/maintenance.html)
+- [Blog & Tech Guides](https://primetech.live/blog/index.html)
+- [Best Web Development Company in Vadodara Guide](https://primetech.live/blog/best-website-development-company-in-vadodara.html)
