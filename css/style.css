@@ -508,11 +508,12 @@ video {
 }
 
 .brand-text-wrap {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Left-align the text block like a premium SaaS logo */
+  align-items: stretch; /* Stretch children so tagline lines span the exact width of PrimeTech text */
   text-align: left;
+  white-space: nowrap;
 }
 
 .brand-name {
@@ -522,6 +523,9 @@ video {
   line-height: 1;
   letter-spacing: 0.02em; /* Expanded width tracking */
   margin: 4px 0 0 0;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .brand-prime {
@@ -554,11 +558,13 @@ video {
   font-size: 10px; /* Reduced by 10% from 11px */
   font-weight: 700;
   letter-spacing: 0.35em; /* Extremely professional wide tracking */
+  margin-right: -0.35em; /* Compensate trailing letter-spacing to align flush from P to H */
   color: #64748b; /* Slate 500 */
   margin-top: 3px;
   line-height: 1;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  display: block;
 }
 
 [data-theme="dark"] .brand-digital {
@@ -574,19 +580,17 @@ video {
   margin-top: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  box-sizing: border-box;
   white-space: nowrap;
   transition: color 0.3s ease;
-}
-
-[data-theme="dark"] .brand-tagline {
-  color: #60a5fa;
 }
 
 .brand-tagline::before,
 .brand-tagline::after {
   content: "";
-  flex: 1;
+  flex: 1 1 auto;
   height: 1.5px;
   background: currentColor;
   opacity: 0.85; /* Made visibly darker and solid */
@@ -4446,33 +4450,109 @@ video {
 
 @media screen and (max-width: 768px) {
 
-  /* Brand Mobile Sizing */
+  /* Brand Mobile Sizing — Exact Replica of Desktop */
   .nav-container {
-    padding: 0.95rem 1.25rem;
+    padding: 0.65rem 1.15rem;
+    width: calc(100% - 1.25rem);
   }
   .brand-logo {
-    gap: 6px;
+    gap: -5px; /* Same exact overlap as desktop */
+    flex-shrink: 1;
   }
   .brand-icon {
-    width: 48px; /* Reduced by 10% from 54px */
-    height: 55px; /* Reduced by 10% from 62px */
+    width: 54px;
+    height: 58px;
+    flex-shrink: 0;
   }
   .brand-text-wrap {
     width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    white-space: nowrap;
   }
   .brand-name {
-    font-size: 23px; /* Reduced by 10% from 26px */
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1;
     letter-spacing: 0.02em;
+    margin: 3px 0 0 0;
+    white-space: nowrap;
+    display: inline-flex;
   }
   .brand-digital {
-    font-size: 7.2px;
-    letter-spacing: 0.22em;
-    margin-top: 2px;
+    font-size: 8.6px;
+    font-weight: 700;
+    letter-spacing: 0.355em; /* Exact pixel-perfect match for PrimeTech width */
+    margin-right: -0.355em;
+    margin-top: 3px;
+    line-height: 1;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
   }
   .brand-tagline {
-    font-size: 6px;
-    margin-top: 3px;
-    gap: 4px;
+    font-size: 5.5px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-right: -0.15em; /* Flush alignment */
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+  }
+  .brand-tagline::before,
+  .brand-tagline::after {
+    flex: 1 1 auto;
+    height: 1.5px;
+    opacity: 0.85;
+  }
+  .nav-actions {
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* Ultra-compact screens (<=360px like 320px in DevTools) */
+  @media screen and (max-width: 360px) {
+    .nav-container {
+      padding: 0.5rem 0.65rem;
+      width: calc(100% - 0.5rem);
+    }
+    .brand-logo {
+      gap: -5px;
+    }
+    .brand-icon {
+      width: 48px;
+      height: 52px;
+    }
+    .brand-name {
+      font-size: 23px;
+      letter-spacing: 0.02em;
+    }
+    .brand-digital {
+      font-size: 8.0px;
+      letter-spacing: 0.355em;
+      margin-right: -0.355em;
+      margin-top: 2px;
+    }
+    .brand-tagline {
+      font-size: 5.2px;
+      letter-spacing: 0.12em;
+      margin-top: 4px;
+    }
+    .nav-actions {
+      gap: 0.25rem;
+    }
+    .theme-toggle,
+    .nav-toggle {
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+    }
   }
 
   /* Layout & Section General styling */
